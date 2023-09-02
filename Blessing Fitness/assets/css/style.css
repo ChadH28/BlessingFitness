@@ -620,12 +620,97 @@ input:-ms-input-placeholder {
 	}
 
 
+/* booking page */
+
+.main-nav .navbar-collapse {
+    text-align: left;
+    background-color: #cf0f1a ;
+}
+
+.main-nav .navbar-nav {
+    float: none; /* Ensures that the menu items are not floated to the right */
+}
+
+.main-nav .navbar-nav>li {
+    display: inline-block; /* Display menu items inline */
+    float: none; /* Remove any residual float */
+}
+
+.main-nav .navbar-toggle {
+    margin-right: 15px; /* Adjust the margin to provide spacing from the logo */
+}
+
+.main-nav .navbar-brand {
+    float: none; /* Remove float from the logo */
+}
+
+.packs {
+    display: flex; /* Use flexbox to create a horizontal layout */
+    justify-content: space-between; /* Add space between the sections */
+}
+
+.authorize_button {
+color: #fff;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+align-items: center;
+}
+
+
+.form {
+    max-width: 250px; /* Set a maximum width for the form container */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px; /* Add some padding to the form */
+    border: 1px solid #ccc; /* Add a border for visual separation */
+    border-radius: 5px; /* Add rounded corners to the form */
+    background-color: #f9f9f9; /* Add a light background color */
+    padding: 10px;
+    width: 100% ;
+    margin:10px;
+    border: 1px solid #ccc;
+
+}
 
 
 
+.promotional-package {
+    align: center;
+}
 
+    .pricing-package {
+        border: 2px solid #ccc;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        border-radius: 10px; /* Add rounded corners */
+        width: 800px;
+    }
 
+    .package-title {
+        font-size: 24px;
+        font-weight: bold;
+    }
 
+    .package-price {
+        font-size: 18px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
 
+    .bullet-line {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        border-left: 2px solid #ccc;
+        height: 24px;
+    }
 
+    .package-options {
+        margin-top: 20px;}
 
+        .package-option {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
