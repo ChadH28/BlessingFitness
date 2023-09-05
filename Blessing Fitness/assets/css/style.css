@@ -55,7 +55,10 @@ img {
     -ms-user-select: none;
     user-select: none;
     -webkit-user-drag: none;
-    user-drag: none;
+
+
+    user-select: none; /* Prevent image selection */
+    pointer-events: none; /* Prevent interactions, including dragging */
 }
 a,
 a:hover,
@@ -465,20 +468,20 @@ input:-ms-input-placeholder {
 	border-color:transparent;
 }
 
-.promotion {
-	color:#465065;
-}
-.promotion h1{
+/* .promotion {
+	color:#0a3081;
+} */
+/* .promotion h1{
 	text-transform:uppercase;
 	font-size:26px;
 	margin-bottom:15px;
 	font-family: 'montserratbold';
 	line-height:35px;
-}
-.promotion h1 i{
+} */
+/* .promotion h1 i{
 	font-size:5px;
 	color:#fa5c65;
-}
+} */
 
 .promotion a h4{
 	text-transform:uppercase;
@@ -498,9 +501,9 @@ input:-ms-input-placeholder {
 	overflow:hidden;
 }
 
-.portfolio img{
+/* .portfolio img{
 	margin-left: -79px;
-}
+} */
 
 .portfolio h1{
 	text-transform:uppercase;
@@ -533,15 +536,16 @@ input:-ms-input-placeholder {
 	padding-top:10px;
 }
 .team-heading {
-    margin-bottom: 40px;
+    margin-top: 40px;
+    border: #263742 5px;
 }
 
-.team-heading h1{
+/* .team-heading h1{
 	text-transform:uppercase;
 	font-size:26px;
 	margin-bottom:15px;
 	font-family: 'montserratbold';
-}
+} */
 
 .team-heading h1 i{
 	font-size:7px;
@@ -622,10 +626,12 @@ input:-ms-input-placeholder {
 
 /* booking page */
 
-.main-nav .navbar-collapse {
+/* .main-nav .navbar-collapse {
     text-align: left;
     background-color: #cf0f1a ;
-}
+    border: #cf0f1a;
+} */
+
 
 .main-nav .navbar-nav {
     float: none; /* Ensures that the menu items are not floated to the right */
@@ -647,6 +653,8 @@ input:-ms-input-placeholder {
 .packs {
     display: flex; /* Use flexbox to create a horizontal layout */
     justify-content: space-between; /* Add space between the sections */
+    padding-top: 50px;
+    border-radius: 20px;
 }
 
 .authorize_button {
@@ -655,6 +663,7 @@ border: none;
 padding: 10px 20px;
 cursor: pointer;
 align-items: center;
+border-radius: 3px;
 }
 
 
@@ -663,41 +672,80 @@ align-items: center;
     margin: 0 auto; /* Center the form horizontally */
     padding: 20px; /* Add some padding to the form */
     border: 1px solid #ccc; /* Add a border for visual separation */
-    border-radius: 5px; /* Add rounded corners to the form */
     background-color: #f9f9f9; /* Add a light background color */
     padding: 10px;
     width: 100% ;
     margin:10px;
-    border: 1px solid #ccc;
+    border: 2px solid rgb(8, 7, 7);
 
 }
 
+
+.top { 
+
+   
+    margin-top: 2px; /* Center the form horizontally */
+    border: 1px solid #ccc; /*Add a border for visual separation*/
+    border-radius: 5px; /* Add rounded corners to the form */
+    background-color: #f9f9f9; /* Add a light background color */
+    padding: 10px;
+    width: 100% ;
+    border: 1px solid #ccc;
+   
+}
 
 
 .promotional-package {
-    align: center;
+   align-items: center;
+
+   
 }
 
-    .pricing-package {
-        border: 2px solid #ccc;
-        padding: 20px;
-        text-align: center;
-        position: relative;
-        border-radius: 10px; /* Add rounded corners */
-        width: 800px;
-    }
+.price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .package-title {
-        font-size: 24px;
-        font-weight: bold;
-    }
+.pricelist {
+    padding: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    text-align: center;
+    /* border-radius: 10px; */
+    width: 300px;
+    background-color: #ff6a6a;
+}
 
-    .package-price {
+.authorize_button {
+    margin-top: auto; /* Adjust the margin as needed */
+}
+
+/* .pricing-packages {
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    border-radius: 10px; /* Add rounded corners around the packs */ 
+    /* width: 50%px; */
+    /* display: inline-block; */
+    /* border:rgba(0, 0, 0, 0.5); */
+    
+    
+ /* } * */
+
+/* .package-title {
+    font-size: 24px;
+    font-weight: bold;
+} */
+
+    /* .package-price {
         font-size: 18px;
         position: absolute;
         top: 20px;
         right: 20px;
-    }
+        
+    } */
 
     .bullet-line {
         position: absolute;
@@ -709,8 +757,29 @@ align-items: center;
 
     .package-options {
         margin-top: 20px;}
+        
+/* 
+    .package-option {
+        font-size: 16px;
+        margin-bottom: 10px;
+        
+    } */
 
-        .package-option {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
+    .container {
+        background-color: #818181;
+        text-align: center;
+        margin: 0 auto;	
+    }
+
+    
+
+    /* .row {
+        /* border:#565656 */
+    /* } */ 
+
+    /* .box {
+        width: 250px;
+        background-color: rgb(39, 7, 7);
+        height: 500px;
+    } */
+
