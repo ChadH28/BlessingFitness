@@ -537,7 +537,8 @@ input:-ms-input-placeholder {
 }
 .team-heading {
     margin-top: 40px;
-    border: #263742 5px;
+    border: #0064a7 5px;
+    font-display: color=blue;
 }
 
 /* .team-heading h1{
@@ -681,17 +682,19 @@ border-radius: 3px;
 }
 
 
-.top { 
 
-   
-    margin-top: 2px; /* Center the form horizontally */
-    border: 1px solid #ccc; /*Add a border for visual separation*/
-    border-radius: 5px; /* Add rounded corners to the form */
-    background-color: #f9f9f9; /* Add a light background color */
-    padding: 10px;
-    width: 100% ;
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    margin-top: 2px;
     border: 1px solid #ccc;
-   
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
 }
 
 
@@ -703,9 +706,36 @@ border-radius: 3px;
 
 .price-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap; /* Wrap items to the next row if they overflow */
+    justify-content: space-between; /* Distribute items horizontally with space between them */
 }
+
+.pricelist {
+    flex: 1; /* Equal width for all items */
+    padding: 20px; /* Add padding for spacing and decoration */
+    border: 1px solid #ccc; /* Add borders for decoration */
+    text-align: center; /* Center the content horizontally */
+    margin: 10px; /* Add margin for spacing between items */
+}
+
+/* Add additional styling as needed */
+.related-articles-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+.authorize_button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
 
 .pricelist {
     padding: 20px;
@@ -747,6 +777,45 @@ border-radius: 3px;
         
     } */
 
+    .price-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .pricelist {
+        flex: 1;
+        padding: 20px;
+        border: 1px solid #e0e0e0; /* Light gray border for a professional look */
+        text-align: center;
+        margin: 10px;
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        justify-content: space-between; /* Push button to the bottom */
+        background-color: #f7f7f7; /* Light background color */
+    }
+    
+    .related-articles-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: rgb(255, 58, 58); /* Dark gray text color */
+    }
+    
+    h5 {
+        font-size: 18px;
+        color: #0073e6; /* Professional blue for headings */
+    }
+    
+    .authorize_button {
+        background-color: #0073e6;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-top: auto; /* Push the button to the bottom */
+    }
+    
+
     .bullet-line {
         position: absolute;
         top: 20px;
@@ -766,14 +835,14 @@ border-radius: 3px;
     } */
 
     .container {
-        background-color: #818181;
+        background-color: #d4d4d4;
         text-align: center;
         margin: 0 auto;	
     }
 
     
 
-    /* .row {
+    /* .row { */
         /* border:#565656 */
     /* } */ 
 
@@ -781,5 +850,5 @@ border-radius: 3px;
         width: 250px;
         background-color: rgb(39, 7, 7);
         height: 500px;
-    } */
+    }
 
