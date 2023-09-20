@@ -631,12 +631,16 @@ input:-ms-input-placeholder {
     float: none; /* Remove float from the logo */
 }
 
-.packs {
-    display: flex; /* Use flexbox to create a horizontal layout */
-    justify-content: space-between; /* Add space between the sections */
-    padding-top: 50px;
-    border-radius: 20px;
-}
+
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text within each div */
+    margin: 20px; /* Add margin for spacing between divs */
+    margin-left: 180px;
+  }
 
 .authorize_button {
 color: #fff;
@@ -658,6 +662,7 @@ border-radius: 3px;
     width: 100% ;
     margin:10px;
     border: 2px solid rgb(8, 7, 7);
+    margin-left: 300px;
 
 }
 
