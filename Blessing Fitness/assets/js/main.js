@@ -146,3 +146,5 @@ function showSlides() {
 });
 
 
+//.we are working in the adventures page//
+
