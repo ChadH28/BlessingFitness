@@ -18,13 +18,13 @@
       let gapiInited = false;
       let gisInited = false;
 
-    //   document.getElementById('authorize_button').style.visibility = 'hidden';
+      // document.getElementById('authorize_button').style.visibility = 'hidden';
     //   document.getElementById('signout_button').style.visibility = 'hidden';
-      // document.getElementById('bookButton').style.visibility = 'hidden' ;
-      // document.getElementById('dateIn').style.visibility = 'hidden';
-      // document.getElementById('timeIn').style.visibility = 'hidden';
-      // document.getElementById('dateInput').style.visibility = 'hidden';
-      // document.getElementById('timeInput').style.visibility = 'hidden';
+      document.getElementById('bookButton').style.visibility = 'hidden' ;
+      document.getElementById('dateIn').style.visibility = 'hidden';
+      document.getElementById('timeIn').style.visibility = 'hidden';
+      document.getElementById('dateInput').style.visibility = 'hidden';
+      document.getElementById('timeInput').style.visibility = 'hidden';
       /**
        * Callback after api.js is loaded.
        */
@@ -65,6 +65,7 @@
         if (gapiInited && gisInited) {
           document.getElementById('authorize_button').style.visibility = 'visible';
           
+          
         }
       }
 
@@ -78,11 +79,11 @@
           }
         //   document.getElementById('signout_button').style.visibility = 'visible';
           // document.getElementById('authorize_button').innerText = 'Refresh';
-          // document.getElementById('bookButton').style.visibility = 'visible';
-          // document.getElementById('dateIn').style.visibility = 'visible';
-          // document.getElementById('timeIn').style.visibility = 'visible';
-          // document.getElementById('dateInput').style.visibility = 'visible';
-          // document.getElementById('timeInput').style.visibility = 'visible';
+          document.getElementById('bookButton').style.visibility = 'visible';
+          document.getElementById('dateIn').style.visibility = 'visible';
+          document.getElementById('timeIn').style.visibility = 'visible';
+          document.getElementById('dateInput').style.visibility = 'visible';
+          document.getElementById('timeInput').style.visibility = 'visible';
           await listUpcomingEvents();
         };
 
@@ -104,14 +105,14 @@
         if (token !== null) {
           google.accounts.oauth2.revoke(token.access_token);
           gapi.client.setToken('');
-        //   document.getElementById('content').innerText = '';
-        //   document.getElementById('authorize_button').innerText = 'Authorize';
-        // //   document.getElementById('signout_button').style.visibility = 'hidden';
-        //   document.getElementById('bookButton').style.visibility = 'hidden';
-        //   document.getElementById('dateIn').style.visibility = 'hidden';
-        //   document.getElementById('timeIn').style.visibility = 'hidden';
-        //   document.getElementById('dateInput').style.visibility = 'hidden';
-        //   document.getElementById('timeInput').style.visibility = 'hidden';
+          document.getElementById('content').innerText = '';
+          // document.getElementById('authorize_button').innerText = 'Authorize';
+        //   document.getElementById('signout_button').style.visibility = 'hidden';
+          document.getElementById('bookButton').style.visibility = 'hidden';
+          document.getElementById('dateIn').style.visibility = 'hidden';
+          document.getElementById('timeIn').style.visibility = 'hidden';
+          document.getElementById('dateInput').style.visibility = 'hidden';
+          document.getElementById('timeInput').style.visibility = 'hidden';
         }
       }
 
@@ -153,6 +154,7 @@
         
         let dateTime = convertToISO()
         let startDate = new Date(dateTime)
+        startDate.setHours(startDate.getHours()-2)
         startDate = new Date(startDate.getTime() + 60 * 60 * 1000 * 2);
         dateTime = startDate.toISOString();
         const isoEndDate = new Date(startDate.getTime() + 60 * 60 * 1000);
@@ -172,7 +174,7 @@
           'timeZone': 'Africa/Johannesburg'
         },
         "attendees": [
-          {"email": "mabokelampho32@gmail.com"}
+          {"email": "primary"}
         ]
       };
 

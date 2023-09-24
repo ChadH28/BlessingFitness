@@ -392,6 +392,7 @@ input:-ms-input-placeholder {
 .mainmenu.navbar-default {
 	background-color:transparent;
 	border-color:transparent;
+
 	
 }
 .mainmenu .navbar-brand {
@@ -553,12 +554,13 @@ input:-ms-input-placeholder {
 }
 .team .team-info h5{
 	font-size:14px;
-	color:#fa5c65;
+	color:#ffffff;
 	margin-bottom:0;
 	font-weight:bold;
 }
 .team .team-info p{
 	font-size:14px;
+    
 	
 }
 .team-more{
@@ -616,6 +618,7 @@ input:-ms-input-placeholder {
 
 .main-nav .navbar-nav {
     float: none; /* Ensures that the menu items are not floated to the right */
+    background-color: bisque;
 }
 
 .main-nav .navbar-nav>li {
@@ -864,7 +867,7 @@ Working on the Heading in home page
 }
 
 .row{
-    background-color: #ff6a6a;
+    background-color: #303030;
 }
 
 
@@ -948,7 +951,6 @@ h5 {
         
 
     .container {
-        background-color: #d4d4d4;
         text-align: center;
         margin: 0 auto;	
     }
@@ -961,6 +963,7 @@ h5 {
   margin: 100px auto;
   position: relative;
   margin-top: 150px;
+
 }
 
 /* img {
@@ -1023,3 +1026,196 @@ img:last-child:nth-child(5) {
   offset-distance: 100%;
 }
 
+
+
+/*============FITNESS=======================*/
+
+/* Apply a background color to the fitness body */
+/* Style the fitness body */
+.fitness-body {
+    margin-top: 100px;
+    background-color: #f4f4f4;
+    padding: 30px 0;
+    text-align: center;
+  }
+  
+  /* Style the heading */
+  .fitness-heading {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the specials section */
+  .specials-fitness {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .specials-fitness h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .specials-fitness h4 {
+    font-size: 18px;
+    color: #777;
+  }
+  
+  .specials-fitness p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  /* Style the "FIND OUT MORE" button */
+ /* Specials Fitness Row */
+.specials-fitness-row {
+    background-color: #f2f2f2; /* Background color for the Specials Fitness row */
+    padding: 20px; /* Add padding to create separation */
+  }
+  
+  .specials-fitness {
+    border: 1px solid #ddd; /* Add a border around the Specials Fitness content */
+    padding: 20px; /* Add padding to the Specials Fitness content */
+  }
+  
+  /* Prices Boxes Row */
+  .prices-boxs-row {
+    background-color: #fff; /* Background color for the Prices Boxes row */
+    padding: 20px; /* Add padding to create separation */
+  }
+  
+  .prices-boxs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Style for each box */
+  .box {
+    background-color: #fff; /* Background color for boxes */
+    border: 1px solid #ddd; /* Add a border around each box */
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+  }
+  
+  /* Add styles for headings, buttons, and other elements as needed */
+  .box h4 {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .box h6 {
+    font-size: 24px;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  .box button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .box button:hover {
+    background-color: #555;
+  }
+  
+
+          /* Add your inline CSS styles here for demonstration purposes */
+        .gallery {
+        
+        text-align: center;
+        /* margin-top: 150px; */
+        background-color: #000000;
+        }
+
+        .gallery h2 {
+            font-size: 24px;
+        }
+
+        .adventure-image {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .adventure-image img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /*==========ABOUT PAGE============
+
+        /* Apply styles to the container */
+       /* Style timetable container */
+.timetable-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* margin-top: 80px; */
+}
+
+/* Style individual timetable items */
+.timetable {
+    flex: 0 0 calc(20% - 20px); /* Adjust the width as needed */
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Style headings */
+.timetable h2 {
+    font-size: 18px;
+    margin: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #1a1a1a;
+    text-align: center;
+}
+
+/* Style event details */
+.timetable h5 {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Style event time */
+.timetable p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Style the "Book With Google" button */
+.timetable button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Apply responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .timetable {
+        flex: 0 0 calc(50% - 20px); /* Two items per row on smaller screens */
+        margin-right: 0;
+    }
+}
