@@ -174,7 +174,7 @@
           'timeZone': 'Africa/Johannesburg'
         },
         "attendees": [
-          {"email": "primary"}
+          {"email": "44nator@gmail.com"}
         ]
       };
 
