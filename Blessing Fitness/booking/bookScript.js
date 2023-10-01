@@ -28,6 +28,7 @@
       /**
        * Callback after api.js is loaded.
        */
+      document.getElementById('booking-form').style.visibility = 'hidden';
       function gapiLoaded() {
         gapi.load('client', initializeGapiClient);
       }
@@ -87,8 +88,9 @@
           await listUpcomingEvents();
         // temp change start
           document.getElementById("authorize-button").innerHTML = document.getElementById("booking-form").innerHTML;
-          // temp cha end
-          await  addEventToCalendar();
+          // temp change end
+
+          // await  addEventToCalendar();
         };
 
         if (gapi.client.getToken() === null) {
@@ -156,8 +158,8 @@
 
       async function addEventToCalendar() {
         
-        // let dateTime = convertToISO()
-        let startDate = new Date()
+        let dateTime = convertToISO()
+        let startDate = new Date(dateTime)
         startDate.setHours(startDate.getHours()-2)
         startDate = new Date(startDate.getTime() + 60 * 60 * 1000 * 2);
         dateTime = startDate.toISOString();
@@ -191,6 +193,7 @@
         console.log('Event created: ' + response.result.htmlLink);
         // document.getElementById('content').innerText = output
         // document.getElementById('content').innerText = dateTime;
+        document.getElementById("authorize-button").innerHTML =  '<div style="color: green;">&#10004;</div>'
         
       });
       gapi.client.calendar.events.insert({
