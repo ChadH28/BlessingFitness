@@ -204,7 +204,7 @@ th {
 }
 .menu-section {
     padding: 10px 0px;
-    background: #2a2b33;
+    background: #ffffff;
     box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.52);
     position: fixed;
     width: 100%;
@@ -605,6 +605,25 @@ td {} .inn-com p {} .inn-com-form {} .inn-com-form form {
 .room-price span {
     font-size: 35px;
 }
+.authorize-button{
+    padding: 7px 25px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 2px;
+    width: 100%;
+    font-size: 15px;
+    display: table-caption;
+    background: #d0ae64;
+    /* fallback for old browsers */
+    
+    background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    
+    background: linear-gradient(to top, #caa65a, #dbbb75);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 .inn-room-book {
     padding: 7px 25px;
     color: #fff;
@@ -623,6 +642,15 @@ td {} .inn-com p {} .inn-com-form {} .inn-com-form form {
     
     background: linear-gradient(to top, #caa65a, #dbbb75);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.authorize-button:hover{
+    background: #cc2b5e;
+    /* fallback for old browsers */
+    
+    background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);
+    /* Chrome 10-25, Safari 5.1-6 */
+    
+    background: linear-gradient(to top, #cc2c5f, #f4364f);
 }
 .inn-room-book:hover {
     background: #cc2b5e;
@@ -1083,7 +1111,22 @@ td {} .inn-com p {} .inn-com-form {} .inn-com-form form {
     line-height: 20px;
     margin-top: 10px;
 }
+/*-------------------------------------------------*/
+/* =  form
+/*-------------------------------------------------*/
+.form {
+    max-width: 250px; /* Set a maximum width for the form container */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px; /* Add some padding to the form */
+    border: 1px solid #ccc; /* Add a border for visual separation */
+    background-color: #f9f9f9; /* Add a light background color */
+    padding: 10px;
+    width: 100% ;
+    margin:10px;
+    border: 2px solid rgb(8, 7, 7);
+    margin-left: 300px;
 
+}
 /*-------------------------------------------------*/
 /* =  INNER BANNER
 /*-------------------------------------------------*/
@@ -1091,7 +1134,7 @@ td {} .inn-com p {} .inn-com-form {} .inn-com-form form {
     margin-top: 72px;
     position: relative;
     overflow: hidden;
-    background: url('../images/inn-bg.jpg') no-repeat;
+    background: url('../img/home-back.png') no-repeat;
     background-size: cover;
     color: #b4b4b4;
     padding: 35px 0px;
@@ -2677,7 +2720,7 @@ a.ui-button:active,
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     width: 23%;
-    margin: 1%;
+    padding: 100%;
     display: none;
     float: left;
     overflow: hidden;
@@ -3482,7 +3525,7 @@ footer ul li a {
     margin-top: 0px;
     margin-bottom: 0px;
     letter-spacing: -1px;
-    color: #2a2b33;
+    color: #ffffff;
 }
 .about-left h2 span {
     font-size: 48px;
@@ -3490,7 +3533,7 @@ footer ul li a {
     margin-top: 0px;
     margin-bottom: 0px;
     letter-spacing: -1px;
-    color: #f4364f;
+    color: #912f2f;
 }
 .about-left h4 {
     font-size: 22px;
@@ -3573,7 +3616,7 @@ footer ul li a {
     font-size: 18px;
 }
 .slid-cap a {
-    background: #f4364f;
+    background: #c05765;
     padding: 7px 25px;
     color: #fff;
     text-transform: uppercase;
@@ -3713,7 +3756,8 @@ footer ul li a {
     width: 100%;
     display: block;
 }
-.disabled {} .disabled span {}
+.disabled {}
+ .disabled span {}
 
 /*-------------------------------------------------------*/
 /*  ROOM AND HOTEL DETAILS
@@ -4356,6 +4400,10 @@ form .stars label:before {
 
 /*-------------------------------------------------------*/
 /*  ROOM DETAILS BLOCK COLOR
+
+
+
+
 /*-------------------------------------------------------*/
 .hom-com-block {
     background: #2e333c;
@@ -4536,3 +4584,34 @@ form .stars label:before {
 .hp-main-overview-block ul li span {
     color: #b1aa9c;
 }
+
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Set the container's height to the full viewport height */
+
+}
+
+.video-container iframe {
+    max-width: 400px;
+    max-height: 100%;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+/* Add styles for the logo */
+.navbar-brand img {
+    max-height: 40px; /* Adjust the max height as needed */
+    margin-top: 5px; /* Adjust the margin as needed for vertical alignment */
+}
+

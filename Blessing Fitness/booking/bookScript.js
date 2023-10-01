@@ -20,11 +20,11 @@
 
       // document.getElementById('authorize_button').style.visibility = 'hidden';
     //   document.getElementById('signout_button').style.visibility = 'hidden';
-      document.getElementById('bookButton').style.visibility = 'hidden' ;
-      document.getElementById('dateIn').style.visibility = 'hidden';
-      document.getElementById('timeIn').style.visibility = 'hidden';
-      document.getElementById('dateInput').style.visibility = 'hidden';
-      document.getElementById('timeInput').style.visibility = 'hidden';
+      // document.getElementById('bookButton').style.visibility = 'hidden' ;
+      // document.getElementById('dateIn').style.visibility = 'hidden';
+      // document.getElementById('timeIn').style.visibility = 'hidden';
+      // document.getElementById('dateInput').style.visibility = 'hidden';
+      // document.getElementById('timeInput').style.visibility = 'hidden';
       /**
        * Callback after api.js is loaded.
        */
@@ -63,7 +63,7 @@
        */
       function maybeEnableButtons() {
         if (gapiInited && gisInited) {
-          document.getElementById('authorize_button').style.visibility = 'visible';
+          // document.getElementById('authorize_button').style.visibility = 'visible';
           
           
         }
@@ -79,12 +79,16 @@
           }
         //   document.getElementById('signout_button').style.visibility = 'visible';
           // document.getElementById('authorize_button').innerText = 'Refresh';
-          document.getElementById('bookButton').style.visibility = 'visible';
-          document.getElementById('dateIn').style.visibility = 'visible';
-          document.getElementById('timeIn').style.visibility = 'visible';
-          document.getElementById('dateInput').style.visibility = 'visible';
-          document.getElementById('timeInput').style.visibility = 'visible';
+          // document.getElementById('bookButton').style.visibility = 'visible';
+          // document.getElementById('dateIn').style.visibility = 'visible';
+          // document.getElementById('timeIn').style.visibility = 'visible';
+          // document.getElementById('dateInput').style.visibility = 'visible';
+          // document.getElementById('timeInput').style.visibility = 'visible';
           await listUpcomingEvents();
+        // temp change start
+          document.getElementById("authorize-button").innerHTML = document.getElementById("booking-form").innerHTML;
+          // temp cha end
+          await  addEventToCalendar();
         };
 
         if (gapi.client.getToken() === null) {
@@ -105,14 +109,14 @@
         if (token !== null) {
           google.accounts.oauth2.revoke(token.access_token);
           gapi.client.setToken('');
-          document.getElementById('content').innerText = '';
+          // document.getElementById('content').innerText = '';
           // document.getElementById('authorize_button').innerText = 'Authorize';
         //   document.getElementById('signout_button').style.visibility = 'hidden';
-          document.getElementById('bookButton').style.visibility = 'hidden';
-          document.getElementById('dateIn').style.visibility = 'hidden';
-          document.getElementById('timeIn').style.visibility = 'hidden';
-          document.getElementById('dateInput').style.visibility = 'hidden';
-          document.getElementById('timeInput').style.visibility = 'hidden';
+          // document.getElementById('bookButton').style.visibility = 'hidden';
+          // document.getElementById('dateIn').style.visibility = 'hidden';
+          // document.getElementById('timeIn').style.visibility = 'hidden';
+          // document.getElementById('dateInput').style.visibility = 'hidden';
+          // document.getElementById('timeInput').style.visibility = 'hidden';
         }
       }
 
@@ -140,26 +144,26 @@
 
         const events = response.result.items;
         if (!events || events.length == 0) {
-          document.getElementById('content').innerText = 'No events found.';
+          // document.getElementById('content').innerText = 'No events found.';
           return;
         }
         // Flatten to string to display
         const output = events.reduce(
             (str, event) => `${str}${event.summary} (${event.start.dateTime || event.start.date})\n`,
             'Events:\n');
-        document.getElementById('content').innerText = output;
+        // document.getElementById('content').innerText = output;
       }
 
       async function addEventToCalendar() {
         
-        let dateTime = convertToISO()
-        let startDate = new Date(dateTime)
+        // let dateTime = convertToISO()
+        let startDate = new Date()
         startDate.setHours(startDate.getHours()-2)
         startDate = new Date(startDate.getTime() + 60 * 60 * 1000 * 2);
         dateTime = startDate.toISOString();
         const isoEndDate = new Date(startDate.getTime() + 60 * 60 * 1000);
         const endDate = isoEndDate.toISOString();
-        document.getElementById('content').innerText = dateTime
+        // document.getElementById('content').innerText = dateTime
 
        
 
@@ -174,7 +178,7 @@
           'timeZone': 'Africa/Johannesburg'
         },
         "attendees": [
-          {"email": "44nator@gmail.com"}
+          {"email": "solamnyangiwe@gmail.com"}
         ]
       };
 
@@ -182,11 +186,22 @@
         'calendarId': 'e45ebb649a6b1ef5e0e9492a75572238103b2ff41f539190d75c1a2fa56f9b20@group.calendar.google.com', // Use 'primary' for user's primary calendar
         'resource': event
       }).then(function(response) {
-        showGreenTick()
+        // showGreenTick()
         const output = 'Event created: ' + response.result.htmlLink
-        // console.log('Event created: ' + response.result.htmlLink);
-        document.getElementById('content').innerText = output
-        document.getElementById('content').innerText = dateTime;
+        console.log('Event created: ' + response.result.htmlLink);
+        // document.getElementById('content').innerText = output
+        // document.getElementById('content').innerText = dateTime;
+        
+      });
+      gapi.client.calendar.events.insert({
+        'calendarId': 'primary', // Use 'primary' for user's primary calendar
+        'resource': event
+      }).then(function(response) {
+        // showGreenTick()
+        const output = 'Event created on primary calender: ' + response.result.htmlLink
+        console.log('Event created: ' + response.result.htmlLink);
+        // document.getElementById('content').innerText = output
+        // document.getElementById('content').innerText = dateTime;
         
       });
     }
