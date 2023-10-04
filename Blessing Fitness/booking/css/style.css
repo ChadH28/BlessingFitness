@@ -4615,3 +4615,63 @@ form .stars label:before {
     margin-top: 5px; /* Adjust the margin as needed for vertical alignment */
 }
 
+
+.timetable-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* Style individual timetable items */
+.timetable {
+    flex: 0 0 calc(20% - 20px); /* Adjust the width as needed */
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    height: 150px;
+    border-radius: 5px;
+}
+
+/* Style headings */
+.timetable h2 {
+    font-size: 18px;
+    margin: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #1a1a1a;
+    text-align: center;
+}
+
+/* Style event details */
+.timetable h5 {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Style event time */
+.timetable p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Style the "Book With Google" button */
+.timetable button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Apply responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .timetable {
+        flex: 0 0 calc(50% - 20px); /* Two items per row on smaller screens */
+        margin-right: 0;
+    }
+}
