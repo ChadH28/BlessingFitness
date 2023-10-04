@@ -4616,6 +4616,11 @@ form .stars label:before {
 }
 
 
+.table-heading{
+
+    text-align: center;
+}
+
 .timetable-container {
     display: flex;
     justify-content: space-between;

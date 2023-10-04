@@ -1244,6 +1244,11 @@ img:last-child:nth-child(5) {
     cursor: pointer;
 }
 
+.table-heading{
+
+    text-align: center;
+}
+
 /* Apply responsive styles for smaller screens */
 @media (max-width: 768px) {
     .timetable {
