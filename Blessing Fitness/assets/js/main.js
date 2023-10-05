@@ -146,5 +146,7 @@ function showSlides() {
 });
 
 
-//.we are working in the adventures page//
+//.we are working in the About slide//
+
+
 
