@@ -153,7 +153,7 @@
 								<li>Student Fee : R850pm</li>
 							</ul>
 						</div>
-						<!--ROOM PRICE-->
+						<!-- ROOM PRICE -->
 						<div class="r4 r-com">
 							<p>Drop in fee :</p>
 							<p><span class="room-price-1">R150</span> <span class="room-price">R: 200</span>
@@ -223,11 +223,39 @@
 							<div class="r2-available">Available</div>
 							<p>Sign up</p> <button onclick="handleAuthClick()" class="authorize-button">Book with google</button> </div>
 					</div>
+					<div class="room">
+						<div class="ribbon ribbon-top-left"><span>Featured</span>
+						</div>
+						<!--ROOM IMAGE-->
+						<div class="r1 r-com"><img src="../assets/images/hom-resize.png" alt="" />
+						</div>
+						<!--ROOM RATING-->
+						<div class="r2 r-com">
+							<div class="r2-ratt"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <img src="images/h-trip.png" alt="" /> <span>Excellent  4.7 / 5</span> </div>
+							<h5>Pay three months</h5>
+							<h5>and get three months</h5>
+							<h5>of boxfit bootcamp</h5>
+							<h5>by coach blessing</h5>
+
+
+						</div>
+						<!--ROOM AMINITIES-->
+						<div class="r3 r-com">
+						</div>
+						<!--ROOM PRICE-->
+						<div class="r4 r-com">
+							<p><span class="room-price-1">Only R2700pm</span> <span class="room-price"></span>
+							</p>
+						</div>
+						<!--ROOM BOOKING BUTTON-->
+						<div class="r5 r-com">
+							<div class="r2-available">Available</div>
+							<p>Sign up</p> <button onclick="handleAuthClick()" class="authorize-button">Book with google</button> </div>
+					</div>
 
 
 						<!--Time table startts here-->
 		
-					
 						<div class="table-heading"> 
 							<h1>TIME TABLE</h1>
 							<h4>(Boxfit bootcamp group classes time table)</h4>
@@ -272,21 +300,28 @@
                                 18:30 - 19:30
                                 <button class="authorize_button" onclick="handleAuthClick()">Book With Google</button>
                             </div>
+						
                         </div>
 
 					
 					<!--END ROOM SECTION-->
 					<!--ROOM SECTION-->
 				</div>
-
-				
-				
 				<div id="booking-form" class = "form">
 					<label id = "dateIn" for="dateInput">Select Date:</label>
 					<input type="date" id="dateInput" required/>
 				  
 					<label id="timeIn" for="timeInput">Select Time:</label>
 					<input type="time" id="timeInput" required/>
+					<label for="cellphone">Cellphone Number:</label>
+					<input type="tel" id="cellphone" name="cellphone" placeholder="Enter your cellphone number" required>
+
+					<input type="radio" id="monthly" name="service" value="1000">
+						<label for="monthly">Monthly subscription:R1000</label><br>
+						<input type="radio" id="student" name="service" value="850">
+						<label for="student">Student :R850pm</label><br>  
+						<input type="radio" id="dropin" name="service" value="150">
+						<label for="dropin">Drop-in:R150 </label><br><br>
 				  
 				  <button id="bookButton" onclick="addEventToCalendar()">Book</button>
 				  <!-- <span id="greenTick">&#10004;</span>  -->
@@ -308,8 +343,6 @@
 					<div class="foot-com foot-1">
 						<ul>
 							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-							</li>
-							<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
 							</li>
 							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 							</li>
@@ -356,9 +389,7 @@
 										<p>Join our socials</p>
 										<ul>
 											<li><a href="#!"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-											<li><a href="#!"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
 											<li><a href="#!"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
-											<li><a href="#!"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
 											<li><a href="#!"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
 											<li><a href="#!"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> </li>
 										</ul>
