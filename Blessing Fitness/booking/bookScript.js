@@ -166,11 +166,13 @@
         const isoEndDate = new Date(startDate.getTime() + 60 * 60 * 1000);
         const endDate = isoEndDate.toISOString();
         // document.getElementById('content').innerText = dateTime
+        let selectedOption = getRadioValue()
+
 
        
 
       var event = {
-        'summary': 'Package 1',
+        'summary': selectedOption,
         'start': {
           'dateTime': dateTime ,
           'timeZone': 'Africa/Johannesburg'
@@ -230,5 +232,21 @@
         // Optionally, you can disable the button after it's clicked
         var myButton = document.getElementById("bookButton");
         myButton.disabled = true;
+    }
+
+    function getRadioValue(){
+        const radioButtons = document.getElementsByName("service");
+
+        // Initialize a variable to store the selected option
+        let selectedOption = "";
+
+        // Loop through all radio buttons and find the selected one
+        for (let i = 0; i < radioButtons.length; i++) {
+          if (radioButtons[i].checked) {
+            selectedOption = radioButtons[i].value;
+            break; // Exit the loop once a selected option is found
+          }
+        }
+        return selectedOption;
     }
       
