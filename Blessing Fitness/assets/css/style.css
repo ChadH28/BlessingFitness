@@ -1189,38 +1189,38 @@ img:last-child:nth-child(5) {
 
     /* Show the dropdown content when the menu icon is clicked */
     .menu-icon.active + .dropdown-content {
-        display: block;
+        display: none;
     }
 }
 
-          .gallery {
-            padding: 50px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-          }
-          
-          .adventure-image {
-            flex-basis: calc(33.33% - 20px);
-            margin-bottom: 20px;
-            box-sizing: border-box;
-            text-align: center; /* Center-align text within each adventure-image */
-          }
-          
-          .adventure-image img {
-            width: 100%;
-            height: auto;
-          }
-          
-          /* Center-align h3 and p elements */
-          .adventure-image h3,
-          .adventure-image p {
-            text-align: center;
-          }
-          .adventures-head{
-            padding-top:150px;
-            text-align: center;
-          }
+.gallery {
+padding: 50px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.adventure-image {
+flex-basis: calc(33.33% - 20px);
+margin-bottom: 20px;
+box-sizing: border-box;
+text-align: center; /* Center-align text within each adventure-image */
+}
+
+.adventure-image img {
+width: 100%;
+height: auto;
+}
+
+/* Center-align h3 and p elements */
+.adventure-image h3,
+.adventure-image p {
+text-align: center;
+}
+.adventures-head{
+padding-top:150px;
+text-align: center;
+}
           
 
           /* Style for the WhatsApp button */

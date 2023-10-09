@@ -10,6 +10,11 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
     body {
         font-size: 15px;
     }
+	.menu-icon{
+		visibility: hidden;
+		background-color: aqua;
+	}
+	
     
 
 }
@@ -48,8 +53,15 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 
 	}
 	.menu-icon {
-        display: block;
-		
+		margin: 10px;
+		display: block;
+		background-color: #3b3b3b;
+		width: 50px;
+		height:30px;
+		position: fixed;
+		top: 0; /* Optional: You can adjust the top position if needed */
+		right: 0;
+	}
     }
 	.promotion {
     margin-bottom: 30px;
@@ -95,7 +107,8 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		.timetable-container {
 			display: flex;
 			flex-direction: column;
-		}
+			
+		}	
 	
 		.timetable {
 			margin-bottom: 20px; /* Add spacing between timetable items */
@@ -128,10 +141,11 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		}
 	
 		.adventure-image {
-			margin-bottom: 20px; /* Add spacing between adventure images */
+			margin: 20px; /* Add spacing between adventure images */
+			width: 100%;
 		}
 }
-}
+
    
 
 
