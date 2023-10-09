@@ -186,6 +186,7 @@
         ]
       };
 
+
       gapi.client.calendar.events.insert({
         'calendarId': 'e45ebb649a6b1ef5e0e9492a75572238103b2ff41f539190d75c1a2fa56f9b20@group.calendar.google.com', // Use 'primary' for user's primary calendar
         'resource': event
@@ -255,4 +256,5 @@
     //     return ""
     //   }
     // }
+    
       

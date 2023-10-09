@@ -26,6 +26,14 @@ jQuery(document).ready(function ($) {
             }
         }
     });
+//--------------menu------------------------//
+
+const menuIcon = document.querySelector('.menu-icon');
+const mobileMenu = document.querySelector('.dropdown-content');
+
+menuIcon.addEventListener('click', () => {
+    mobileMenu.classList.toggle('show');
+});
 
 //Starts the slideshow for home page
 let slideIndex = 0;
@@ -91,6 +99,13 @@ function showSlides() {
 //        });
 //        wow.init();
    
+
+    $(document).ready(function() {
+        $(".menu-icon").click(function() {
+            $(this).toggleClass("active");
+        });
+    });
+
 
 /* ---------------------------------------------------------------------
      Carousel

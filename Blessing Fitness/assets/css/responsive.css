@@ -47,6 +47,10 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
     font-size: 39px;
 
 	}
+	.menu-icon {
+        display: block;
+		
+    }
 	.promotion {
     margin-bottom: 30px;
     text-align: center;
@@ -54,7 +58,22 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.portfolio {
     margin-bottom: 30px;
     text-align: center;
+	margin-top: 50px;
 	}
+	.video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio (iframe's height/width ratio) */
+        overflow: hidden;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+	
 	.team-heading {
     text-align: center;
 	}
@@ -71,8 +90,50 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	float:none;
 	margin-top:80px;
 	}
-   
+	/* Apply responsive styles for smaller screens */
+	@media (max-width: 768px) {
+		.timetable-container {
+			display: flex;
+			flex-direction: column;
+		}
+	
+		.timetable {
+			margin-bottom: 20px; /* Add spacing between timetable items */
+			width: 100%;
+		}
+	
+		.shopping-section {
+			text-align: center; /* Center align the content */
+		}
+
+    .shopping-item {
+        width: 90%; /* Make each shopping item take up full width */
+		height: 50%;
+        margin-bottom: 20px; /* Add some spacing between items */
+        float: none; /* Remove any floats */}
+	.price-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center; /* Center items horizontally */
+		}
+	
+	.pricelist {
+			width: 100%; /* Make each pricelist item take up full width */
+			margin-bottom: 20px; /* Add some spacing between items */
+		}
+	
+	    .gallery {
+			display: flex;
+			flex-direction: column;
+		}
+	
+		.adventure-image {
+			margin-bottom: 20px; /* Add spacing between adventure images */
+		}
 }
+}
+   
+
 
 
 
@@ -91,6 +152,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.portfolio {
     margin-bottom: 30px;
     text-align: center;
+	
 	}
 	.team-heading {
     text-align: center;

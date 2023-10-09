@@ -87,7 +87,7 @@ a span {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    /*    direction: rtl;*/
+    text-align: center;
 }
 p {
     margin: 0 0 15px;
@@ -156,8 +156,9 @@ h2 {
 h3 {
     font-weight: 300;
     margin-bottom: .9rem;
-    font-size: 2.1rem;
     line-height: 2.5rem;
+    padding-top:20px;
+    margin:20px;
 }
 h4 {
     font-size: 1.6rem;
@@ -180,6 +181,13 @@ p {
 p:last-child {
     margin-bottom: 0px;
 }
+
+.home-welcome h4 {
+    border-bottom: 1px solid #3e3e3e; /* You can adjust the color and thickness as needed */
+    padding-bottom: 20px; /* Adjust the padding as needed to control the distance between text and border */
+
+  }
+  
 /*.home-wrap h1,*/
 .home-wrap h2,
 .home-wrap h3,
@@ -866,10 +874,7 @@ Working on the Heading in home page
     margin-bottom: 10px;
 }
 
-.row{
 
-    
-}
 
 
 h5 {
@@ -904,6 +909,8 @@ h5 {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin:20px;
+
     }
     
     .pricelist {
@@ -916,6 +923,7 @@ h5 {
         flex-direction: column; /* Stack content vertically */
         justify-content: space-between; /* Push button to the bottom */
         background-color: #f7f7f7; /* Light background color */
+        border-radius: 5px;
     }
     
     .related-articles-title {
@@ -1139,10 +1147,51 @@ img:last-child:nth-child(5) {
   .box button:hover {
     background-color: #555;
   }
-  
 
-          /* Add your inline CSS styles here for demonstration purposes */
-      
+  /* Styles for the mobile menu icon */
+/* CSS for smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+    /* Hide the desktop menu */
+    .nav-links {
+        display: none;
+    }
+    
+    /* Show the mobile menu and style the hamburger icon */
+    .mobile-menu {
+        display: block;
+    }
+
+    /* Style the hamburger menu icon (you can customize this further) */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Style the dropdown content (you can customize this further) */
+    .dropdown-content {
+        display: none;
+        background-color: #f9f9f9;
+        position: absolute;
+        top: 50px; /* Adjust the top position as needed */
+        right: 0;
+        z-index: 1;
+    }
+
+    .dropdown-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dropdown-content ul li {
+        padding: 10px;
+    }
+
+    /* Show the dropdown content when the menu icon is clicked */
+    .menu-icon.active + .dropdown-content {
+        display: block;
+    }
+}
 
           .gallery {
             padding: 50px;
@@ -1194,13 +1243,53 @@ img:last-child:nth-child(5) {
 
         /* Apply styles to the container */
        /* Style timetable container */
+
+
 .timetable-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     /* margin-top: 80px; */
+
+
+
+
 }
+.about-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .about-content {
+    flex: 1;
+    padding: 20px; /* Adjust the padding as needed */
+  }
+  
+  .about-image {
+    flex: 1;
+    padding: 20px; /* Adjust the padding as needed */
+    text-align: right;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+  .about-content {
+    text-align: center; /* Center-align the text content */
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+
+
+
+  
 
 /* Style individual timetable items */
 .timetable {
@@ -1249,13 +1338,7 @@ img:last-child:nth-child(5) {
     text-align: center;
 }
 
-/* Apply responsive styles for smaller screens */
-@media (max-width: 768px) {
-    .timetable {
-        flex: 0 0 calc(50% - 20px); /* Two items per row on smaller screens */
-        margin-right: 0;
-    }
-}
+
 
 /*----------------------shopping section-----------------*/
 
