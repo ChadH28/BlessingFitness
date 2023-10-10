@@ -6,17 +6,16 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 */
 
 /* Portrait tablets and medium desktops */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) {
     body {
         font-size: 15px;
     }
-	.menu-icon{
+	/* .menu-icon{
 		visibility: hidden;
-		background-color: aqua;
-	}
-	
-    
-
+	} */
+	/* .dropdown-content{
+		visibility: hidden;
+	} */ 
 }
 
 /* Portrait tablets and small desktops */
@@ -40,9 +39,15 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	float:none;
 	margin-top:80px;
 	}
-
-
+	.dropdown-content{
+		visibility: hidden;
+	}
+		
+	¬
 }
+
+
+
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
     html {
@@ -62,7 +67,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		top: 0; /* Optional: You can adjust the top position if needed */
 		right: 0;
 	}
-    }
+    
 	.promotion {
     margin-bottom: 30px;
     text-align: center;
@@ -102,6 +107,12 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	float:none;
 	margin-top:80px;
 	}
+	.dropdown-content{
+		width: 100px;
+	}
+}
+
+
 	/* Apply responsive styles for smaller screens */
 	@media (max-width: 768px) {
 		.timetable-container {
@@ -143,6 +154,9 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		.adventure-image {
 			margin: 20px; /* Add spacing between adventure images */
 			width: 100%;
+		}
+		.menu-icon{
+			background-color: rgb(0, 0, 0);
 		}
 }
 
