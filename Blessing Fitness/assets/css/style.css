@@ -850,6 +850,8 @@ color: #000000;
 }
 
 
+
+
 /*
 Working on the Heading in home page
 */
@@ -1189,8 +1191,10 @@ img:last-child:nth-child(5) {
 
     /* Show the dropdown content when the menu icon is clicked */
     .menu-icon.active + .dropdown-content {
-        display: none;
+        display:flex;
     }
+
+
 }
 
 .gallery {

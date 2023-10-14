@@ -10,12 +10,12 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
     body {
         font-size: 15px;
     }
-	/* .menu-icon{
+	.menu-icon{
 		visibility: hidden;
-	} */
-	/* .dropdown-content{
+	}
+ 	.dropdown-content{
 		visibility: hidden;
-	} */ 
+	}
 }
 
 /* Portrait tablets and small desktops */
@@ -42,14 +42,14 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.dropdown-content{
 		visibility: hidden;
 	}
-		
-	¬
+	
+	
 }
 
 
 
 /* Landscape phones and portrait tablets */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     html {
         font-size: 80%;
     }
@@ -60,13 +60,15 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.menu-icon {
 		margin: 10px;
 		display: block;
-		background-color: #3b3b3b;
+		background-color: #555555;
 		width: 50px;
 		height:30px;
 		position: fixed;
-		top: 0; /* Optional: You can adjust the top position if needed */
+		top: 5px; /* Optional: You can adjust the top position if needed */
 		right: 0;
 	}
+
+	
     
 	.promotion {
     margin-bottom: 30px;
@@ -109,6 +111,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	}
 	.dropdown-content{
 		width: 100px;
+		
 	}
 }
 
@@ -157,8 +160,26 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		}
 		.menu-icon{
 			background-color: rgb(0, 0, 0);
+			border: 5px white;
+
+			
 		}
+		.dropdown-content{
+			padding: 5px;
+			margin-top: 30px;
+			margin-right: 15px;
+			display: block;
+			background-color: #1d1d1d;
+			width: 300px;
+			height:200px;
+			position: fixed;
+			top: 5px; /* Optional: You can adjust the top position if needed */
+			visibility: visible;
+			
+		}
+
 }
+
 
    
 
@@ -188,6 +209,13 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.portfolio img {
     margin-left:0;
 	}
+	.menu-icon{
+		visibility: hidden;
+	}
+ 	.dropdown-content{
+		visibility: hidden;
+	}
+	
 
 }
 

@@ -29,10 +29,20 @@ jQuery(document).ready(function ($) {
 //--------------menu------------------------//
 
 const menuIcon = document.querySelector('.menu-icon');
-const mobileMenu = document.querySelector('.dropdown-content');
+const mobileMenu = document.querySelector('.mobile-menu');
+let isHidden = true;
+document.getElementById("mobile-menu").style.display= "none";
+
 
 menuIcon.addEventListener('click', () => {
+    if (isHidden) {
+        document.getElementById("mobile-menu").style.display= "block";
+    } else {
+        document.getElementById("mobile-menu").style.display= "none";
+    }
+    isHidden = !isHidden; // Toggle the state
     mobileMenu.classList.toggle('show');
+
 });
 
 //Starts the slideshow for home page
