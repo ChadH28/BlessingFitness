@@ -6,7 +6,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 */
 
 /* Portrait tablets and medium desktops */
-@media (min-width: 992px) {
+@media (max-width: 992px) {
     body {
         font-size: 15px;
     }
@@ -109,10 +109,10 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	float:none;
 	margin-top:80px;
 	}
-	.dropdown-content{
-		width: 100px;
-		
-	}
+	.menu-icon,
+    .dropdown-content {
+        visibility: hidden;
+    }
 }
 
 
@@ -177,6 +177,10 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 			visibility: visible;
 			
 		}
+		.menu-icon,
+		.dropdown-content {
+			visibility:visible;
+		}
 
 }
 
@@ -209,15 +213,16 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.portfolio img {
     margin-left:0;
 	}
-	.menu-icon{
-		visibility: hidden;
-	}
- 	.dropdown-content{
-		visibility: hidden;
-	}
+	.menu-icon,
+    .dropdown-content {
+        visibility: visible;
+    }
 	
 
 }
+
+
+
 
 
 
@@ -230,6 +235,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.team-heading {
     text-align: center;
 	}
+	
 	
 }
 
