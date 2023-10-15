@@ -18,13 +18,6 @@
       let gapiInited = false;
       let gisInited = false;
 
-      // document.getElementById('authorize_button').style.visibility = 'hidden';
-    //   document.getElementById('signout_button').style.visibility = 'hidden';
-      // document.getElementById('bookButton').style.visibility = 'hidden' ;
-      // document.getElementById('dateIn').style.visibility = 'hidden';
-      // document.getElementById('timeIn').style.visibility = 'hidden';
-      // document.getElementById('dateInput').style.visibility = 'hidden';
-      // document.getElementById('timeInput').style.visibility = 'hidden';
       /**
        * Callback after api.js is loaded.
        */
@@ -64,9 +57,7 @@
        */
       function maybeEnableButtons() {
         if (gapiInited && gisInited) {
-          // document.getElementById('authorize_button').style.visibility = 'visible';
-          
-          
+          // document.getElementById('authorize_button').style.visibility = 'visible'; 
         }
       }
 
@@ -78,16 +69,11 @@
           if (resp.error !== undefined) {
             throw (resp);
           }
-        //   document.getElementById('signout_button').style.visibility = 'visible';
-          // document.getElementById('authorize_button').innerText = 'Refresh';
-          // document.getElementById('bookButton').style.visibility = 'visible';
-          // document.getElementById('dateIn').style.visibility = 'visible';
-          // document.getElementById('timeIn').style.visibility = 'visible';
-          // document.getElementById('dateInput').style.visibility = 'visible';
-          // document.getElementById('timeInput').style.visibility = 'visible';
           await listUpcomingEvents();
         // temp change start
           document.getElementById("authorize-button").innerHTML = document.getElementById("booking-form").innerHTML;
+          document.getElementById("1 on 1").style.display="none";
+        document.getElementById("2 on 1f").style.display="none";
           // temp change end
 
           // await  addEventToCalendar();
@@ -111,14 +97,6 @@
         if (token !== null) {
           google.accounts.oauth2.revoke(token.access_token);
           gapi.client.setToken('');
-          // document.getElementById('content').innerText = '';
-          // document.getElementById('authorize_button').innerText = 'Authorize';
-        //   document.getElementById('signout_button').style.visibility = 'hidden';
-          // document.getElementById('bookButton').style.visibility = 'hidden';
-          // document.getElementById('dateIn').style.visibility = 'hidden';
-          // document.getElementById('timeIn').style.visibility = 'hidden';
-          // document.getElementById('dateInput').style.visibility = 'hidden';
-          // document.getElementById('timeInput').style.visibility = 'hidden';
         }
       }
 
@@ -166,13 +144,11 @@
         const isoEndDate = new Date(startDate.getTime() + 60 * 60 * 1000);
         const endDate = isoEndDate.toISOString();
         // document.getElementById('content').innerText = dateTime
-        let selectedOption = getRadioValue()
-
-
-       
-
+        let selectedOption = getRadioValue();
+        let description = document.getElementById("cellphone").value
       var event = {
         'summary': selectedOption,
+        'description': description,
         'start': {
           'dateTime': dateTime ,
           'timeZone': 'Africa/Johannesburg'
@@ -195,7 +171,7 @@
         const output = 'Event created: ' + response.result.htmlLink
         console.log('Event created: ' + response.result.htmlLink);
         // document.getElementById('content').innerText = output
-        // document.getElementById('content').innerText = dateTime;
+        // docuent.getElementById('content').innerText = dateTime;
         document.getElementById("authorize-button").innerHTML =  '<div style="color: green;">&#10004;</div>'
         
       });
@@ -249,12 +225,118 @@
           }
         }
         return selectedOption;
-    } 
+    }
+    
+    /**
+       *  Sign in for special offer.
+       */
+    function handleAuthClick1() {
+      tokenClient.callback = async (resp) => {
+        if (resp.error !== undefined) {
+          throw (resp);
+        }
+        await listUpcomingEvents();
+      // temp change start
+        document.getElementById("special-offer").innerHTML = document.getElementById("booking-form").innerHTML;
+        document.getElementById("mon").style.display="none";
+        document.getElementById("stu").style.display="none";
+        document.getElementById("dro").style.display="none";
+        document.getElementById("1 on 1").style.display="none";
+        document.getElementById("2 on 1f").style.display="none";
+    
+        // temp change end
+        var valueToSelect = "Special Offer: 2750pm";
 
-    // function generateTitle(optionValue){
-    //   if(optionValue=='850'){
-    //     return ""
-    //   }
-    // }
+        // Get the radio buttons by name
+        var radioButtons = document.getElementsByName("service");
+
+        // Loop through the radio buttons and check the one with the matching value
+        for (var i = 0; i < radioButtons.length; i++) {
+            if (radioButtons[i].value === valueToSelect) {
+                radioButtons[i].checked = true;
+                break; // Exit the loop once the matching radio button is found
+            }
+        }
+      };
+
+      if (gapi.client.getToken() === null) {
+        // Prompt the user to select a Google Account and ask for consent to share their data
+        // when establishing a new session.
+        tokenClient.requestAccessToken({prompt: 'consent'});
+      } else {
+        // Skip display of account chooser and consent dialog for an existing session.
+        tokenClient.requestAccessToken({prompt: ''});
+      }
+    }
+
+  
+
+    function handleAuthClick2() {
+      tokenClient.callback = async (resp) => {
+        if (resp.error !== undefined) {
+          throw (resp);
+        }
+        await listUpcomingEvents();
+      // temp change start
+        document.getElementById("2 on 1").innerHTML = document.getElementById("booking-form").innerHTML;
+        document.getElementById("mon").style.display="none";
+        document.getElementById("stu").style.display="none";
+        document.getElementById("dro").style.display="none";
+
+        // temp change end
+      };
+
+      if (gapi.client.getToken() === null) {
+        // Prompt the user to select a Google Account and ask for consent to share their data
+        // when establishing a new session.
+        tokenClient.requestAccessToken({prompt: 'consent'});
+      } else {
+        // Skip display of account chooser and consent dialog for an existing session.
+        tokenClient.requestAccessToken({prompt: ''});
+      }
+    }
+    function handleAuthClick3() {
+      tokenClient.callback = async (resp) => {
+        if (resp.error !== undefined) {
+          throw (resp);
+        }
+        await listUpcomingEvents();
+      // temp change start
+        document.getElementById("free months").innerHTML = document.getElementById("booking-form").innerHTML;
+        document.getElementById("mon").style.display="none";
+        document.getElementById("stu").style.display="none";
+        document.getElementById("dro").style.display="none";
+        document.getElementById("1 on 1").style.display="none";
+        document.getElementById("2 on 1f").style.display="none";
+    
+        // temp change end
+        var valueToSelect = "Three months free:R2700pm";
+
+        // Get the radio buttons by name
+        var radioButtons = document.getElementsByName("service");
+
+        // Loop through the radio buttons and check the one with the matching value
+        for (var i = 0; i < radioButtons.length; i++) {
+            if (radioButtons[i].value === valueToSelect) {
+                radioButtons[i].checked = true;
+                break; // Exit the loop once the matching radio button is found
+            }
+        }
+      };
+
+      if (gapi.client.getToken() === null) {
+        // Prompt the user to select a Google Account and ask for consent to share their data
+        // when establishing a new session.
+        tokenClient.requestAccessToken({prompt: 'consent'});
+      } else {
+        // Skip display of account chooser and consent dialog for an existing session.
+        tokenClient.requestAccessToken({prompt: ''});
+      }
+    }
+
+
+   
+
+
     
       

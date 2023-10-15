@@ -164,7 +164,7 @@
 						<!--ROOM BOOKING BUTTON-->
 						<div id="authorize-button" class="r5 r-com">
 							<div class="r2-available">Available</div>
-							<p>Sign up</p> <button onclick="handleAuthClick()" class="authorize-button">Book with google  </button> </div>
+							<p>Sign up</p> <button onclick="handleAuthClick()" class="authorize-button" >Book with google  </button> </div>
 					</div>
 
 					
@@ -176,7 +176,7 @@
 						<div class="ribbon ribbon-top-left"><span>Featured</span>
 						</div>
 						<!--ROOM IMAGE-->
-						<div class="r1 r-com"><img src="../assets/images/double-resize.jpg" alt="" />
+						<div class="r1 r-com"><img src="..assets/images/double-resize.jpg" alt="" />
 						</div>
 						<!--ROOM RATING-->
 						<div class="r2 r-com">
@@ -193,9 +193,9 @@
 							</p>
 						</div>
 						<!--ROOM BOOKING BUTTON-->
-						<div class="r5 r-com">
+						<div id="special-offer" class="r5 r-com">
 							<div class="r2-available">Available</div>
-							<p>Sign up</p> <button onclick="handleAuthClick()" class="authorize-button">Book with google</button> </div>
+							<p>Sign up</p> <button onclick="handleAuthClick1()" class="authorize-button">Book with google</button> </div>
 					</div>
 					<!--END ROOM SECTION-->
 					<!--ROOM SECTION-->
@@ -221,9 +221,9 @@
 							<p>R6000 per 10 sessions</p>
 						</div>
 					
-						<div class="r5 r-com">
+						<div id="2 on 1" class="r5 r-com">
 							<div class="r2-available">Available</div>
-							<p>Sign up</p> <button onclick="handleAuthClick()" class="authorize-button">Book with google</button> </div>
+							<p>Sign up</p> <button onclick="handleAuthClick2()" class="authorize-button">Book with google</button> </div>
 					</div>
 					<div class="room">
 						<div class="ribbon ribbon-top-left"><span>Featured</span>
@@ -250,21 +250,16 @@
 							</p>
 						</div>
 						<!--ROOM BOOKING BUTTON-->
-						<div class="r5 r-com">
+						<div id="free months" class="r5 r-com">
 							<div class="r2-available">Available</div>
-							<p>Sign up</p> <button onclick="handleAuthClick()" class="authorize-button">Book with google</button> </div>
+							<p>Sign up</p> <button onclick="handleAuthClick3()" class="authorize-button">Book with google</button> </div>
 					</div>
-
-
 						<!--Time table startts here-->
-		
 						<div class="table-heading"> 
 							<h1>TIME TABLE</h1>
 							<h4>(Boxfit bootcamp group classes time table)</h4>
 							<h5>Note: Classes are to be held at Mygym 79 Roeland street</h5>
-						</div>
-					 
-						                
+						</div>		                
                         <div class="timetable-container">
 					
                             <div class="timetable">
@@ -302,15 +297,11 @@
                                 18:30 - 19:30
                                 <button class="authorize_button" onclick="handleAuthClick()">Book With Google</button>
                             </div>
-						
                         </div>
-					
-
-					
 					<!--END ROOM SECTION-->
 					<!--ROOM SECTION-->
 				</div>
-				<div id="booking-form" class = "form">
+				<div id="booking-form" class = "form" style="display: none;">
 					<label id = "dateIn" for="dateInput">Select Date:</label>
 					<input type="date" id="dateInput" required/>
 				  
@@ -319,23 +310,23 @@
 					<label for="cellphone">Cellphone Number:</label>
 					<input type="tel" id="cellphone" name="cellphone" placeholder="Enter your cellphone number" required>
 
-					<input type="radio" id="monthly" name="service" value="1000">
-						<label for="monthly">Monthly subscription:R1000</label><br>
+					<input type="radio" id="monthly" name="service" value="Monthly subscription:R1000">
+						<label id="mon" for="monthly">Monthly subscription:R1000</label><br>
 						<input type="radio" id="student" name="service" value="Student :R850pm">
-						<label for="student">Student :R850pm</label><br>  
-						<input type="radio" id="dropin" name="service" value="150">
-						<label for="dropin">Drop-in:R150 </label><br><br>
+						<label id="stu" for="student">Student :R850pm</label><br>  
+						<input type="radio" id="dropin" name="service" value="Drop-in:R150">
+						<label id="dro" for="dropin">Drop-in:R150 </label><br>
+						<label id="1 on 1" for="one">1 ON 1 10 sessions</label><br>  
+						<input type="radio" id="one" name="service" value="1 on 1">
+						<label id="2 on 1f" for="two">2 ON 1 10 sessions</label><br>  
+						<input type="radio" id="two" name="service" value="2 on 1"><br>
+						<input type="radio" id="specialOf" name="service" value="Special Offer: 2750pm" style="display: none;">
+						<input type="radio" id="specialOf" name="service" value="Three months free:R2700pm" style="display: none;">
 				  
 				  <button id="bookButton" onclick="addEventToCalendar()">Book</button>
 				  <!-- <span id="greenTick">&#10004;</span>  -->
-			
 				</div>
 			</div>
-			
-
-			
-
-
 		</div>
 		<!--TOP SECTION-->
 		<!--TOP SECTION-->
