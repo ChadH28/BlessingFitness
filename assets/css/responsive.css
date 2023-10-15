@@ -13,9 +13,10 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.menu-icon{
 		visibility: hidden;
 	}
- 	.dropdown-content{
-		visibility: hidden;
-	}
+	.menu-icon,
+    .dropdown-content {
+        visibility: hidden;
+    }
 }
 
 /* Portrait tablets and small desktops */
@@ -39,9 +40,10 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	float:none;
 	margin-top:80px;
 	}
-	.dropdown-content{
-		visibility: hidden;
-	}
+	.menu-icon,
+    .dropdown-content {
+        visibility: hidden;
+    }
 	
 	
 }

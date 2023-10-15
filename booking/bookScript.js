@@ -158,7 +158,7 @@
           'timeZone': 'Africa/Johannesburg'
         },
         "attendees": [
-          {"email": "solamnyangiwe@gmail.com"}
+          {"email": "mteroblessing@gmail.com"}
         ]
       };
 
