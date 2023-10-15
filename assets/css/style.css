@@ -176,7 +176,8 @@ h6 {
 p {
     line-height: 1.5rem;
     font-size: 1.1rem;
-	color:#9aa0ab;
+	color:#303030;
+    
 }
 p:last-child {
     margin-bottom: 0px;
@@ -195,7 +196,7 @@ p:last-child {
 .home-wrap h5,
 .home-wrap p {
     color: #ffffff;
-    font-family: 'roboto', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 .text {
     color: #333333;
@@ -242,7 +243,7 @@ footer {
 section .subtitle h5 {
     margin-top: 10px;
     font-size: 1.3rem;
-    font-family: 'roboto', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 .parallax-section {
     max-width: 100%;
@@ -446,7 +447,7 @@ input:-ms-input-placeholder {
 }
 .home-bg .header-details h1{
 	text-transform:uppercase;
-	font-family: 'montserratbold';
+    font-family: 'Quicksand', sans-serif;
 	font-size:48px;
 	margin-bottom:20px;
 	line-height: 55px;
@@ -502,7 +503,7 @@ input:-ms-input-placeholder {
 	text-transform:uppercase;
 	font-size:26px;
 	margin-bottom:15px;
-	font-family: 'montserratbold';
+    font-family: 'Quicksand', sans-serif;
 }
 .portfolio h1 i{
 	font-size:5px;
@@ -534,12 +535,12 @@ input:-ms-input-placeholder {
     font-display: color=blue;
 }
 
-/* .team-heading h1{
+.team-heading h1{
 	text-transform:uppercase;
 	font-size:26px;
 	margin-bottom:15px;
 	font-family: 'montserratbold';
-} */
+}
 
 .team-heading h1 i{
 	font-size:7px;
@@ -590,7 +591,7 @@ input:-ms-input-placeholder {
 }
 .social-network a i{
 	margin:10px;
-	color:#b9c0c6;
+	color:#b2b2b2;
 	font-size:20px;
 	transition:.3s ease-in-out;
 	-webkit-transition:.3s ease-in-out;
@@ -982,6 +983,40 @@ h5 {
   margin-top: 150px;
 
 }
+
+.gallery-adventures {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery-item {
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    .gallery-adventures {
+        flex-direction: column;
+    }
+
+    .gallery-item {
+        width: 50%;
+    }
+}
+
+
 
 /* img {
   height: 100px;

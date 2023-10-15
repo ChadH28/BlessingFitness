@@ -75,9 +75,9 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
     text-align: center;
 	}
 	.portfolio {
-    margin-bottom: 30px;
+    padding-top: 30px;
     text-align: center;
-	margin-top: 50px;
+	
 	}
 	.video-container {
         position: relative;
@@ -158,7 +158,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		}
 	
 		.adventure-image {
-			margin: 20px; /* Add spacing between adventure images */
+			/* margin: 20px; Add spacing between adventure images */
 			width: 100%;
 		}
 		.menu-icon{
