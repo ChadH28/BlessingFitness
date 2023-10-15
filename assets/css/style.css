@@ -1150,6 +1150,32 @@ img:last-child:nth-child(5) {
     background-color: #555;
   }
 
+
+  /* Styles for the dropdown content (menu links) */
+.dropdown-content ul {
+    list-style: none; /* Remove default list bullets */
+    padding: 0; /* Remove default list padding */
+}
+
+/* Style for individual list items */
+.dropdown-content ul li {
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+
+/* Style for anchor links within list items */
+.dropdown-content ul li a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #d49a9a; /* Set link color */
+    font-size: 16px; /* Adjust link text size */
+    transition: color 0.3s; /* Add a color transition effect */
+}
+
+/* Style for anchor links on hover */
+.dropdown-content ul li:hover {
+    color: #007BFF; /* Change link color on hover */
+}
+
+
   /* Styles for the mobile menu icon */
 /* CSS for smaller screens (e.g., mobile) */
 @media (max-width: 768px) {
@@ -1172,11 +1198,12 @@ img:last-child:nth-child(5) {
     /* Style the dropdown content (you can customize this further) */
     .dropdown-content {
         display: none;
-        background-color: #f9f9f9;
+        background-color: #e7e7e7;
         position: absolute;
         top: 50px; /* Adjust the top position as needed */
         right: 0;
         z-index: 1;
+        
     }
 
     .dropdown-content ul {
@@ -1186,13 +1213,18 @@ img:last-child:nth-child(5) {
     }
 
     .dropdown-content ul li {
-        padding: 10px;
+        padding: 1px;
+        
+      
     }
 
     /* Show the dropdown content when the menu icon is clicked */
     .menu-icon.active + .dropdown-content {
         display:flex;
     }
+    .dropdown-content ul li a:hover{
+        color: aqua;
+    } 
 
 
 }

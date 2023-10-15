@@ -7,8 +7,8 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 
 /* Portrait tablets and medium desktops */
 @media (max-width: 992px) {
-    body {
-        font-size: 15px;
+    html {
+        font-size: 80%;
     }
 	.menu-icon{
 		visibility: hidden;
@@ -118,6 +118,9 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 
 	/* Apply responsive styles for smaller screens */
 	@media (max-width: 768px) {
+		html {
+			font-size: 80%;
+		}
 		.timetable-container {
 			display: flex;
 			flex-direction: column;
@@ -165,18 +168,33 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 			
 		}
 		.dropdown-content{
-			padding: 5px;
+			/* padding: 5px; */
 			margin-top: 30px;
 			margin-right: 15px;
 			display: block;
-			background-color: #1d1d1d;
 			width: 300px;
-			height:200px;
 			position: fixed;
 			top: 5px; /* Optional: You can adjust the top position if needed */
 			visibility: visible;
 			
+			
 		}
+
+		.dropdown-content ul li a {
+			display: block;
+			font-size: 13.5px;
+			padding: 5px 0px;
+			border-bottom: 1px solid #303b40;
+			padding: 12px 20px;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			color: #98999a;
+			
+		
+		}
+
+
 		.menu-icon,
 		.dropdown-content {
 			visibility:visible;
