@@ -17,6 +17,7 @@
       let tokenClient;
       let gapiInited = false;
       let gisInited = false;
+      var elementToChange = "authorize-button";
 
       /**
        * Callback after api.js is loaded.
@@ -74,6 +75,7 @@
           document.getElementById("authorize-button").innerHTML = document.getElementById("booking-form").innerHTML;
           document.getElementById("1 on 1").style.display="none";
         document.getElementById("2 on 1f").style.display="none";
+        elementToChange = "authorize-button";
           // temp change end
 
           // await  addEventToCalendar();
@@ -172,7 +174,7 @@
         console.log('Event created: ' + response.result.htmlLink);
         // document.getElementById('content').innerText = output
         // docuent.getElementById('content').innerText = dateTime;
-        document.getElementById("authorize-button").innerHTML =  '<div style="color: green;">&#10004;</div>'
+        document.getElementById(elementToChange).innerHTML =  '<div style="color: green;">&#10004;</div>'
         
       });
       gapi.client.calendar.events.insert({
@@ -243,6 +245,7 @@
         document.getElementById("dro").style.display="none";
         document.getElementById("1 on 1").style.display="none";
         document.getElementById("2 on 1f").style.display="none";
+        elementToChange = "special-offer";
     
         // temp change end
         var valueToSelect = "Special Offer: 2750pm";
@@ -282,6 +285,7 @@
         document.getElementById("mon").style.display="none";
         document.getElementById("stu").style.display="none";
         document.getElementById("dro").style.display="none";
+        elementToChange = "2 on 1";
 
         // temp change end
       };
@@ -308,6 +312,7 @@
         document.getElementById("dro").style.display="none";
         document.getElementById("1 on 1").style.display="none";
         document.getElementById("2 on 1f").style.display="none";
+        elementToChange = "free months";
     
         // temp change end
         var valueToSelect = "Three months free:R2700pm";
