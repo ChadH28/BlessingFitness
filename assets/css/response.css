@@ -1,0 +1,103 @@
+@media (max-width: 768px) {
+    html {
+        font-size: 80%;
+    }
+    .timetable-container {
+        display: flex;
+        flex-direction: column;
+        
+    }	
+
+    .timetable {
+        margin-bottom: 20px; /* Add spacing between timetable items */
+        width: 100%;
+    }
+
+    .shopping-section {
+        text-align: center; /* Center align the content */
+    }
+
+.shopping-item {
+    width: 90%; /* Make each shopping item take up full width */
+    height: 50%;
+    margin-bottom: 20px; /* Add some spacing between items */
+    float: none; /* Remove any floats */}
+.price-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+    }
+
+.pricelist {
+        width: 100%; /* Make each pricelist item take up full width */
+        margin-bottom: 20px; /* Add some spacing between items */
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .adventure-image {
+        /* margin: 20px; Add spacing between adventure images */
+        width: 100%;
+    }
+    .menu-icon{
+        background-color: rgb(0, 0, 0);
+        border: 5px white;
+
+        
+    }
+    .dropdown-content{
+        /* padding: 5px; */
+        margin-top: 5px;
+        margin-right: 15px;
+        display: block;
+        width: 300px;
+        position: fixed;
+        top: 5px; /* Optional: You can adjust the top position if needed */
+        visibility: visible;
+        
+        
+    }
+
+    .dropdown-content ul li a {
+        display: block;
+        font-size: 13.5px;
+        padding: 5px 0px;
+        border-bottom: 1px solid #303b40;
+        padding: 12px 20px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #98999a;
+        
+    
+    }
+
+
+    .menu-icon,
+    .dropdown-content {
+        visibility:visible;
+    }
+
+}
+
+
+@media (min-width: 769px) {
+    html {
+        font-size: 100%; /* Reset font size for desktop/tablet screens */
+    }
+
+    .menu-icon,
+    .dropdown-content {
+        visibility:hidden;
+    }
+
+}
+
+
+
+
+
+
