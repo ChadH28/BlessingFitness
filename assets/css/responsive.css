@@ -150,7 +150,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		}
 	
 	.pricelist {
-			width: 100%; /* Make each pricelist item take up full width */
+			/* Make each pricelist item take up full width */
 			margin-bottom: 20px; /* Add some spacing between items */
 		}
 	
@@ -213,6 +213,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 /* Landscape phones and smaller */
 @media (max-width: 480px) {
     html {
+		padding:0;
         font-size: 65%;
     }
 	.home-bg .header-details h1 {
@@ -232,12 +233,26 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	}
 	.portfolio img {
     margin-left:0;
+	
 	}
 	.menu-icon,
     .dropdown-content {
         visibility: visible;
     }
-	
+
+	.gallery{
+		padding: 0;;
+	}
+
+	.specials-fitness-row{
+		padding: 0;
+	}
+	.team-heading {
+    text-align: center;
+	}
+	slideshow-container{
+		padding-top: 10px;
+	}
 
 }
 
@@ -252,10 +267,8 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
     html {
         font-size: 60.5%;
     }
-	.team-heading {
-    text-align: center;
-	}
+
 	
-	
+
 }
 
