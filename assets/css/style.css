@@ -13,7 +13,7 @@ body {
     font-size: 15px;
     color: #565656;
     width: 100%;
-    padding: 0;
+    padding: 5px;
     margin-left: 0;
     margin-right: 0;
     font-family: 'open_sansregular';
@@ -178,6 +178,18 @@ p {
     font-size: 1.1rem;
 	color:#131a20;
     
+}
+
+.merch-prices {
+    font-size: 1.1rem;
+	color:#ffffff;
+
+}
+
+.merch-headings {
+  
+	color:#830000;
+
 }
 p:last-child {
     margin-bottom: 0px;
@@ -852,7 +864,15 @@ color: #000000;
 }
 
 
-
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    color: white;
+    padding-top: 5px;
+}
 
 /*
 Working on the Heading in home page
