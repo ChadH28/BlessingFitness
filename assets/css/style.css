@@ -981,14 +981,6 @@ h5 {
 }
 
 
-.pricelist {
-    padding: 20px;
-    border: 1px solid rgb(255, 255, 255);
-    text-align: center;
-    /* border-radius: 10px; */
-    width: 300px;
-    background-color: #ff6a6a;
-}
 
 .authorize_button {
     margin-top: auto; /* Adjust the margin as needed */
