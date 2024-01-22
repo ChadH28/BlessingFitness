@@ -55,9 +55,7 @@ img {
     -ms-user-select: none;
     user-select: none;
     -webkit-user-drag: none;
-
-
-    user-select: none; /* Prevent image selection */
+     user-select: none; /* Prevent image selection */
     pointer-events: none; /* Prevent interactions, including dragging */
 }
 a,
@@ -74,6 +72,26 @@ a span {
     -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
 }
+.button {
+    background-color: #df2828; /* Set the background color */
+    color: #ffffff; /* Set the text color */
+    padding: 10px ; /* Set padding to provide space around the text */
+    text-decoration: none; /* Remove underlines from the link */
+    display: inline-block; /* Make the link a block element to allow setting width and height */
+    border-radius: 5px; /* Add rounded corners to the button */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect for the background color */
+    position: absolute;
+    bottom: 0;}
+
+.button:hover {
+    background-color: #ff0000; /* Change background color on hover */
+}
+.item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
 .btn.extra-width {
     padding: 13px 40px;
 }
@@ -473,19 +491,9 @@ input:-ms-input-placeholder {
 	color:#314a5b;
 }
 
-.home-bg .header-details button{
-	padding:10px;
-	width: 150px;
-    height: 60px;
-	background:#fa5c65;
-	color:white;
-	font-size:15px;
-	margin-top:30px;
-}
-.home-bg .header-details button:hover{
-	background:#cf0f1a;
-	color:white;
-}
+
+
+
 .btn-default{
 	border-color:transparent;
 }
@@ -498,7 +506,7 @@ input:-ms-input-placeholder {
 	color:#fa5c65;
 }
 .promotion a h4:hover{
-	color:pink;
+	color:rgb(255, 255, 255);
 }
 .promotion h4 span i{
 	padding-left:5px;
@@ -506,7 +514,7 @@ input:-ms-input-placeholder {
 }
 
 .portfolio{
-	color:#465065;
+	color:#3e0000;
 	overflow:hidden;
 }
 
@@ -519,18 +527,16 @@ input:-ms-input-placeholder {
 }
 .portfolio h1 i{
 	font-size:5px;
-	color:#fa5c65;
+	color:#960007;
 }
 
 .portfolio a h4{
 	text-transform:uppercase;
 	font-size:14px;
-	color:#fa5c65;
+	color:#ffffff;
 	font-family: 'montserratregular';
 }
-.portfolio a h4:hover{
-	color:pink;
-}
+
 .portfolio h5{
 	font-size:16px;
 }
@@ -540,6 +546,9 @@ input:-ms-input-placeholder {
 }
 .portfolio .item{
 	padding-top:10px;
+    border: 1px solid black;
+    height:750px;
+    border-radius:15px;
 }
 .team-heading {
     margin-top: 40px;
@@ -742,6 +751,9 @@ align-items: center;
 border-radius: 3px;
 }
 
+.container {
+    width: 100%;
+}
 
 .form {
     max-width: 250px; /* Set a maximum width for the form container */
