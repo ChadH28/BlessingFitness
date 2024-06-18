@@ -67,6 +67,7 @@ a:active,
 a:focus {
     text-decoration: none;
     outline: none;
+    color: inherit;
 }
 
 a,
@@ -75,6 +76,20 @@ a span {
     -webkit-transition: 0.2s ease-in-out;
     -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
+}
+
+.about-button {
+    background-color: #df2828;
+    color: #ffffff;
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 0 auto;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .button {
@@ -94,7 +109,8 @@ a span {
 
 }
 
-.button:hover {
+.button:hover,
+.about-button:hover {
     background-color: rgba(255, 0, 0, 0.7);
     color: #ffffff;
 }
@@ -505,7 +521,7 @@ input:-ms-input-placeholder {
     overflow: hidden;
 }
 
-.mainmenu > .navbar-default {
+.mainmenu>.navbar-default {
     background-color: transparent;
     border-color: transparent;
     display: flex;
@@ -928,14 +944,6 @@ tr:hover {
 
 }
 
-.price-container {
-    display: flex;
-    flex-wrap: wrap;
-    /* Wrap items to the next row if they overflow */
-    justify-content: space-between;
-    /* Distribute items horizontally with space between them */
-}
-
 .pricelist {
     flex: 1;
     /* Equal width for all items */
@@ -1156,8 +1164,15 @@ h5 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 20px;
+}
 
+.price-container-content {
+    margin: 120px 50px 20px;
+}
+
+.price-container-content p {
+    font-size: large;
+    margin: 20px 30px;
 }
 
 .pricelist {
