@@ -1,43 +1,50 @@
 /* Portrait tablets and medium desktops */
 @media (max-width: 992px) {
-    html {
-        font-size: 80%;
-    }
-	.menu-icon{
+	html {
+		font-size: 80%;
+	}
+
+	.menu-icon {
 		visibility: hidden;
 	}
+
 	.menu-icon,
-    .dropdown-content {
-        visibility: hidden;
-    }
+	.dropdown-content {
+		visibility: hidden;
+	}
 }
 
 /* Portrait tablets and small desktops */
-@media  (max-width: 991px) {
-    html {
-        font-size: 90%;
-    }
-   .team-heading {
-    text-align: center;
+@media (max-width: 991px) {
+	html {
+		font-size: 90%;
 	}
-	.team  img{
-	float:none;
-	margin-bottom:20px;
+
+	.team-heading {
+		text-align: center;
 	}
+
+	.team img {
+		float: none;
+		margin-bottom: 20px;
+	}
+
 	.team {
-		text-align:center;
-		margin-bottom:40px;
+		text-align: center;
+		margin-bottom: 40px;
 	}
+
 	.team-more {
-    text-align:center;
-	float:none;
-	margin-top:80px;
+		text-align: center;
+		float: none;
+		margin-top: 80px;
 	}
+
 	.menu-icon,
-    .dropdown-content {
-        visibility: hidden;
-    }
-	
+	.dropdown-content {
+		visibility: hidden;
+	}
+
 }
 
 
@@ -45,229 +52,269 @@
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 768px) {
-    html {
-        font-size: 80%;
-    }
+	html {
+		font-size: 80%;
+	}
+
 	.home-bg .header-details h1 {
-    font-size: 39px;
+		font-size: 39px;
 
 	}
+
 	.menu-icon {
-		margin: 10px;
+		margin: 20px 20px 0 0;
 		display: block;
 		background-color: #555555;
 		width: 50px;
-		height:30px;
-		position: fixed;
-		top: 5px; /* Optional: You can adjust the top position if needed */
+		height: 30px;
+		position: absolute;
+		top: 0;
+		/* Optional: You can adjust the top position if needed */
 		right: 0;
 	}
 
-	
-    
-	.promotion {
-    margin-bottom: 30px;
-    text-align: center;
-	}
-	.portfolio {
-    padding-top: 30px;
-    text-align: center;
-	
-	}
-	.video-container {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio (iframe's height/width ratio) */
-        overflow: hidden;
-    }
 
-    .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-	
-	.team-heading {
-    text-align: center;
+
+	.promotion {
+		margin-bottom: 30px;
+		text-align: center;
 	}
-	.team  img{
-	float:none;
-	margin-bottom:20px;
+
+	.portfolio {
+		padding-top: 30px;
+		text-align: center;
+
 	}
-	.team {
-		text-align:center;
-		margin-bottom:40px;
+
+	.video-container {
+		position: relative;
+		padding-bottom: 56.25%;
+		/* 16:9 aspect ratio (iframe's height/width ratio) */
+		overflow: hidden;
 	}
-	.team-more {
-    text-align:center;
-	float:none;
-	margin-top:80px;
-	}
-	.menu-icon,
-    .dropdown-content {
-        visibility: hidden;
-    }
-	.text{
+
+	.video-container iframe {
 		position: absolute;
-		top: 50%; /* Adjust as needed to position the text vertically */
-		left: 50%; /* Adjust as needed to position the text horizontally */
-		transform: translate(-50%, -50%); /* Center the text both vertically and horizontally */
-		background-color: rgba(0, 0, 0, 0.5); /* Background color for the text */
-		color: white; /* Text color */
-		padding: 00px; /* Padding around the text */
-		width: 100%; /* Make the text overlay responsive */
-		text-align: center; /* Center-align the text */
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.team-heading {
+		text-align: center;
+	}
+
+	.team img {
+		float: none;
+		margin-bottom: 20px;
+	}
+
+	.team {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	.team-more {
+		text-align: center;
+		float: none;
+		margin-top: 80px;
+	}
+
+	.menu-icon,
+	.dropdown-content {
+		visibility: hidden;
+	}
+
+	.text {
+		position: absolute;
+		top: 50%;
+		/* Adjust as needed to position the text vertically */
+		left: 50%;
+		/* Adjust as needed to position the text horizontally */
+		transform: translate(-50%, -50%);
+		/* Center the text both vertically and horizontally */
+		background-color: rgba(0, 0, 0, 0.5);
+		/* Background color for the text */
+		color: white;
+		/* Text color */
+		padding: 00px;
+		/* Padding around the text */
+		width: 100%;
+		/* Make the text overlay responsive */
+		text-align: center;
+		/* Center-align the text */
 		font-size: 30px;
 	}
-	.slideshow-box{
+
+	.slideshow-box {
 		padding: 0px;
 		height: 270px
 	}
 }
 
 
-	/* Apply responsive styles for smaller screens */
-	@media (max-width: 768px) {
-		html {
-			font-size: 80%;
-		}
-		.timetable-container {
-			display: flex;
-			flex-direction: column;
-			
-		}	
-	
-		.timetable {
-			margin-bottom: 20px; /* Add spacing between timetable items */
-			width: 100%;
-		}
-	
-		.shopping-section {
-			text-align: center; /* Center align the content */
-		}
+/* Apply responsive styles for smaller screens */
+@media (max-width: 768px) {
+	html {
+		font-size: 80%;
+	}
 
-    .shopping-item {
-        width: 90%; /* Make each shopping item take up full width */
+	.timetable-container {
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	.timetable {
+		margin-bottom: 20px;
+		/* Add spacing between timetable items */
+		width: 100%;
+	}
+
+	.shopping-section {
+		text-align: center;
+		/* Center align the content */
+	}
+
+	.shopping-item {
+		width: 90%;
+		/* Make each shopping item take up full width */
 		height: 50%;
-        margin-bottom: 20px; /* Add some spacing between items */
-        float: none; /* Remove any floats */}
+		margin-bottom: 20px;
+		/* Add some spacing between items */
+		float: none;
+		/* Remove any floats */
+	}
+
 	.price-container {
-			display: flex;
-			flex-direction: column;
-			align-items: center; /* Center items horizontally */
-		}
-	
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* Center items horizontally */
+	}
+
 	.pricelist {
-			/* Make each pricelist item take up full width */
-			margin-bottom: 20px; /* Add some spacing between items */
-		}
-	
-	    .gallery {
-			display: flex;
-			flex-direction: column;
-		}
-	
-		.adventure-image {
-			/* margin: 20px; Add spacing between adventure images */
-			width: 100%;
-		}
-		.menu-icon{
-			background-color: rgb(0, 0, 0);
-			border: 5px white;
-			border-radius: 5px;
+		/* Make each pricelist item take up full width */
+		margin-bottom: 20px;
+		/* Add some spacing between items */
+	}
 
-			
-		}
-		.dropdown-content{
-			/* padding: 5px; */
-			margin-top: 30px;
-			margin-right: 15px;
-			display: block;
-			width: 300px;
-			position: fixed;
-			top: 5px; /* Optional: You can adjust the top position if needed */
-			visibility: visible;
-			
-			
-		}
+	.gallery {
+		display: flex;
+		flex-direction: column;
+	}
 
-		.dropdown-content ul li a {
-			display: block;
-			font-size: 13.5px;
-			padding: 5px 0px;
-			border-bottom: 1px solid #303b40;
-			padding: 12px 20px;
-			text-overflow: ellipsis;
-			white-space: nowrap;
-			overflow: hidden;
-			color: #98999a;
-			
-		
-		}
+	.adventure-image {
+		/* margin: 20px; Add spacing between adventure images */
+		width: 100%;
+	}
+
+	.menu-icon {
+		background-color: rgb(0, 0, 0);
+		border: 5px white;
+		border-radius: 5px;
 
 
-		.menu-icon,
-		.dropdown-content {
-			visibility:visible;
-		}
+	}
+
+	.dropdown-content {
+		/* padding: 5px; */
+		margin-top: 30px;
+		margin-right: 15px;
+		display: block;
+		width: 300px;
+		position: fixed;
+		top: 5px;
+		/* Optional: You can adjust the top position if needed */
+		/* visibility: visible; */
+	}
+
+	.dropdown-content ul li a {
+		display: block;
+		font-size: 13.5px;
+		padding: 5px 0px;
+		/* border-bottom: 1px solid #303b40; */
+		padding: 12px 20px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		color: #98999a;
+	}
+
+	.dropdown-content ul li a:hover {
+		background-color: rgba(152, 153, 154, 0.7);
+		color: #98999a;
+	}
+
+
+	.menu-icon,
+	.dropdown-content {
+		visibility: visible;
+	}
 
 }
+
 /* Landscape phones and smaller */
 @media (max-width: 480px) {
-    html {
-		padding:0;
-        font-size: 65%;
-    }
+	html {
+		padding: 0;
+		font-size: 65%;
+	}
+
 	.home-bg .header-details h1 {
-    font-size: 18px;
-    line-height: 30px;
+		font-size: 18px;
+		line-height: 30px;
 	}
+
 	.home-bg .header-details p {
-    font-size: 12px;
+		font-size: 12px;
 	}
+
 	.portfolio {
-    margin-bottom: 30px;
-    text-align: center;
-	
+		margin-bottom: 30px;
+		text-align: center;
+
 	}
+
 	.team-heading {
-    text-align: center;
+		text-align: center;
 	}
+
 	.portfolio img {
-    margin-left:0;
-	
+		margin-left: 0;
+
 	}
+
 	.menu-icon,
-    .dropdown-content {
-        visibility: visible;
-    }
-
-	.gallery{
-		padding: 0;;
+	.dropdown-content {
+		visibility: visible;
 	}
 
-	.specials-fitness-row{
+	.gallery {
+		padding: 0;
+		;
+	}
+
+	.specials-fitness-row {
 		padding: 0;
 	}
+
 	.team-heading {
-    text-align: center;
+		text-align: center;
 	}
-	slideshow-container{
+
+	slideshow-container {
 		padding-top: 10px;
 	}
 
 }
-@media (max-width: 320px) {
-    html {
-        font-size: 60.5%;
-    }
 
-	
+@media (max-width: 320px) {
+	html {
+		font-size: 60.5%;
+	}
+
+
 
 }
-
-
-
-
-
