@@ -655,6 +655,50 @@ input:-ms-input-placeholder {
 
 }
 
+.cards-container {
+    width: 100%;
+    /* background-color: #fefefe; */
+    padding: 15px 0px;
+    position: relative;
+}
+
+.overlay {
+    transform: translateY(100%);
+    content: '';
+    background-color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: transform 0.25s ease-in-out;
+}
+
+.overlay:hover {
+    transform: translateY(0%);
+}
+
+.cards-container:hover {
+    /* background-color: #fff; */
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+}
+
+.cards-container:hover>.overlay {
+    transform: translateY(0%);
+}
+
+.cards-container>.item {
+    width: 100%;
+}
+
+.cards-container>.item a {
+    gap: 5px;
+}
+
+
 .portfolio .item {
     transition: transform 0.25s ease-in-out;
     margin: 10px 0px;
@@ -1364,7 +1408,7 @@ img:last-child:nth-child(5) {
 /* Apply a background color to the fitness body */
 /* Style the fitness body */
 .fitness-body {
-    margin-top: 60px;
+    margin-top: 80px;
     background-color: inherit;
     text-align: center;
 }
@@ -1408,6 +1452,10 @@ img:last-child:nth-child(5) {
     padding: 20px;
     margin: 20px auto;
     /* Add padding to create separation */
+}
+
+.fitness-container {
+    background-color: #f2f2f2;
 }
 
 .specials-fitness {
