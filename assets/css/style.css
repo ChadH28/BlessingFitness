@@ -1830,14 +1830,20 @@ img:last-child:nth-child(5) {
     align-items: flex-start;
     gap: 5px;
     margin: 5px 0;
+    position: relative;
 }
 
 .list-holder a {}
 
 .list-holder a:hover {
     transform: translateX(2px);
-    opacity: 0.8;
+    color: #000000;
+    /* opacity: 0.8; */
+    font-weight: 500;
     transition: ease-in-out 0.25;
+    padding: 10px 20px;
+    background-color: rgba(128, 128, 128, 0.3);
+    border-radius: 2px;
 }
 
 .easy {
@@ -1854,7 +1860,7 @@ img:last-child:nth-child(5) {
 
 
 .hiking-card-container {
-    padding: 0px 120px;
+    padding: 0px 120px 80px;
     transition: ease-in-out 0.25s;
 }
 
@@ -1883,7 +1889,26 @@ img:last-child:nth-child(5) {
     height: 300px;
     background-color: rgba(26, 26, 26, 0.3);
     border-radius: 25px;
+    position: relative;
 }
+
+.hiking-card-image>img,
+.hiking-card-image>.mySlides>img {
+    max-width: inherit;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    object-fit: cover
+}
+
+.hiking-card-image>.mySlides {
+    max-width: inherit;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+}
+
+
 
 .hiking-card-content {
     width: max-content;

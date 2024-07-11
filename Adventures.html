@@ -272,42 +272,17 @@
       <h5>Reach New Heights with Our Ultimate Hiking Guide</h5>
     </div>
 
-    <div
-      tabindex="0"
-      class="hiking-container accordian"
-    >
-      <div class="dropdown-menu">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
-            aria-expanded="true"
-            aria-controls="collapseOne"
-          >
-            Accordion Item #1
-          </button>
-        </h2>
-        <div
-          id="collapseOne"
-          class="accordion-collapse collapse show"
-          data-bs-parent="#accordionExample"
-        >
-          <div class="accordion-body">
-            <strong>This is the first item's accordion body.</strong> It is
-            shown by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It's also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
-          </div>
-        </div>
-      </div>
+    <div tabindex="0" class="hiking-container">
       List of hiking options:
       <div class="list-holder">
+        <a href="#Biskop_Steps">
+          Biskop Steps
+          <strong class="location"
+            >37 Victoria Road, above Clifton 2nd beach, Cape Town</strong
+          >
+          -
+          <span class="level moderate">301 stairs - Moderate</span>
+        </a>
         <a href="#Signal_Hill_Spine">
           Signal Hill Spine
           <strong class="location">Mountain National Park</strong> -
@@ -318,11 +293,6 @@
           <strong class="location">Cape Town, Western Cape</strong>
           -
           <span class="level easy easy">Easy</span>
-        </a>
-        <a href="#Biskop_Steps">
-          Biskop Steps
-          <strong class="location">Clifton, Cape Town, Western Cape</strong> -
-          <span class="level">301 stairs</span>
         </a>
         <a href="#East_Fort_Contour">
           East Fort Contour - Chapmans Peak Drive
@@ -406,85 +376,79 @@
           -
           <span class="level hard">Hard</span>
         </a>
-        <a href="#id">
+        <a href="#Elands_River_Trail">
           Elands River Trail
           <strong class="location">Limietberg Nature Reserve</strong>
           -
           <span class="level moderate">Moderate</span>
         </a>
-        <a href="#id">
+        <a href="#Sandy_Bay_via_Shipwreck">
           Sandy Bay via BOS 400 Shipwreck
           <strong class="location">Table Mountain National Park</strong>
           -
           <span class="level moderate">Moderate</span>
         </a>
-        <a href="#id">
+        <a href="#Woodstock_Cave_Trail">
           Woodstock Cave Trail
           <strong class="location">Table Mountain National Park</strong>
           -
           <span class="level hard">Hard</span>
         </a>
-        <a href="#id">
+        <a href="#Constantia_Nek_to_Kirstenbosch">
           Constantia Nek to Kirstenbosch via Contour Path
           <strong class="location">Table Mountain National Park</strong>
           -
           <span class="level moderate">Moderate</span>
         </a>
-        <a href="#id">
+        <a href="#Constantia_Nek_to_Cecilia_Forest">
           Constantia Nek to Cecilia Forest via Contour Path
           <strong class="location">Table Mountain National Park</strong>
           -
           <span class="level moderate">Moderate</span>
         </a>
-        <a href="#id">
+        <!-- <a href="#Devils_Peak_via_Saddle_Rock">
           Devil's Peak via Saddle Rock
           <strong class="location">Table Mountain National Park</strong>
           -
           <span class="level hard">Hard</span>
-        </a>
-        <a href="#id">
-          Devil's Peak via Saddle Rock
-          <strong class="location">Table Mountain National Park</strong>
-          -
-          <span class="level hard">Hard</span>
-        </a>
-        <a href="#id">
+        </a> -->
+        <a href="#Pipe_Track_from_Kloof_Nek">
           Pipe Track from Kloof Nek
           <strong class="location">Table Mountain National Park</strong>
           -
           <span class="level moderate">Moderate</span>
         </a>
-        <a href="#id">
+        <a href="#India_Venster_to_Upper_Cable_Station">
           India Venster to Upper Cable Station
           <strong class="location">Table Mountain National Park</strong>
           -
           <span class="level hard">Hard</span>
         </a>
-        <a href="#id">
-          Platteklip Gorge to Upper Cable Statio hardn Hard
+        <a href="#Platteklip_Gorge_to_Upper_Cable_Station">
+          Platteklip Gorge to Upper Cable Station
           <strong class="location">Table Mountain National Park</strong>
           -
           <span class="level hard">Hard</span>
         </a>
-        <a href="#id">
+        <a href="#Hermanus_Fernkloof_Waterfall">
           Hermanus Fernkloof Waterfall
           <strong class="location">Fernkloof Nature Reserve</strong>
           -
           <span class="level moderate">Moderate</span>
         </a>
-        <a href="#id">
+        <a href="#Krom_River_Trail">
           Krom River Trail
           <strong class="location">Limietberg Nature Reserve</strong>
           -
           <span class="level moderate">Moderate</span>
         </a>
-        <a href="#id">
+        <a href="#Kloof_Nek_to_Camps_Bay">
           Kloof Nek to Camps Bay via Pipe Track
           <strong class="location">Table Mountain National Park</strong>
           -
           <span class="level moderate">Moderate</span>
         </a>
-        <a href="#id">
+        <a href="#Crystal_Pools_Steenbras_Peak">
           Crystal Pools - Steenbras Peak
           <strong class="location"
             >Gordons Bay, Western Cape, South Africa</strong
@@ -492,7 +456,7 @@
           -
           <span class="level hard">Hard</span>
         </a>
-        <a href="#id">
+        <a href="#Bettys_Bay_Leopards_Kloof_Trail">
           Bettys Bay Leopard's Kloof Trail
           <strong class="location">Harold Porter Botanical Gardens</strong>
           -
@@ -502,9 +466,41 @@
     </div>
     <!-- hikingcard -->
     <div class="hiking-card-container">
+      <div id="Biskop_Steps" class="anchor_snap">
+        <div class="hiking-card reverse">
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/biskop_steps.png"
+              alt="Biskop Steps"
+            />
+          </div>
+          <div class="hiking-card-content">
+            <p class="hiking-card-level moderate">301 stairs - Moderate</p>
+            <h3 class="hiking-card-title">Biskop Steps</h3>
+            <p class="hiking-card-location">Cape Town, Western Cape</p>
+            <div class="hiking-card-info">
+              <!-- <p class="hiking-card-distance"><span>Distance</span>: 6km</p> -->
+              <!-- <p class="hiking-card-time"><span>Est.</span> 1hr</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
       <div id="Signal_Hill_Spine" class="anchor_snap">
         <div class="hiking-card">
-          <div class="hiking-card-image"></div>
+          <div class="hiking-card-image">
+            <!-- <div class="mySlides fade">
+              <img
+                src="assets/images/hiking/Signal Hill Spine 1.png"
+                alt="Biskop Steps"
+              />
+            </div> -->
+            <!-- <div class="mySlides fade"> -->
+            <img
+              src="assets/images/hiking/Signal Hill Spine 2.png"
+              alt="Biskop Steps"
+            />
+            <!-- </div> -->
+          </div>
           <div class="hiking-card-content">
             <p class="hiking-card-level easy">Easy</p>
             <h3 class="hiking-card-title">Signal Hill Spine</h3>
@@ -518,7 +514,26 @@
       </div>
       <div id="Seapoint_Promenade_Walk" class="anchor_snap">
         <div class="hiking-card reverse">
-          <div class="hiking-card-image"></div>
+          <div class="hiking-card-image">
+            <!-- <div class="mySlides fade"> -->
+            <img
+              src="assets/images/hiking/Seapoint Promenade Walk 1.png"
+              alt="Seapoint Promenade Walk"
+            />
+            <!-- </div> -->
+            <!-- <div class="mySlides fade">
+              <img
+                src="assets/images/hiking/Seapoint Promenade Walk 2.png"
+                alt="Seapoint Promenade Walk"
+              />
+            </div> -->
+            <!-- <div class="mySlides fade">
+              <img
+                src="assets/images/hiking/Seapoint Promenade Walk 3.png"
+                alt="Seapoint Promenade Walk"
+              />
+            </div> -->
+          </div>
           <div class="hiking-card-content">
             <p class="hiking-card-level moderate">Moderate</p>
             <h3 class="hiking-card-title">Seapoint Promenade Walk</h3>
@@ -530,23 +545,14 @@
           </div>
         </div>
       </div>
-      <div id="Biskop_Steps" class="anchor_snap">
-        <div class="hiking-card">
-          <div class="hiking-card-image"></div>
-          <div class="hiking-card-content">
-            <p class="hiking-card-level moderate">301 stairs - Moderate</p>
-            <h3 class="hiking-card-title">Biskop Steps</h3>
-            <p class="hiking-card-location">Cape Town, Western Cape</p>
-            <div class="hiking-card-info">
-              <!-- <p class="hiking-card-distance"><span>Distance</span>: 6km</p> -->
-              <!-- <p class="hiking-card-time"><span>Est.</span> 1hr</p> -->
-            </div>
-          </div>
-        </div>
-      </div>
       <div id="East_Fort_Contour" class="anchor_snap">
         <div class="hiking-card">
-          <div class="hiking-card-image"></div>
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/East_Fort_Contour2.png"
+              alt="East Fort Contour - Chapmans Peak Drive"
+            />
+          </div>
           <div class="hiking-card-content">
             <p class="hiking-card-level hard">Hard</p>
             <h3 class="hiking-card-title">
@@ -562,7 +568,12 @@
       </div>
       <div id="Eagles_Nest" class="anchor_snap">
         <div class="hiking-card reverse">
-          <div class="hiking-card-image"></div>
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Eagles_Nest1.png"
+              alt="Eagle's Nest via Constantia Nek"
+            />
+          </div>
           <div class="hiking-card-content">
             <p class="hiking-card-level moderate">Moderate</p>
             <h3 class="hiking-card-title">Eagle's Nest via Constantia Nek</h3>
@@ -576,7 +587,12 @@
       </div>
       <div id="Helderberg_Farm" class="anchor_snap">
         <div class="hiking-card">
-          <div class="hiking-card-image"></div>
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Helderberg_Farm4.png"
+              alt="Eagle's Nest via Constantia Nek"
+            />
+          </div>
           <div class="hiking-card-content">
             <p class="hiking-card-level hard">Hard</p>
             <h3 class="hiking-card-title">Helderberg Farm - Woodies Walk</h3>
@@ -590,7 +606,12 @@
       </div>
       <div id="Devils_Peak_via_Saddle_Rock" class="anchor_snap">
         <div class="hiking-card reverse">
-          <div class="hiking-card-image"></div>
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Devils_Peak_via_Saddle_Rock2.png"
+              alt="Eagle's Nest via Constantia Nek"
+            />
+          </div>
           <div class="hiking-card-content">
             <p class="hiking-card-level hard">Hard</p>
             <h3 class="hiking-card-title">Devil's Peak via Saddle Rock</h3>
@@ -604,7 +625,12 @@
       </div>
       <div id="Baileys_Kloof" class="anchor_snap">
         <div class="hiking-card">
-          <div class="hiking-card-image"></div>
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Baileys_Kloof2.png"
+              alt="Eagle's Nest via Constantia Nek"
+            />
+          </div>
           <div class="hiking-card-content">
             <p class="hiking-card-level hard">Hard</p>
             <h3 class="hiking-card-title">Baileys Kloof - Muizenberg Window</h3>
@@ -618,7 +644,12 @@
       </div>
       <div id="Cecilia_Forest_to_Devilliers_Dam" class="anchor_snap">
         <div class="hiking-card reverse">
-          <div class="hiking-card-image"></div>
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Cecilia_Forest_to_Devilliers_Dam3.png"
+              alt="Cecilia Forest to Devilliers Dam"
+            />
+          </div>
           <div class="hiking-card-content">
             <p class="hiking-card-level hard">Hard</p>
             <h3 class="hiking-card-title">Cecilia Forest to Devilliers Dam</h3>
@@ -632,7 +663,12 @@
       </div>
       <div id="Cecilia_Waterfall_via_Cecilia_Forest" class="anchor_snap">
         <div class="hiking-card">
-          <div class="hiking-card-image"></div>
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Cecilia_Waterfall_via_Cecilia_Forest2.png"
+              alt="Cecilia Waterfall via Cecilia Forest"
+            />
+          </div>
           <div class="hiking-card-content">
             <p class="hiking-card-level moderate">Moderate</p>
             <h3 class="hiking-card-title">
@@ -648,7 +684,12 @@
       </div>
       <div id="Uitkyk_via_Du_Toitskop" class="anchor_snap">
         <div class="hiking-card reverse">
-          <div class="hiking-card-image"></div>
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Uitkyk_via_Du_Toitskop1.png"
+              alt="Uitkyk via Du Toitskop and Manganese Trail"
+            />
+          </div>
           <div class="hiking-card-content">
             <p class="hiking-card-level hard">Hard</p>
             <h3 class="hiking-card-title">
@@ -664,7 +705,12 @@
       </div>
       <div id="Jonkershoek_Waterfalls_Day_Hiking_Trail" class="anchor_snap">
         <div class="hiking-card">
-          <div class="hiking-card-image"></div>
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Jonkershoek_Waterfalls_Day_Hiking_Trail3.png"
+              alt="Jonkershoek Waterfalls Day Hiking Trail"
+            />
+          </div>
           <div class="hiking-card-content">
             <p class="hiking-card-level moderate">Moderate</p>
             <h3 class="hiking-card-title">
@@ -680,7 +726,12 @@
       </div>
       <div id="Cape_of_Good_Hope_Trail" class="anchor_snap">
         <div class="hiking-card reverse">
-          <div class="hiking-card-image"></div>
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Cape_of_Good_Hope_Trail1.png"
+              alt="Cape of Good Hope Trail"
+            />
+          </div>
           <div class="hiking-card-content">
             <p class="hiking-card-level moderate">Moderate</p>
             <h3 class="hiking-card-title">Cape of Good Hope Trail</h3>
@@ -694,7 +745,12 @@
       </div>
       <div id="Cape_Point_Lighthouse" class="anchor_snap">
         <div class="hiking-card">
-          <div class="hiking-card-image"></div>
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Cape_Point_Lighthouse1.png"
+              alt="Cape of Good Hope Trail"
+            />
+          </div>
           <div class="hiking-card-content">
             <p class="hiking-card-level moderate">Moderate</p>
             <h3 class="hiking-card-title">
@@ -710,7 +766,12 @@
       </div>
       <div id="Paarl_Rock" class="anchor_snap">
         <div class="hiking-card reverse">
-          <div class="hiking-card-image"></div>
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Paarl_Rock2.png"
+              alt="Cape of Good Hope Trail"
+            />
+          </div>
           <div class="hiking-card-content">
             <p class="hiking-card-level moderate">Moderate</p>
             <h3 class="hiking-card-title">Paarl Rock - Brittania Loop</h3>
@@ -724,7 +785,12 @@
       </div>
       <div id="Twelve_Apostles_and_Missing_Link_Loop" class="anchor_snap">
         <div class="hiking-card">
-          <div class="hiking-card-image"></div>
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Twelve_Apostles_and_Missing_Link_Loop2.png"
+              alt="Twelve Apostles and Missing Link Loop"
+            />
+          </div>
           <div class="hiking-card-content">
             <p class="hiking-card-level moderate">Moderate</p>
             <h3 class="hiking-card-title">
@@ -740,7 +806,12 @@
       </div>
       <div id="Lions_Head" class="anchor_snap">
         <div class="hiking-card reverse">
-          <div class="hiking-card-image"></div>
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Lions_Head1.png"
+              alt="Twelve Apostles and Missing Link Loop"
+            />
+          </div>
           <div class="hiking-card-content">
             <p class="hiking-card-level hard">Hard</p>
             <h3 class="hiking-card-title">
@@ -754,8 +825,276 @@
           </div>
         </div>
       </div>
+      <div id="Elands_River_Trail" class="anchor_snap">
+        <div class="hiking-card">
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Elands_River_Trail3.png"
+              alt="Elands River Trail"
+            />
+          </div>
+          <div class="hiking-card-content">
+            <p class="hiking-card-level moderate">Moderate</p>
+            <h3 class="hiking-card-title">Elands River Trail</h3>
+            <p class="hiking-card-location">Limietberg Nature Reserve</p>
+            <div class="hiking-card-info">
+              <p class="hiking-card-distance"><span>Distance</span>: 8.5km</p>
+              <!-- <p class="hiking-card-time"><span>Est.</span> 2hrs 54min</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Sandy_Bay_via_Shipwreck" class="anchor_snap">
+        <div class="hiking-card reverse">
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Sandy_Bay_via_Shipwreck1.png"
+              alt="Elands River Trail"
+            />
+          </div>
+          <div class="hiking-card-content">
+            <p class="hiking-card-level moderate">Moderate</p>
+            <h3 class="hiking-card-title">Sandy Bay via BOS 400 Shipwreck</h3>
+            <p class="hiking-card-location">Table Mountain National Park</p>
+            <div class="hiking-card-info">
+              <p class="hiking-card-distance"><span>Distance</span>: 9km</p>
+              <!-- <p class="hiking-card-time"><span>Est.</span> 2hrs 54min</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Woodstock_Cave_Trail" class="anchor_snap">
+        <div class="hiking-card">
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Woodstock_Cave_Trail1.png"
+              alt="Woodstock Cave Trail"
+            />
+          </div>
+          <div class="hiking-card-content">
+            <p class="hiking-card-level hard">Hard</p>
+            <h3 class="hiking-card-title">Woodstock Cave Trail</h3>
+            <p class="hiking-card-location">Table Mountain National Park</p>
+            <div class="hiking-card-info">
+              <p class="hiking-card-distance"><span>Distance</span>: 9km</p>
+              <!-- <p class="hiking-card-time"><span>Est.</span> 2hrs 54min</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Constantia_Nek_to_Kirstenbosch" class="anchor_snap">
+        <div class="hiking-card reverse">
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Constantia_Nek_to_Kirstenbosch2.png"
+              alt="Woodstock Cave Trail"
+            />
+          </div>
+          <div class="hiking-card-content">
+            <p class="hiking-card-level moderate">Moderate</p>
+            <h3 class="hiking-card-title">
+              Constantia Nek to Kirstenbosch via Contour Path
+            </h3>
+            <p class="hiking-card-location">Table Mountain National Park</p>
+            <div class="hiking-card-info">
+              <p class="hiking-card-distance"><span>Distance</span>: 6km</p>
+              <p class="hiking-card-time"><span>Est.</span> 2hrs 6min</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Constantia_Nek_to_Cecilia_Forest" class="anchor_snap">
+        <div class="hiking-card">
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Constantia_Nek_to_Cecilia_Forest3.png"
+              alt="Constantia Nek to Cecilia Forest via Contour Path"
+            />
+          </div>
+          <div class="hiking-card-content">
+            <p class="hiking-card-level moderate">Moderate</p>
+            <h3 class="hiking-card-title">
+              Constantia Nek to Cecilia Forest via Contour Path
+            </h3>
+            <p class="hiking-card-location">Table Mountain National Park</p>
+            <div class="hiking-card-info">
+              <p class="hiking-card-distance"><span>Distance</span>: 5.5km</p>
+              <p class="hiking-card-time"><span>Est.</span> 1hr 44min</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div id="Devils_Peak_via_Saddle_Rock" class="anchor_snap">
+        <div class="hiking-card reverse">
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Constantia_Nek_to_Cecilia_Forest3.png"
+              alt="Constantia Nek to Cecilia Forest via Contour Path"
+            />
+          </div>
+          <div class="hiking-card-content">
+            <p class="hiking-card-level hard">Hard</p>
+            <h3 class="hiking-card-title">Devil's Peak via Saddle Rock</h3>
+            <p class="hiking-card-location">Table Mountain National Park</p>
+            <div class="hiking-card-info">
+              <p class="hiking-card-distance"><span>Distance</span>: 5.6km</p>
+              <p class="hiking-card-time"><span>Est.</span> 1hr 44min</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div id="Pipe_Track_from_Kloof_Nek" class="anchor_snap">
+        <div class="hiking-card">
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Pipe_Track_from_Kloof_Nek2.png"
+              alt="Pipe Track from Kloof Nek"
+            />
+          </div>
+          <div class="hiking-card-content">
+            <p class="hiking-card-level moderate">Moderate</p>
+            <h3 class="hiking-card-title">Pipe Track from Kloof Nek</h3>
+            <p class="hiking-card-location">Table Mountain National Park</p>
+            <div class="hiking-card-info">
+              <p class="hiking-card-distance"><span>Distance</span>: 9.5km</p>
+              <p class="hiking-card-time"><span>Est.</span> 2hrs 50min</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="India_Venster_to_Upper_Cable_Station" class="anchor_snap">
+        <div class="hiking-card reverse">
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/India_Venster_to_Upper_Cable_Station3.png"
+              alt="India Venster to Upper Cable Station"
+            />
+          </div>
+          <div class="hiking-card-content">
+            <p class="hiking-card-level hard">Hard</p>
+            <h3 class="hiking-card-title">
+              India Venster to Upper Cable Station
+            </h3>
+            <p class="hiking-card-location">Table Mountain National Park</p>
+            <div class="hiking-card-info">
+              <!-- <p class="hiking-card-distance"><span>Distance</span>: 9.5km</p> -->
+              <p class="hiking-card-time"><span>Est.</span> 2hrs 30min</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Platteklip_Gorge_to_Upper_Cable_Station" class="anchor_snap">
+        <div class="hiking-card">
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Platteklip_Gorge_to_Upper_Cable_Station3.png"
+              alt="India Venster to Upper Cable Station"
+            />
+          </div>
+          <div class="hiking-card-content">
+            <p class="hiking-card-level hard">Hard</p>
+            <h3 class="hiking-card-title">
+              Platteklip Gorge to Upper Cable Station
+            </h3>
+            <p class="hiking-card-location">Table Mountain National Park</p>
+            <div class="hiking-card-info">
+              <!-- <p class="hiking-card-distance"><span>Distance</span>: 9.5km</p> -->
+              <p class="hiking-card-time"><span>Est.</span> 2hrs 30min</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Hermanus_Fernkloof_Waterfall" class="anchor_snap">
+        <div class="hiking-card reverse">
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Hermanus_Fernkloof_Waterfall4.png"
+              alt="Hermanus Fernkloof Waterfall"
+            />
+          </div>
+          <div class="hiking-card-content">
+            <p class="hiking-card-level moderate">moderate</p>
+            <h3 class="hiking-card-title">Hermanus Fernkloof Waterfall</h3>
+            <p class="hiking-card-location">Fernkloof Nature Reserve</p>
+            <div class="hiking-card-info">
+              <p class="hiking-card-distance"><span>Distance</span>: 4.2km</p>
+              <p class="hiking-card-time"><span>Est.</span> 1hr 29min</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Krom_River_Trail" class="anchor_snap">
+        <div class="hiking-card">
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Jonkershoek_Waterfalls_Day_Hiking_Trail2.png"
+              alt="Krom River Trail"
+            />
+          </div>
+          <div class="hiking-card-content">
+            <p class="hiking-card-level moderate">moderate</p>
+            <h3 class="hiking-card-title">Krom River Trail</h3>
+            <p class="hiking-card-location">Limietberg Nature Reserve</p>
+            <div class="hiking-card-info">
+              <p class="hiking-card-distance"><span>Distance</span>: 6.9km</p>
+              <!-- <p class="hiking-card-time"><span>Est.</span> 1hr 29min</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Kloof_Nek_to_Camps_Bay" class="anchor_snap">
+        <div class="hiking-card reverse">
+          <div class="hiking-card-image">
+            <img
+              src="assets/images/hiking/Jonkershoek_Waterfalls_Day_Hiking_Trail2.png"
+              alt="Krom River Trail"
+            />
+          </div>
+          <div class="hiking-card-content">
+            <p class="hiking-card-level moderate">moderate</p>
+            <h3 class="hiking-card-title">
+              Kloof Nek to Camps Bay via Pipe Track
+            </h3>
+            <p class="hiking-card-location">Table Mountain National Park</p>
+            <div class="hiking-card-info">
+              <p class="hiking-card-distance"><span>Distance</span>: 4km</p>
+              <p class="hiking-card-time"><span>Est.</span> 1hr 13min</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Crystal_Pools_Steenbras_Peak" class="anchor_snap">
+        <div class="hiking-card">
+          <div class="hiking-card-image"></div>
+          <div class="hiking-card-content">
+            <p class="hiking-card-level hard">hard</p>
+            <h3 class="hiking-card-title">Crystal Pools - Steenbras Peak</h3>
+            <p class="hiking-card-location">
+              Gordons Bay, Western Cape, South Africa
+            </p>
+            <div class="hiking-card-info">
+              <p class="hiking-card-distance"><span>Distance</span>: 9.8km</p>
+              <p class="hiking-card-time"><span>Est.</span> 4hrs 35min</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Bettys_Bay_Leopards_Kloof_Trail" class="anchor_snap">
+        <div class="hiking-card reverse">
+          <div class="hiking-card-image"></div>
+          <div class="hiking-card-content">
+            <p class="hiking-card-level moderate">moderate</p>
+            <h3 class="hiking-card-title">Bettys Bay Leopard's Kloof Trail</h3>
+            <p class="hiking-card-location">Harold Porter Botanical Gardens</p>
+            <div class="hiking-card-info">
+              <p class="hiking-card-distance"><span>Distance</span>: 2.74km</p>
+              <p class="hiking-card-time"><span>Est.</span> 1hr 14min</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
+    <!-- past ad header -->
     <div class="gallery-header">
       <h2>Past Adventures</h2>
     </div>
