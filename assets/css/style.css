@@ -17,6 +17,10 @@ body {
     font-weight: 300;
 }
 
+body {
+    scroll-behavior: smooth;
+}
+
 /*==========================================
 PRE LOADER 
 ==========================================*/
@@ -654,6 +658,50 @@ input:-ms-input-placeholder {
     padding-left: 5px;
 
 }
+
+.cards-container {
+    width: 100%;
+    /* background-color: #fefefe; */
+    padding: 15px 0px;
+    position: relative;
+}
+
+.overlay {
+    transform: translateY(100%);
+    content: '';
+    background-color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: transform 0.25s ease-in-out;
+}
+
+.overlay:hover {
+    transform: translateY(0%);
+}
+
+.cards-container:hover {
+    /* background-color: #fff; */
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+}
+
+.cards-container:hover>.overlay {
+    transform: translateY(0%);
+}
+
+.cards-container>.item {
+    width: 100%;
+}
+
+.cards-container>.item a {
+    gap: 5px;
+}
+
 
 .portfolio .item {
     transition: transform 0.25s ease-in-out;
@@ -1364,7 +1412,7 @@ img:last-child:nth-child(5) {
 /* Apply a background color to the fitness body */
 /* Style the fitness body */
 .fitness-body {
-    margin-top: 60px;
+    margin-top: 80px;
     background-color: inherit;
     text-align: center;
 }
@@ -1408,6 +1456,10 @@ img:last-child:nth-child(5) {
     padding: 20px;
     margin: 20px auto;
     /* Add padding to create separation */
+}
+
+.fitness-container {
+    background-color: #f2f2f2;
 }
 
 .specials-fitness {
@@ -1572,7 +1624,8 @@ img:last-child:nth-child(5) {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 30px;
+    /* justify-content: space-between; */
 }
 
 .video-container {
@@ -1588,12 +1641,17 @@ img:last-child:nth-child(5) {
     margin-bottom: 20px;
     box-sizing: border-box;
     text-align: center;
+    transition: 0.35s ease-in-out;
     /* Center-align text within each adventure-image */
 }
 
 .adventure-image img {
     width: 100%;
     height: auto;
+}
+
+.adventure-image:hover {
+    transform: scale(1.1);
 }
 
 /* Center-align h3 and p elements */
@@ -1763,3 +1821,203 @@ img:last-child:nth-child(5) {
 
 
 /*----------------------avout----------------*/
+
+
+.hiking-header {
+    padding: 0 20px;
+}
+
+.hiking-header>* {
+    padding: 0 20px;
+    text-wrap: balance;
+}
+
+.hiking-container {
+    text-align: left;
+    padding: 50px 100px;
+}
+
+@media (max-width: 600px) {
+    .hiking-container {
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    .anchor_snap {
+        padding: 100px 0 0 !important;
+    }
+
+    .list-holder {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 15px !important;
+        margin: 5px 0;
+
+    }
+
+    .list-holder>a {
+        text-wrap: balance;
+        text-align: left;
+    }
+
+    .hiking-card-container {
+        padding: 0px 50px 80px !important;
+    }
+
+    .hiking-card,
+    .reverse {
+        flex-direction: column !important;
+        gap: 50px;
+    }
+
+    .hiking-card {
+        /* display: flex; */
+        /* align-items: center; */
+        /* gap: 50px; */
+        width: 100%;
+    }
+
+
+
+}
+
+
+.list-holder {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+    margin: 5px 0;
+}
+
+.list-holder a:hover {
+    transform: translateX(2px);
+    color: #000000;
+    /* opacity: 0.8; */
+    font-weight: 500;
+    transition: ease-in-out 0.25;
+    padding: 10px 20px;
+    background-color: rgba(128, 128, 128, 0.3);
+    border-radius: 2px;
+}
+
+.easy {
+    color: lime;
+}
+
+.moderate {
+    color: orangered;
+}
+
+.hard {
+    color: red
+}
+
+
+.hiking-card-container {
+    padding: 0px 120px 80px;
+}
+
+.anchor_snap {
+    padding: 150px 0 0;
+}
+
+.hiking-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.hiking-card-image {
+    max-width: 500px;
+    width: 100%;
+    height: 300px;
+    background-color: rgba(26, 26, 26, 0.3);
+    border-radius: 25px;
+}
+
+.hiking-card-image>img,
+.hiking-card-image>.mySlides>img {
+    max-width: inherit;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    object-fit: cover
+}
+
+.hiking-card-image>.mySlides {
+    max-width: inherit;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+}
+
+
+
+.hiking-card-content {
+    /* width: max-content; */
+    /* max-width: 50%; */
+}
+
+.hiking-card-content>*,
+.hiking-card-info>* {
+    text-align: left;
+}
+
+
+.hiking-card-title {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+
+.hiking-card-title {
+    font-weight: 700;
+}
+
+.hiking-card-location {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    opacity: 0.7;
+    margin: 10px 0 15px;
+}
+
+.hiking-card-level {
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: medium;
+    text-transform: capitalize;
+}
+
+.hiking-card-time,
+.hiking-card-distance {
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0.7;
+}
+
+
+#content:target {
+    display: block;
+}
+
+#content {
+    display: none;
+}
+
+.adventure {
+    margin: 50px 0 0;
+}
