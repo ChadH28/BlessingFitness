@@ -821,19 +821,28 @@ input:-ms-input-placeholder {
     background-color: #ffffff;
     /* Background color for the special pricing div */
     color: #333;
-    padding: 20px;
     text-align: center;
     border-bottom: #000000 2px;
 }
 
 .special-pricing img {
     max-width: 100%;
+    width: 100%;
+    object-fit: cover;
     height: auto;
+    max-height: 40vh;
     margin-bottom: 20px;
 }
 
-.Booking {
+.promotion-card {
+    padding: 20px 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5px;
+    text-wrap: balance;
+}
 
+.Booking {
     padding-top: 110px;
     width: 80%;
     margin-left: 10%;
@@ -867,12 +876,17 @@ input:-ms-input-placeholder {
     border-right: 1px solid #d1d1d1;
 }
 
+.exercise_table {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 table {
     width: 90%;
     border-collapse: collapse;
     margin-top: 60px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 
 th,
@@ -994,8 +1008,21 @@ tr:hover {
 }
 
 .pricelist {
-    flex: 1;
     /* Equal width for all items */
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    /* Light gray border for a professional look */
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    /* Stack content vertically */
+    justify-content: space-between;
+    /* Push button to the bottom */
+    background-color: #f7f7f7;
+    /* Light background color */
+    border-radius: 5px;
     padding: 20px;
     /* Add padding for spacing and decoration */
     border: 1px solid #ccc;
@@ -1207,6 +1234,10 @@ h5 {
     /* Adjust the margin as needed */
 }
 
+.adventure-activ {
+    margin: 30px auto;
+}
+
 
 
 .price-container {
@@ -1221,25 +1252,10 @@ h5 {
 
 .price-container-content p {
     font-size: large;
-    margin: 20px 30px;
+    line-height: normal;
+    margin: 20px 10px;
 }
 
-.pricelist {
-    flex: 1;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    /* Light gray border for a professional look */
-    text-align: center;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    /* Stack content vertically */
-    justify-content: space-between;
-    /* Push button to the bottom */
-    background-color: #f7f7f7;
-    /* Light background color */
-    border-radius: 5px;
-}
 
 .related-articles-title {
     font-size: 24px;
@@ -1469,12 +1485,28 @@ img:last-child:nth-child(5) {
     /* Add padding to the Specials Fitness content */
 }
 
+.fitness-cta {
+    margin: 50px auto 0;
+    padding: 0px 30px;
+}
+
+.fitness-cta .about-button {
+    margin: 25px auto 0;
+}
+
+
+
 /* Prices Boxes Row */
 .prices-boxs-row {
     background-color: #fff;
     /* Background color for the Prices Boxes row */
-    padding: 20px 30px;
+    padding: 50px 60px;
     margin: 0 auto;
+    text-wrap: balance;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     /* Add padding to create separation */
 }
 
@@ -1566,6 +1598,10 @@ img:last-child:nth-child(5) {
 /* Styles for the mobile menu icon */
 /* CSS for smaller screens (e.g., mobile) */
 @media (max-width: 768px) {
+
+    .about-image img {
+        height: 300px !important;
+    }
 
     /* Hide the desktop menu */
     .nav-links {
@@ -1700,6 +1736,7 @@ img:last-child:nth-child(5) {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+    padding: 0 20px;
     /* margin-top: 80px; */
 }
 
@@ -1709,22 +1746,16 @@ img:last-child:nth-child(5) {
     align-items: center;
 }
 
-.about-content {
-    flex: 1;
-    padding: 20px;
-    /* Adjust the padding as needed */
-}
 
 .about-image {
     flex: 1;
     padding: 20px;
-    /* Adjust the padding as needed */
-    text-align: right;
 }
 
 .about-image img {
-    max-width: 100%;
-    height: auto;
+    object-fit: cover;
+    height: 600px;
+    width: 100%;
 }
 
 
@@ -1733,7 +1764,7 @@ img:last-child:nth-child(5) {
     /* Center-align the text content */
     display: flex;
     flex-direction: column;
-
+    padding: 20px 40px 40px;
 }
 
 
@@ -1748,14 +1779,25 @@ img:last-child:nth-child(5) {
     background-color: #ffffff;
     border: 1px solid #ddd;
     padding: 10px;
-    margin: 10px 10px;
+    margin: 10px auto;
     text-align: center;
+    width: 100%;
     box-sizing: border-box;
-    min-height: 200px;
+    min-height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: 0.25s ease-in-out;
+    border-radius: 5%;
+}
+
+.timetable:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.timetable .about-button {
+    margin: 0;
 }
 
 /* Style headings */
@@ -1787,7 +1829,7 @@ img:last-child:nth-child(5) {
 .table-heading {
 
     text-align: center;
-    padding-top: 50px;
+    padding: 50px 30px 0px;
 }
 
 
