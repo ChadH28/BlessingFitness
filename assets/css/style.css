@@ -861,6 +861,11 @@ input:-ms-input-placeholder {
     transition: all 0.5s ease;
 }
 
+.anchor_adj {
+    padding-top: 60px;
+    margin-top: -40px;
+}
+
 .r-com {
 
     width: 20%;
