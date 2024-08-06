@@ -118,10 +118,25 @@ a span {
     color: #ffffff;
 }
 
+.about-us-sect {
+    text-wrap: balance;
+}
+
+.cta-label {
+    padding: 30px 0;
+    margin: 30px 0;
+    background-color: #fefefe;
+}
+
+
+.invert {
+    flex-direction: row-reverse !important;
+}
+
 .item {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -281,10 +296,6 @@ p:last-child {
 .home-wrap p {
     color: #ffffff;
     font-family: 'Quicksand', sans-serif;
-}
-
-.text {
-    color: #333333;
 }
 
 .colorstext {
@@ -831,7 +842,7 @@ input:-ms-input-placeholder {
     object-fit: cover;
     height: auto;
     max-height: 40vh;
-    margin-bottom: 20px;
+    margin: 50px 0 0;
 }
 
 @keyframes switch {
@@ -1110,10 +1121,7 @@ tr:hover {
     /* Ensures the container fits the image size */
 }
 
-/* Hide the images by default */
-/* .mySlides {
-  display: 100%;
-} */
+
 
 /* Next & previous buttons */
 .prev,
@@ -1138,10 +1146,9 @@ tr:hover {
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-/* .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-} */
+
+
+
 
 /* Caption text */
 .text {
@@ -1149,7 +1156,9 @@ tr:hover {
     color: #000000;
     font-size: 40px;
     padding: 8px 12px;
+    font-weight: 400;
     position: absolute;
+    display: block;
     bottom: 0px;
     width: 100%;
     text-align: center;
@@ -1184,19 +1193,21 @@ tr:hover {
 
 /* Fading animation */
 .fade {
-
-    animation-duration: 30s;
+    animation: fade 1.25s ease-in;
 }
 
 @keyframes fade {
-    from {
-        opacity: .4
+    0% {
+        opacity: 0.5;
+        transform: scale(0.99);
     }
 
-    to {
-        opacity: 1
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
+
 
 
 .fa {
@@ -1268,7 +1279,7 @@ h5 {
 }
 
 .price-container-content {
-    margin: 120px 50px 20px;
+    margin: 60px 50px 20px;
 }
 
 .price-container-content p {
@@ -1360,37 +1371,6 @@ h5 {
     object-fit: cover;
 }
 
-@media (max-width: 767px) {
-    .gallery-adventures {
-        flex-direction: column;
-    }
-
-    .gallery-item {
-        width: 50%;
-    }
-}
-
-
-
-/* img {
-  height: 100px;
-  position: absolute;
-  left: 0;
-  offset-path: path('m 0 50 q 50-30 100-30 t 100 30 100 0 100-30 100 30');
-  box-shadow: 1px 1px 3px #0008;
-  transition: transform .4s ease-out, offset-path .4s cubic-bezier(.77,-1.17,.75,.84),box-shadow .3s, z-index .3s;
-  z-index: 0;
-}
-
-img:hover {
-  transform: scale(3);
-  /* on hover, the path gets a bit shorter & flattened & shifted to left/bottom a bit for nicer movement */
-/* offset-path: path('m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0');
-  box-shadow: 3px 4px 10px #0006;
-  z-index: 999;
-} */
-*/
-
 /* 3 images */
 img:nth-last-child(3):first-child {
     offset-distance: 17%;
@@ -1449,7 +1429,7 @@ img:last-child:nth-child(5) {
 /* Apply a background color to the fitness body */
 /* Style the fitness body */
 .fitness-body {
-    margin-top: 80px;
+    margin-top: 0px;
     background-color: inherit;
     text-align: center;
 }
@@ -1507,8 +1487,8 @@ img:last-child:nth-child(5) {
 }
 
 .fitness-cta {
-    margin: 50px auto 0;
-    padding: 0px 30px;
+    /* margin: 50px auto 0; */
+    padding: 60px 30px;
 }
 
 .fitness-cta .about-button {
@@ -1619,6 +1599,65 @@ img:last-child:nth-child(5) {
 /* Styles for the mobile menu icon */
 /* CSS for smaller screens (e.g., mobile) */
 @media (max-width: 768px) {
+
+    .hiking-container {
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    .anchor_snap {
+        padding: 100px 0 0 !important;
+    }
+
+    .list-holder {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 15px !important;
+        margin: 5px 0;
+
+    }
+
+    .list-holder>a {
+        text-wrap: balance;
+        text-align: left;
+    }
+
+    .hiking-card-container {
+        padding: 0px 50px 80px !important;
+    }
+
+    .hiking-card,
+    .reverse {
+        flex-direction: column !important;
+        gap: 50px;
+    }
+
+    .invert {
+        flex-direction: column !important;
+    }
+
+    .hiking-card {
+        /* display: flex; */
+        /* align-items: center; */
+        /* gap: 50px; */
+        width: 100%;
+    }
+
+    .gallery-adventures {
+        flex-direction: column;
+    }
+
+    .gallery-item {
+        width: 50%;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+    }
 
     .about-image img {
         height: 300px !important;
@@ -1900,54 +1939,6 @@ img:last-child:nth-child(5) {
     padding: 50px 100px;
 }
 
-@media (max-width: 600px) {
-    .hiking-container {
-        text-align: left;
-        padding: 0 20px;
-    }
-
-    .anchor_snap {
-        padding: 100px 0 0 !important;
-    }
-
-    .list-holder {
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 15px !important;
-        margin: 5px 0;
-
-    }
-
-    .list-holder>a {
-        text-wrap: balance;
-        text-align: left;
-    }
-
-    .hiking-card-container {
-        padding: 0px 50px 80px !important;
-    }
-
-    .hiking-card,
-    .reverse {
-        flex-direction: column !important;
-        gap: 50px;
-    }
-
-    .hiking-card {
-        /* display: flex; */
-        /* align-items: center; */
-        /* gap: 50px; */
-        width: 100%;
-    }
-
-
-
-}
-
-
 .list-holder {
     text-align: left;
     display: flex;
@@ -2081,6 +2072,15 @@ img:last-child:nth-child(5) {
     display: none;
 }
 
-.adventure {
-    margin: 50px 0 0;
+
+
+
+.main-header {
+    margin: 50px 0 0px;
+
+    h5 {
+        margin: 10px auto;
+        text-wrap: balance;
+        line-height: normal;
+    }
 }
