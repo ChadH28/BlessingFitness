@@ -283,10 +283,6 @@ p:last-child {
     font-family: 'Quicksand', sans-serif;
 }
 
-.text {
-    color: #333333;
-}
-
 .colorstext {
     color: #f56363;
 }
@@ -831,7 +827,7 @@ input:-ms-input-placeholder {
     object-fit: cover;
     height: auto;
     max-height: 40vh;
-    margin-bottom: 20px;
+    margin: 50px 0 0;
 }
 
 @keyframes switch {
@@ -1110,10 +1106,7 @@ tr:hover {
     /* Ensures the container fits the image size */
 }
 
-/* Hide the images by default */
-/* .mySlides {
-  display: 100%;
-} */
+
 
 /* Next & previous buttons */
 .prev,
@@ -1138,10 +1131,9 @@ tr:hover {
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-/* .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-} */
+
+
+
 
 /* Caption text */
 .text {
@@ -1149,7 +1141,9 @@ tr:hover {
     color: #000000;
     font-size: 40px;
     padding: 8px 12px;
+    font-weight: 400;
     position: absolute;
+    display: block;
     bottom: 0px;
     width: 100%;
     text-align: center;
@@ -1184,19 +1178,21 @@ tr:hover {
 
 /* Fading animation */
 .fade {
-
-    animation-duration: 30s;
+    animation: fade 1.25s ease-in;
 }
 
 @keyframes fade {
-    from {
-        opacity: .4
+    0% {
+        opacity: 0.5;
+        transform: scale(0.99);
     }
 
-    to {
-        opacity: 1
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
+
 
 
 .fa {
@@ -1268,7 +1264,7 @@ h5 {
 }
 
 .price-container-content {
-    margin: 120px 50px 20px;
+    margin: 60px 50px 20px;
 }
 
 .price-container-content p {
@@ -1449,7 +1445,7 @@ img:last-child:nth-child(5) {
 /* Apply a background color to the fitness body */
 /* Style the fitness body */
 .fitness-body {
-    margin-top: 80px;
+    margin-top: 0px;
     background-color: inherit;
     text-align: center;
 }
@@ -1507,8 +1503,8 @@ img:last-child:nth-child(5) {
 }
 
 .fitness-cta {
-    margin: 50px auto 0;
-    padding: 0px 30px;
+    /* margin: 50px auto 0; */
+    padding: 60px 30px;
 }
 
 .fitness-cta .about-button {
@@ -2081,6 +2077,15 @@ img:last-child:nth-child(5) {
     display: none;
 }
 
-.adventure {
-    margin: 50px 0 0;
+
+
+
+.main-header {
+    margin: 50px 0 0px;
+
+    h5 {
+        margin: 10px auto;
+        text-wrap: balance;
+        line-height: normal;
+    }
 }
