@@ -844,6 +844,7 @@ input:-ms-input-placeholder {
     color: #333;
     text-align: center;
     border-bottom: #000000 2px;
+    position: relative;
 }
 
 .special-pricing img {
@@ -919,9 +920,13 @@ input:-ms-input-placeholder {
 }
 
 .exercise_table {
+    /* background-color: #d1d1d1; */
+    /* color: #fff !important; */
     width: 100%;
     display: flex;
     justify-content: center;
+    /* padding: 30px 0; */
+    /* margin: 30px 0; */
 }
 
 table {
@@ -1779,6 +1784,37 @@ img:last-child:nth-child(5) {
     margin: 120px 50px 0;
 }
 
+.activities-image {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.img_container {
+    overflow: hidden;
+    transition: 0.35s ease-in-out;
+}
+
+.img_container>img {
+    transition: 0.35s ease-in-out;
+}
+
+.img_container:hover>img {
+    transform: scale(1.2);
+}
+
+.activities-image h3,
+.activities-image p {
+    text-align: center;
+}
+
+.activities-image>p {
+    margin: 15px 25px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+}
+
 .adventure-image {
     flex-basis: calc(33.33% - 20px);
     margin-bottom: 20px;
@@ -1803,8 +1839,10 @@ img:last-child:nth-child(5) {
     text-align: center;
 }
 
-.adventure-image p {
-    margin: 10px 20px 20px;
+.adventure-image>p {
+    margin: 15px 25px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
 }
 
 .adventures-head {
@@ -1829,6 +1867,23 @@ img:last-child:nth-child(5) {
     background-color: #128C7E;
     color: #fff;
     /* Darker WhatsApp green color on hover */
+}
+
+.hero-heading-container {
+    position: absolute;
+    display: block;
+    text-wrap: balance;
+    max-width: 80%;
+    bottom: 0;
+    left: 0;
+    margin: 15px;
+}
+
+.hero-heading-container>h1,
+.hero-heading-container>h5 {
+    text-align: left;
+    color: #fff;
+    text-shadow: #000000 0.5px;
 }
 
 
