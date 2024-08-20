@@ -95,6 +95,9 @@ a span {
     background-color: #df2828;
     color: #ffffff;
     padding: 10px 20px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
     width: fit-content;
     margin: 0 auto;
     text-decoration: none;
