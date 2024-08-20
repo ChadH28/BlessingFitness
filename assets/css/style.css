@@ -1886,6 +1886,33 @@ img:last-child:nth-child(5) {
     text-shadow: #000000 0.5px;
 }
 
+.about-container-paragraph {
+    padding: 40px 26px;
+    background-color: rgba(255, 0, 0, 0.75);
+}
+
+
+
+.about-container-paragraph>p {
+    color: white;
+    font-size: larger;
+    line-height: normal;
+    letter-spacing: 0.08%;
+    text-wrap: balance;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.fitness-container-section {
+    background-color: #191919;
+}
+
+.fitness-container-section>.gallery>.adventure-image>p,
+.fitness-container-section>.gallery>.adventure-image>h3 {
+    color: #fff;
+    text-wrap: balance;
+}
+
+
 
 /*==========ABOUT PAGE============
 
@@ -1941,7 +1968,7 @@ img:last-child:nth-child(5) {
 
 /* Style individual timetable items */
 .timetable {
-    flex: 0 0 calc(20% - 20px);
+    flex: 0 0 calc(30% - 20px);
     /* Adjust the width as needed */
     background-color: #ffffff;
     border: 1px solid #ddd;
@@ -1949,14 +1976,35 @@ img:last-child:nth-child(5) {
     margin: 10px auto;
     text-align: center;
     width: 100%;
-    box-sizing: border-box;
     min-height: 250px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: 0.25s ease-in-out;
     border-radius: 5%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.timetable-image {
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    min-height: 250px;
+    opacity: 0.15;
+}
+
+
+
+.timetable>*:not(.timetable-image) {
+    z-index: 1;
+    position: relative;
 }
 
 .timetable:hover {
@@ -1994,12 +2042,23 @@ img:last-child:nth-child(5) {
 }
 
 .table-heading {
-
     text-align: center;
-    padding: 50px 30px 0px;
+    padding: 50px 30px 25px;
 }
 
+.table-heading,
+.timetable-container {
+    background-color: #191919;
+    padding: 50px 30px;
+}
 
+.table-heading>* {
+    color: #fff;
+}
+
+.timetable-container {
+    padding: 0 0 50px;
+}
 
 /*----------------------shopping section-----------------*/
 
