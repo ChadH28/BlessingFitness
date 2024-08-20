@@ -17,6 +17,16 @@ body {
     font-weight: 300;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+:target {
+    scroll-margin-top: 1rem;
+}
+
 body {
     scroll-behavior: smooth;
 }
@@ -1834,6 +1844,7 @@ img:last-child:nth-child(5) {
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 0 20px;
+    text-wrap: balance;
     /* margin-top: 80px; */
 }
 
