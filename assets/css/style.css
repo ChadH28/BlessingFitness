@@ -967,13 +967,10 @@ input:-ms-input-placeholder {
 }
 
 .exercise_table {
-    /* background-color: #d1d1d1; */
-    /* color: #fff !important; */
     width: 100%;
     display: flex;
     justify-content: center;
-    /* padding: 30px 0; */
-    /* margin: 30px 0; */
+    padding: 0 0 40px;
 }
 
 table {
@@ -1935,7 +1932,7 @@ img:last-child:nth-child(5) {
 
 .about-container-paragraph {
     padding: 40px 26px;
-    background-color: rgba(255, 0, 0, 0.75);
+    background-color: #191919;
 }
 
 
@@ -2030,7 +2027,7 @@ img:last-child:nth-child(5) {
     align-items: center;
     justify-content: center;
     transition: 0.25s ease-in-out;
-    border-radius: 5%;
+    border-radius: 12.5px;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -2056,6 +2053,7 @@ img:last-child:nth-child(5) {
 
 .timetable:hover {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transform: translateY(-1px);
 }
 
 .timetable .about-button {
@@ -2096,15 +2094,11 @@ img:last-child:nth-child(5) {
 .table-heading,
 .timetable-container {
     background-color: #191919;
-    padding: 50px 30px;
+    padding: 30px 20px;
 }
 
 .table-heading>* {
     color: #fff;
-}
-
-.timetable-container {
-    padding: 0 0 50px;
 }
 
 /*----------------------shopping section-----------------*/
