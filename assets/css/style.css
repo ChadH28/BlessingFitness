@@ -91,6 +91,10 @@ a span {
     transition: 0.2s ease-in-out;
 }
 
+.margin-b {
+    margin: 0 0 10px !important;
+}
+
 .about-button {
     background-color: #df2828;
     color: #ffffff;
@@ -133,6 +137,7 @@ a span {
 
 .about-us-sect {
     text-wrap: balance;
+    margin:0 0 15px;
 }
 
 .about-us-sect>h2 {
@@ -149,6 +154,7 @@ a span {
     font-weight: 400;
     line-height: normal;
 }
+
 
 .about-us-sect>h5>span {
     font-weight: lighter;
