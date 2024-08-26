@@ -97,7 +97,7 @@ a span {
     padding: 10px 20px;
     letter-spacing: 0%;
     text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: fit-content;
     margin: 0 auto;
     text-decoration: none;
@@ -914,18 +914,36 @@ input:-ms-input-placeholder {
 
 }
 
+.promotion-card-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
 .promotion-card {
     border-radius: 10px;
     padding: 20px 30px 30px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 600px;
-    margin: 30px auto 0;
+    margin: 30px 20px 0;
     flex-direction: column;
     gap: 2.5px;
     text-wrap: balance;
     animation: switch 1s infinite ease-in-out;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.promotion-card>h2 {
+    color: #000000;
+}
+
+.promotion-card>p {
+    color: gray;
+}
+
 
 .Booking {
     padding-top: 110px;
@@ -1943,7 +1961,7 @@ img:last-child:nth-child(5) {
     line-height: normal;
     letter-spacing: 0.08%;
     text-wrap: balance;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .fitness-container-section {
@@ -2082,13 +2100,14 @@ img:last-child:nth-child(5) {
 }
 
 /* Style the "Book With Google" button */
-.timetable a {
-    margin: 10px auto;
+.timetable>a {
+    margin: 10px auto !important;
 }
 
 .table-heading {
     text-align: center;
     padding: 50px 30px 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .table-heading,
@@ -2249,7 +2268,7 @@ img:last-child:nth-child(5) {
 }
 
 .hiking-card-location {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
     opacity: 0.7;
     margin: 10px 0 15px;
@@ -2257,7 +2276,7 @@ img:last-child:nth-child(5) {
 
 .hiking-card-level {
     font-weight: 400;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: normal;
     font-size: medium;
     text-transform: capitalize;
@@ -2266,7 +2285,7 @@ img:last-child:nth-child(5) {
 .hiking-card-time,
 .hiking-card-distance {
     font-weight: 400;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     opacity: 0.7;
 }
 

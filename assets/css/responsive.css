@@ -63,14 +63,20 @@
 
 	.menu-icon {
 		margin: 20px 20px 0 0;
+		padding: 10px;
 		display: block;
-		background-color: #555555;
-		width: 50px;
-		height: 30px;
 		position: absolute;
 		top: 0;
 		/* Optional: You can adjust the top position if needed */
 		right: 0;
+	}
+
+	.menu-icon:hover {
+		background-color: rgba(250, 92, 101, 0.1)
+	}
+
+	.menu-icon>.fa-bars {
+		color: #fa5c65;
 	}
 
 
@@ -210,14 +216,6 @@
 		width: 100%;
 	}
 
-	.menu-icon {
-		background-color: rgb(0, 0, 0);
-		border: 5px white;
-		border-radius: 5px;
-
-
-	}
-
 	.dropdown-content {
 		position: fixed;
 		display: block;
@@ -242,6 +240,7 @@
 	}
 
 	.dropdown-content ul li a:hover {
+		color: #fa5c65;
 		background-color: rgba(250, 92, 101, 0.1);
 	}
 
