@@ -15,6 +15,7 @@ body {
     margin: 0;
     font-family: 'open_sansregular';
     font-weight: 300;
+    overflow-x: hidden;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -138,6 +139,7 @@ a span {
 .about-us-sect {
     text-wrap: balance;
     margin:0 0 15px;
+    padding: 0 30px;
 }
 
 .about-us-sect>h2 {
