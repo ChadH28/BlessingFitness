@@ -15,6 +15,8 @@
     />
     <meta name="author" content="Total Blessing Fitness and Travel  Tours" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" href="assets/css/slider-style.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <!--For font-awesome css-->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
@@ -154,7 +156,7 @@
         <!-- card and image -->
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="cards-container">
-            <div class="item invert">
+            <div class="item">
               <div class="col-md-6 col-sm-12 col-xs-12">
                 <div class="portfolio">
                   <img
@@ -185,6 +187,46 @@
             </div>
           </div>
         </div>
+
+        <!-- <div class="logos">
+          <div class="logos-slide">
+            <img src="assets/images/hoodie1.jpg" />
+            <img src="assets/images/hoodie1.jpg" />
+            <img src="assets/images/hoodie1.jpg" />
+            <img src="assets/images/hoodie1.jpg" />
+            <img src="assets/images/hoodie1.jpg" />
+            <img src="assets/images/hoodie1.jpg" />
+          </div>
+        </div> -->
+
+        <div class="logos">
+          <div class="paragraph-slide">
+            <p>Hiking</p>
+            <span>•</span>
+            <p>High Intensity Training</p>
+            <span>•</span>
+            <p>Sandboarding</p>
+            <span>•</span>
+            <p>Full body conditioning</p>
+            <span>•</span>
+            <p>BOXING</p>
+            <span>•</span>
+            <p>Township Tours</p>
+            <span>•</span>
+            <p>STRENGTH TRAINING</p>
+            <span>•</span>
+            <p>Bungee Jumping</p>
+            <span>•</span>
+            <p>LADIES ONLY BOXERCISE & RESISTANCE TRAINING</p>
+            <span>•</span>
+            <p>Kirstenbosch Gardens</p>
+            <span>•</span>
+            <p>Box Fit Group Classes</p>
+            <span>•</span>
+            <p>Junior Boxing</p>
+          </div>
+        </div>
+
         <!-- cta -->
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="cards-container">
@@ -206,7 +248,7 @@
 
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="cards-container">
-            <div class="item invert">
+            <div class="item">
               <div class="col-md-6 col-sm-12 col-xs-12">
                 <div class="portfolio">
                   <img
@@ -289,7 +331,17 @@
     <!--Footer-->
     <footer class="container">
       <hr />
-      <div class="row">
+      <div class="row footer-inner-container">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="copyright">
+            <p>
+              © 2024 - All rights reserved - Totalblessingfitness.
+              <a style="text-decoration: underline" href="privacy-policy.html"
+                >Privacy Policy</a
+              >
+            </p>
+          </div>
+        </div>
         <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="social-network">
             <a href="https://twitter.com/total_blessing" target="_blank"
@@ -308,22 +360,15 @@
             <a href="https://wa.link/2fyjg5" target="_blank"
               ><i class="fa fa-whatsapp"></i
             ></a>
-            <a href="privacy-policy.html">Privacy Policy</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-6 col-xs-12">
-          <div class="copyright">
-            <p>
-              <i class="fa fa-circle"></i>
-              <a target="_blank" href="http://bootstrapthemes.co">
-                This site is for Blessing</a
-              >
-              2024. All rights reserved.
-            </p>
           </div>
         </div>
       </div>
     </footer>
+
+    <script>
+      var copy = document.querySelector(".logos-slide").cloneNode(true);
+      document.querySelector(".logos").appendChild(copy);
+    </script>
 
     <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
     <script src="assets/js/vendor/bootstrap.min.js"></script>
