@@ -1,13 +1,9 @@
 import Hero from "@/components/hero";
 import InfoCard from "@/components/info-card";
-import Navigation from "@/components/navigations";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
-      <Navigation />
-
       <main
       // className="flex flex-col gap-8 row-start-2 items-center sm:items-start"
       >

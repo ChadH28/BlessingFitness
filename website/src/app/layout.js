@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Navigation from "@/components/navigation";
 import "./globals.css";
 import Footer from "@/components/footer";
 
@@ -11,6 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <Navigation />
         {children}
         <Footer />
       </body>
