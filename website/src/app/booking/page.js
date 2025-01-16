@@ -1,18 +1,13 @@
+import SubHero from "@/components/sub-hero";
+
 export default function Booking() {
   return (
     <main>
-      <div class="special-pricing">
-        <img
-          class="special-pricing-hero"
-          src="assets/images/BLACKANDWHITE.jpeg"
-          alt="Special Offer Image"
-        />
-
-        <div class="hero-heading-container">
-          <h1>Reserve Your Fitness Journey</h1>
-          <h5>Book Your Classes and Training Sessions Today</h5>
-        </div>
-      </div>
+      <SubHero
+        title={"Reserve Your Fitness Journey"}
+        image={"/images/BLACKANDWHITE.jpeg"}
+        // <h5>Book Your Classes and Training Sessions Today</h5>
+      />
 
       <div class="promotion-card-container">
         <div class="promotion-card">

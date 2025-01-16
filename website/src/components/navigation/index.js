@@ -36,21 +36,22 @@ export default function Navigation() {
         className="
           flex 
           items-center
-          max-[1024px]:justify-between
+          justify-between
           max-[1024px]:px-4
           max-[1024px]:flex-wrap
           w-full
           px-[50px]
+          py-[20px]
           gap-3
           bg-background
       "
       >
-        <Link href={"/"} className="logo-container my-[-10px]">
+        <Link href={"/"} className="logo-container">
           <Image
             width={80}
             height={80}
             alt="fn rangers logo"
-            src={"/logo/FN-Rangers.png"}
+            src={"/images/logo3.png"}
           />
         </Link>
 
@@ -68,7 +69,7 @@ export default function Navigation() {
               links?.sublinks ? (
                 <li key={index} className="relative group">
                   <Link
-                    className={`max-[1024px]:text-sm max-[1024px]:font-normal text-xs font-bold
+                    className={`max-[1024px]:text-sm max-[1024px]:font-normal text-xs font-bold uppercase
                     transition-all
                     hover: text-tertiary
                     ${
@@ -85,7 +86,7 @@ export default function Navigation() {
                     {links.sublinks.map((sublink, key) => (
                       <li
                         key={key}
-                        className="text-sm hover:bg-tertiary px-3 capitalize leading-8"
+                        className=" uppercase text-sm hover:bg-tertiary px-3 leading-8"
                       >
                         <Link href={sublink.url}>{sublink.label}</Link>
                       </li>
@@ -96,7 +97,7 @@ export default function Navigation() {
                 <li key={index}>
                   <Link
                     className={`max-[1024px]:text-sm max-[1024px]:font-normal text-xs font-bold
-                      transition-all
+                      transition-all uppercase
                       hover: text-tertiary
                       ${
                         router.pathname === links.url
@@ -146,66 +147,6 @@ export default function Navigation() {
         </button>
       </div>
 
-      <div className="md:hidden flex justify-center mt-3 w-full">
-        <div id="mobile-menu" className="mobile-menu absolute top-23 w-full">
-          <ul className="bg-gray-100 shadow-lg leading-9 font-bold h-screen">
-            <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-              <a href="https://google.com" className="block pl-7">
-                Home
-              </a>
-            </li>
-            <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-              <a href="#" className="block pl-7">
-                News
-              </a>
-            </li>
-            <li className="border-b-2 border-white hover:bg-red-400 hover:text-white">
-              <a href="#" className="block pl-11">
-                Services{" "}
-                <i className="fa-solid fa-chevron-down fa-2xs pt-4"></i>
-              </a>
-
-              <ul className="bg-white z-10 text-gray-800 w-full">
-                <li className="text-sm leading-8 font-normal hover:bg-slate-200">
-                  <a className="block pl-16" href="#">
-                    Webdesign
-                  </a>
-                </li>
-                <li className="text-sm leading-8 font-normal hover:bg-slate-200">
-                  <a className="block pl-16" href="#">
-                    Digital marketing
-                  </a>
-                </li>
-                <li className="text-sm leading-8 font-normal hover:bg-slate-200">
-                  <a className="block pl-16" href="#">
-                    SEO
-                  </a>
-                </li>
-                <li className="text-sm leading-8 font-normal hover:bg-slate-200">
-                  <a className="block pl-16" href="#">
-                    Ad campaigns
-                  </a>
-                </li>
-                <li className="text-sm leading-8 font-normal hover:bg-slate-200">
-                  <a className="block pl-16" href="#">
-                    UX Design
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-              <a href="#" className="block pl-7">
-                About
-              </a>
-            </li>
-            <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-              <a href="#" className="block pl-7">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </nav>
   );
 }
