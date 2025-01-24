@@ -1,117 +1,146 @@
+import PriceCard from "@/components/price-card";
 import SubHero from "@/components/sub-hero";
+import Link from "next/link";
 
 export default function Booking() {
+  const pricelist = {
+    ladies_only: [
+      {
+        price: "R650",
+        description: "per month",
+      },
+      {
+        price: "R200",
+        description: "per dropin",
+      },
+    ],
+    group: [
+      {
+        price: "R1,000",
+        description: "per month",
+      },
+      {
+        price: "R850",
+        description: "per monthly student",
+      },
+      {
+        price: "R150",
+        description: "per dropin",
+      },
+    ],
+    private: [
+      {
+        price: "R2,000",
+        description: "10 sessions",
+      },
+      {
+        price: "R450",
+        description: "1 hour",
+      },
+      {
+        price: "R350",
+        description: "45 mins",
+      },
+      {
+        price: "R250",
+        description: "30 mins",
+      },
+    ],
+    one_on: [
+      {
+        price: "R4,000",
+        description: "10 sessions",
+      },
+    ],
+    three_on: [
+      {
+        price: "R7,000",
+        description: "10 sessions",
+      },
+      {
+        price: "R750",
+        description: "1 hour",
+      },
+    ],
+    two_on: [
+      {
+        price: "R6,000",
+        description: "10 sessions",
+      },
+      {
+        price: "R650",
+        description: "1 hour",
+      },
+    ],
+  };
   return (
     <main>
       <SubHero
         title={"Reserve Your Fitness Journey"}
+        subtitle={"Book Your Classes and Training Sessions Today"}
         image={"/images/BLACKANDWHITE.jpeg"}
-        // <h5>Book Your Classes and Training Sessions Today</h5>
       />
 
-      <div class="promotion-card-container">
-        <div class="promotion-card">
-          <h2>SPECIAL PROMOTION</h2>
-          <p>
-            Pay three months upfront and get three months of boxfit bootcamp by
-            coach Blessing
-          </p>
-          <p>
-            Use code <strong>TOTALBLESSING20</strong> for only R2700. (Pay R2700
-            for 3 months)
-          </p>
-          <a
-            class="about-button"
-            href="https://calendly.com/mteroblessing/30min?month=2024-02"
+      {/* promotion section */}
+      <div className="flex justify-center w-full h-auto">
+        <div className="bg-black text-white p-5 flex flex-col gap-2">
+          <h2 className="text-3xl">SPECIAL PROMOTION</h2>
+          <div className="text-xl leading-relaxed ">
+            <p>
+              Pay three months upfront and get three months of boxfit bootcamp
+              by coach Blessing
+            </p>
+            <p>
+              Use code <strong>TOTALBLESSING20</strong> for only R2700. (Pay
+              R2700 for 3 months)
+            </p>
+          </div>
+          <Link
+            className="bg-white text-black uppercase p-4 w-fit text-xs"
+            // href="https://calendly.com/mteroblessing/30min?month=2024-02"
+            href="https://wa.link/2fyjg5"
             target="_blank"
           >
             Book Here
-          </a>
+          </Link>
         </div>
       </div>
 
-      <div class="exercise_table">
-        <table>
-          <thead>
-            <tr>
-              <th>Service</th>
-              <th>Description</th>
-              <th>Subscription</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1 ON 1</td>
-              <td>10 sessions</td>
-              <td>R4,000</td>
-            </tr>
-            <tr>
-              <td>3 ON 1</td>
-              <td>10 sessions</td>
-              <td>R7,000</td>
-            </tr>
-            <tr>
-              <td>3 ON 1</td>
-              <td>1 Hour</td>
-              <td>R750</td>
-            </tr>
-            <tr>
-              <td>2 ON 1</td>
-              <td>10 sessions upfront</td>
-              <td>R6,000</td>
-            </tr>
-            <tr>
-              <td>2 ON 1</td>
-              <td>1 Hour</td>
-              <td>R650</td>
-            </tr>
-            <tr>
-              <td>Private Session</td>
-              <td>10 sessions</td>
-              <td>R2,000</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>1 Hour</td>
-              <td>R450</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>45 mins</td>
-              <td>R350</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>30 mins</td>
-              <td>R250</td>
-            </tr>
-            <tr>
-              <td>Group Sessions</td>
-              <td>Monthly</td>
-              <td>R1,000 p/m</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Student</td>
-              <td>R850 p/m</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Drop in</td>
-              <td>R150</td>
-            </tr>
-            <tr>
-              <td>Ladies only Saturday session</td>
-              <td>Monthly</td>
-              <td>R650 p/m</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Drop in</td>
-              <td>R200</td>
-            </tr>
-          </tbody>
-        </table>
+      {/* table */}
+      <div className="px-10 w-full h-auto">
+        <PriceCard
+          image={"/images/Fitness/Fitness15.jpeg"}
+          title={"Ladies only Saturday session"}
+          pricinglist={pricelist.ladies_only}
+          alt
+        />
+        <PriceCard
+          image={"/images/Fitness/03Fitness.jpeg"}
+          title={"Group Sessions"}
+          pricinglist={pricelist.group}
+        />
+        <PriceCard
+          image={"/images/Fitness/Fitness03.jpeg"}
+          title={"Private Session"}
+          pricinglist={pricelist.private}
+          alt
+        />
+        <PriceCard
+          image={"/images/Fitness/Fitness08.jpeg"}
+          title={"1 ON 1"}
+          pricinglist={pricelist.one_on}
+        />
+        <PriceCard
+          image={"/images/Fitness/2Fitness.jpeg"}
+          title={"2 ON 1"}
+          pricinglist={pricelist.two_on}
+          alt
+        />
+        <PriceCard
+          image={"/images/Fitness/Fitness03.jpeg"}
+          title={"3 ON 1"}
+          pricinglist={pricelist.three_on}
+        />
       </div>
 
       <div id="schedule" class="anchor_adj">

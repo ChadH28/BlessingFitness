@@ -5,7 +5,10 @@ export default function About() {
   return (
     <main>
       <SubHero
-        title={"Its time to GET FIT \nand have a great time doing it!"}
+        title={"Get Fit. Have Fun. Feel Great!"}
+        subtitle={
+          "Transform Your Health with Workouts You'll Love and Elevate Your Fitness!"
+        }
         image={"/images/Fitness/Fitness04.jpeg"}
       />
 

@@ -34,7 +34,8 @@ body {
   animation: zoomInOut 20s infinite ease-in;
 }
 
-.hero-image::after {
+.hero-image::after,
+.subhero::after {
   left: 0;
   position: absolute;
   content: "";

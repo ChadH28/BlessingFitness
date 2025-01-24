@@ -5,7 +5,9 @@ export default function Fitness() {
     <main>
       <SubHero
         title={"WORKOUT PROGRAMMES TAILORED TO YOUR FITTING"}
-        // We Know Exactly what is needed to get you to your Full potential
+        subtitle={
+          "We Know Exactly what is needed to get you to your Full potential"
+        }
         image={"/images/BLACKANDWHITE.jpeg"}
       />
     </main>
