@@ -10,6 +10,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        tertiary: "var(--tertiary)",
+        primary: "var(--primary)",
+        primarycolorgradient: "var(--primarycolorgradient)",
+        blacktransgradient: "var(--blacktransgradient)",
+        primaryred: "var(--primaryred)",
+        primaryblue: "var(--primaryblue)",
       },
     },
   },

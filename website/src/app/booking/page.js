@@ -1,5 +1,7 @@
 import PriceCard from "@/components/price-card";
 import SubHero from "@/components/sub-hero";
+import TableCard from "@/components/timetable-card";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Booking() {
@@ -16,59 +18,71 @@ export default function Booking() {
     ],
     group: [
       {
-        price: "R1,000",
+        price: "R1,200",
         description: "per month",
       },
       {
-        price: "R850",
+        price: "R1,000",
         description: "per monthly student",
       },
       {
-        price: "R150",
+        price: "R200",
+        description: "per dropin student",
+      },
+      {
+        price: "R220",
         description: "per dropin",
       },
     ],
-    private: [
+    sessions: [
       {
-        price: "R2,000",
-        description: "10 sessions",
+        price: "R4,000",
+        description: "10 x 45 mins",
+      },
+      {
+        price: "R3,500",
+        description: "10 x 30 mins",
       },
       {
         price: "R450",
-        description: "1 hour",
+        description: "Assessment fee",
       },
-      {
-        price: "R350",
-        description: "45 mins",
-      },
-      {
-        price: "R250",
-        description: "30 mins",
-      },
+      // {
+      //   price: "R250",
+      //   description: "30 mins",
+      // },
     ],
     one_on: [
       {
-        price: "R4,000",
+        price: "R5,000",
         description: "10 sessions",
+      },
+      {
+        price: "R550",
+        description: "1 hour",
+      },
+      {
+        price: "R450",
+        description: "45 mins",
+      },
+      {
+        price: "R400",
+        description: "30 mins",
       },
     ],
     three_on: [
+      {
+        price: "R1,050",
+        description: "1 hour",
+      },
+    ],
+    two_on: [
       {
         price: "R7,000",
         description: "10 sessions",
       },
       {
         price: "R750",
-        description: "1 hour",
-      },
-    ],
-    two_on: [
-      {
-        price: "R6,000",
-        description: "10 sessions",
-      },
-      {
-        price: "R650",
         description: "1 hour",
       },
     ],
@@ -83,26 +97,32 @@ export default function Booking() {
 
       {/* promotion section */}
       <div className="flex justify-center w-full h-auto">
-        <div className="bg-black text-white p-5 flex flex-col gap-2">
-          <h2 className="text-3xl">SPECIAL PROMOTION</h2>
+        <div className="bg-black text-white sm:w-full lg:w-[500px] m-8 p-8 flex flex-col gap-2">
+          <h2 className="text-3xl">SPECIAL PACKAGE</h2>
           <div className="text-xl leading-relaxed ">
-            <p>
-              Pay three months upfront and get three months of boxfit bootcamp
-              by coach Blessing
-            </p>
-            <p>
-              Use code <strong>TOTALBLESSING20</strong> for only R2700. (Pay
-              R2700 for 3 months)
-            </p>
+            <div className="flex flex-col gap-4">
+              <p>
+                5X private sessions including a 1 month membership for groups{" "}
+                <strong>for only R3,200</strong>
+              </p>
+              <p>
+                Every member that pays 3 months upfront (R1,000 x 3 ) will get
+                R200 dicount each month
+              </p>
+              <p>
+                Every student that pays 3 months upfront (R950 x 3 ) will get
+                R50 dicount each month
+              </p>
+            </div>
           </div>
-          <Link
+          {/* <Link
             className="bg-white text-black uppercase p-4 w-fit text-xs"
             // href="https://calendly.com/mteroblessing/30min?month=2024-02"
             href="https://wa.link/2fyjg5"
             target="_blank"
           >
             Book Here
-          </Link>
+          </Link> */}
         </div>
       </div>
 
@@ -122,7 +142,7 @@ export default function Booking() {
         <PriceCard
           image={"/images/Fitness/Fitness03.jpeg"}
           title={"Private Session"}
-          pricinglist={pricelist.private}
+          pricinglist={pricelist.sessions}
           alt
         />
         <PriceCard
@@ -143,8 +163,15 @@ export default function Booking() {
         />
       </div>
 
-      <div id="schedule" class="anchor_adj">
-        <div class="table-heading">
+      <div
+        id="schedule"
+        class="
+        anchor_adj
+        relative flex items-center justify-center h-1/2
+      bg-fixed bg-center bg-cover custom-img
+      "
+      >
+        <div class="table-heading flex flex-col items-center gap-2 p-10 justify-center w-100 text-[#a94442] font-semibold">
           <h2>TIME TABLE</h2>
           <h4>(Bootcamp classes time table)</h4>
           <h5>Note: Classes are to be held at The Ring Reloaded Boxing Gym</h5>
@@ -154,123 +181,52 @@ export default function Booking() {
           </p>
         </div>
       </div>
-      <div class="timetable-container">
-        <div class="timetable">
-          <img
-            class="timetable-image"
-            loading="lazy"
-            src="assets/images/Fitness/03Fitness.jpeg"
-            alt="Image 3"
-          />
-          <h2 class="related-articles-title">MONDAY</h2>
-          <h5>HIIT</h5>
-          (High-Intensity Interval Training
-          <span>07:30 - 08:30am</span>
-          <a
-            class="about-button"
-            href="https://calendly.com/mteroblessing/30min?month=2024-02"
-            target="_blank"
-          >
-            Book
-          </a>
-        </div>
-        <div class="timetable">
-          <img
-            class="timetable-image"
-            loading="lazy"
-            src="assets/images/Fitness/RESIZED/01Fitness.jpg"
-            alt="Image 3"
-          />
-          <h2 class="related-articles-title">TUESDAY</h2>
-          <h5>BOXING</h5>
-          <span>07:30 - 08:30am</span>
 
-          <a
-            class="about-button"
-            href="https://calendly.com/mteroblessing/boxing"
-          >
-            Book
-          </a>
-        </div>
+      <div class="timetable-container relative my-12">
+        <TableCard
+          day={"MONDAY"}
+          workout={"HIIT"}
+          workout_desc={"(High-Intensity Interval Training)"}
+          time_am={"07:30 - 08:30am"}
+          image={"/images/Fitness/03Fitness.jpeg"}
+        />
+        <TableCard
+          day={"TUESDAY"}
+          workout={"BOXING"}
+          time_am={"07:30 - 08:30am"}
+          image={"/images/Fitness/RESIZED/01Fitness.jpg"}
+        />
 
-        <div class="timetable">
-          <img
-            class="timetable-image"
-            loading="lazy"
-            src="assets/images/Fitness/2Fitness.jpeg"
-            alt="Image 3"
-          />
-          <h2 class="related-articles-title">WEDNESDAY</h2>
-          <h5>FULL BODY CONDITIONING</h5>
-          <span>07:30 - 08:30am</span>
-          <span>18:30 - 19:30pm</span>
-          <a
-            class="about-button"
-            href="https://calendly.com/mteroblessing/30min?month=2024-02"
-            target="_blank"
-          >
-            Book
-          </a>
-        </div>
+        <TableCard
+          day={"WEDNESDAY"}
+          workout={"FULL BODY CONDITIONING"}
+          time_am={"07:30 - 08:30am"}
+          time_pm={"18:30 - 19:30pm"}
+          image={"/images/Fitness/2Fitness.jpeg"}
+        />
 
-        <div class="timetable">
-          <img
-            class="timetable-image"
-            loading="lazy"
-            src="assets/images/Fitness/Fitness03.jpeg"
-            alt="Image 3"
-          />
-          <h2 class="related-articles-title">THURSDAY</h2>
-          <h5>STRENGTH TRAINING</h5>
-          <span>07:30am - 08:30am</span>
-          <a
-            class="about-button"
-            href="https://calendly.com/mteroblessing/30min?month=2024-02"
-            target="_blank"
-          >
-            Book
-          </a>
-        </div>
+        <TableCard
+          day={"THURSDAY"}
+          workout={"STRENGTH TRAINING"}
+          time_am={"07:30 - 08:30am"}
+          image={"/images/Fitness/Fitness03.jpeg"}
+        />
 
-        <div class="timetable">
-          <img
-            class="timetable-image"
-            loading="lazy"
-            src="assets/images/Fitness/02Fitness.jpeg"
-            alt="Image 3"
-          />
-          <h2 class="related-articles-title">FRIDAY</h2>
-          <h5>BOXING</h5>
-          <span>07:30 - 08:30am</span>
-          <span>18:30 - 19:30pm</span>
-          <a
-            class="about-button"
-            href="https://calendly.com/mteroblessing/30min?month=2024-02"
-            target="_blank"
-          >
-            Book
-          </a>
-        </div>
+        <TableCard
+          day={"FRIDAY"}
+          workout={"BOXING"}
+          time_am={"07:30 - 08:30am"}
+          time_pm={"18:30 - 19:30pm"}
+          image={"/images/Fitness/02Fitness.jpeg"}
+        />
 
-        <div class="timetable">
-          <img
-            class="timetable-image"
-            loading="lazy"
-            src="assets/images/Fitness/Fitness16.jpeg"
-            alt="Image 3"
-          />
-          <h2 class="related-articles-title">SATURDAY</h2>
-          <h5>LADIES ONLY BOXERCISE & RESISTANCE TRAINING</h5>
-          <span>8:00 - 09:00am</span>
-          <span>13:00 - 14:00pm</span>
-          <a
-            class="about-button"
-            href="https://calendly.com/mteroblessing/30min?month=2024-02"
-            target="_blank"
-          >
-            Book
-          </a>
-        </div>
+        <TableCard
+          day={"SATURDAY"}
+          workout={"LADIES ONLY BOXERCISE & RESISTANCE TRAINING"}
+          time_am={"10:00 - 11:00am"}
+          time_pm={"13:00 - 14:00pm"}
+          image={"/images/Fitness/Fitness16.jpeg"}
+        />
       </div>
     </main>
   );

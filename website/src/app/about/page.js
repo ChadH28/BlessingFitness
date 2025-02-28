@@ -1,7 +1,76 @@
+"use client";
 import InfoCard from "@/components/info-card";
 import SubHero from "@/components/sub-hero";
+import Image from "next/image";
+import Link from "next/link";
+import Slider from "react-slick";
+
+const sliderImages = [
+  {
+    image: "/images/Fitness/RESIZED/01Fitness.jpg",
+  },
+  {
+    image: "/images/adventures/IMG_0304.jpeg",
+  },
+  {
+    image: "/images/Fitness/RESIZED/02Fitness.jpg",
+  },
+  {
+    image: "/images/adventures/IMG_0307.jpeg",
+  },
+  {
+    image: "/images/Fitness/03Fitness.jpeg",
+  },
+  {
+    image: "/images/adventures/IMG_0306.jpeg",
+  },
+];
+
+function SampleNextArrow(props) {
+  const { style, onClick } = props;
+  return (
+    <div
+      className="absolute z-10 w-2 h-16 right-0 top-1/2 translate-y-1/2 cursor-pointer bg-red-700"
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { style, onClick } = props;
+  return (
+    <div
+      className="absolute z-10 w-2 h-16 top-1/2 translate-y-1/2 cursor-pointer bg-red-700"
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+    />
+  );
+}
 
 export default function About() {
+  var settings = {
+    lazyLoad: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+    dots: false,
+    arrows: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
   return (
     <main>
       <SubHero
@@ -13,15 +82,7 @@ export default function About() {
       />
 
       <InfoCard
-        content={`Total Blessing Fitness & Tour Travel is a Cape Town based company that specializes in providing fitness and tour travel services. We offer a
-          wide range of services, from personal training and group fitness
-          classes to guided tours and travel packages. Our team of experienced
-          professionals is dedicated to helping you reach your fitness and
-          travel goals. We strive to provide the best possible experience for
-          our clients, ensuring that they have a safe and enjoyable journey. We
-          believe in creating lasting memories and providing an unforgettable
-          experience. Our goal is to make sure that you have the best possible
-          experience when you travel with us.`}
+        content={`Total Blessing Fitness & Tour Travel is a Cape Town based company that specializes in providing fitness and tour travel services. We offer a wide range of services, from personal training and group fitness classes to guided tours and travel packages. Our team of experienced professionals is dedicated to helping you reach your fitness and travel goals. We strive to provide the best possible experience for our clients, ensuring that they have a safe and enjoyable journey. We believe in creating lasting memories and providing an unforgettable experience. Our goal is to make sure that you have the best possible experience when you travel with us.`}
         image={"/images/rem-bg/biskop_steps-removebg-preview.png"}
         alt
       />
@@ -34,6 +95,8 @@ export default function About() {
         image={"/images/Fitness/2Fitness.jpeg"}
         buttonlabel={"Get fit"}
         buttonlink={"/fitness"}
+        background={"var(--secondary)"}
+        textc={"#00000"}
       />
 
       <InfoCard
@@ -45,6 +108,8 @@ export default function About() {
         buttonlabel={"Explore more"}
         buttonlink={"/adventures"}
         alt
+        background={"var(--primary)"}
+        textc={"#fff"}
       />
 
       <InfoCard
@@ -55,6 +120,8 @@ export default function About() {
         image={"/images/adventures/tablemountain.jpg"}
         buttonlabel={"Sign up now and join the tribe"}
         buttonlink={"/booking"}
+        background={"var(--secondary)"}
+        textc={"#00000"}
       />
 
       <InfoCard
@@ -66,76 +133,36 @@ export default function About() {
         buttonlabel={"Subscribe"}
         buttonlink={"https://www.youtube.com/@total.blessing"}
         alt
+        background={"var(--primary)"}
+        textc={"#fff"}
       />
 
-      <div className="fitness-container">
-        <div className="gallery">
-          <div className="adventure-image">
-            <img
-              src="assets/images/Fitness/RESIZED/01Fitness.jpg"
-              alt="1-on-1 Boxing Training Cape Town"
-            />
-          </div>
-          <div className="adventure-image">
-            <img
-              src="assets/images/Fitness/RESIZED/02Fitness.jpg"
-              alt="Couple Boxing Training Cape Town"
-            />
-          </div>
-          <div className="adventure-image">
-            <img
-              src="assets/images/Fitness/03Fitness.jpeg"
-              alt="Group Cardio Sessions Cape Town"
-            />
-          </div>
+      <div className="adventure-section relative py-16 w-full bg-slate-50">
+        <div className="item cta-label flex flex-col items-center justify-center gap-3 pb-10 w-full">
+          <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
+            Seek an <span style={{ color: "red" }}>adventure</span> with us
+          </h2>
+          <Link
+            className="uppercase block bg-[red] hover:bg-red-500 text-xs text-white font-extrabold w-fit rounded-sm px-4 py-2"
+            href="/Adventures"
+          >
+            Explore More
+          </Link>
         </div>
-      </div>
-
-      <section>
-        <div className="container">
-          <div className="col-md-12 col-sm-12 col-xs-12">
-            <div className="cards-container">
-              <div className="item cta-label">
-                <div className="about-us-sect col-md-6 col-sm-12 col-xs-12">
-                  <h2>
-                    Seek an <span style={{ color: "red" }}>adventure</span> with
-                    us
-                  </h2>
-                </div>
-                <div className="item-content col-md-6 col-sm-12 col-xs-12">
-                  <div className="left_align">
-                    <a className="about-button" href="Adventures.html">
-                      Explore More
-                    </a>
-                  </div>
-                </div>
+        <Slider {...settings} className="relative">
+          {sliderImages.map((activity, index) => (
+            <div key={index} className="h-auto px-6">
+              <div className="h-[350px] relative">
+                <Image
+                  style={{ objectFit: " cover" }}
+                  fill
+                  src={activity.image}
+                  alt={"activity."}
+                />
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="fitness-container-section">
-        <div className="gallery">
-          <div className="adventure-image">
-            <img
-              src="assets/images/adventures/IMG_0304.jpeg"
-              alt="Cape Town Amazon Tours"
-            />
-          </div>
-          <div className="adventure-image">
-            <img
-              src="assets/images/adventures/IMG_0306.jpeg"
-              alt="Amazon Lunch in Cape Town"
-            />
-          </div>
-          <div className="adventure-image">
-            <img
-              src="assets/images/adventures/IMG_0307.jpeg"
-              alt="Cape Tonn Hiking"
-            />
-          </div>
-        </div>
+          ))}
+        </Slider>
       </div>
     </main>
   );

@@ -31,7 +31,7 @@ export default function PriceCard({
           alt ? "text-right" : "text-left"
         }`}
       >
-        <h2 className="uppercase font-extrabold text-tertiary max-[1024px]:text-2xl text-3xl">
+        <h2 className="uppercase font-extrabold text-red-800 max-[1024px]:text-2xl text-3xl">
           {title}
         </h2>
         {pricinglist &&
