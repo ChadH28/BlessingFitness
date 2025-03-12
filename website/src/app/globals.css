@@ -28,6 +28,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 
+  main {
+    overflow: hidden;
+  }
+
   h1,
   h2 {
     text-wrap: balance;
@@ -103,7 +107,26 @@ body {
 }
 
 .table-heading {
-  background-color: rgba(221, 221, 221, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(221, 221, 221, 0.7); */
   width: 100%;
   z-index: 1;
+}
+
+
+.video-overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.zoomImg {
+  overflow: hidden;
+  transition: 0.35s ease-in-out;
+}
+
+.zoomImg>img {
+  transition: 0.35s ease-in-out;
+}
+
+.zoomImg:hover>img {
+  transform: scale(1.2);
 }

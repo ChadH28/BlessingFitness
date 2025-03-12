@@ -1,13 +1,50 @@
+"use client";
 import Hero from "@/components/hero";
 import InfoCard from "@/components/info-card";
+import Slider from "react-slick";
+
+const activities = [
+  { text: "Hiking" },
+  { text: "High Intensity Training" },
+  { text: "Sandboarding" },
+  { text: "Full body conditioning" },
+  { text: "BOXING" },
+  { text: "Township Tours" },
+  { text: "STRENGTH TRAINING" },
+  { text: "Bungee Jumping" },
+  { text: "Kirstenbosch Gardens" },
+  { text: "Box Fit Group Classes" },
+  { text: "Junior Boxing" },
+  { text: "LADIES BOXERCISE" },
+];
 
 export default function Home() {
+  var settings = {
+    lazyLoad: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+    dots: false,
+    arrows: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 750,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
   return (
     <div>
       <main
       // className="flex flex-col gap-8 row-start-2 items-center sm:items-start"
       >
-        <Hero title={"WHERE FITNESS MEETS ADVENTURE"} image={""} slider />
+        <Hero title={"WHERE FITNESS MEETS ADVENTURE"} slider />
 
         <InfoCard
           title={"Meet the team behind the adventure"}
@@ -41,6 +78,16 @@ export default function Home() {
           image={"/images/rem-bg/hom-resize-removebg-preview.png"}
         />
 
+        <Slider {...settings} className="py-14 bg-slate-50">
+          {activities.map((activity, index) => (
+            <div key={index}>
+              <p className="uppercase text-[grey] font-extrabold text-2xl relative">
+                {activity.text}
+              </p>
+            </div>
+          ))}
+        </Slider>
+
         <InfoCard
           title={"Unleash Your Potential with Our Programs"}
           content={`From Monday to Saturday, we have classes you can join in
@@ -52,37 +99,17 @@ export default function Home() {
           image={"/images/Fitness/Fitness05.jpeg"}
         />
 
-        <section id="portfolio-area" className="sections">
-          <div className="container">
-            {/* <div className="logos">
-              <div className="paragraph-slide">
-                <p>Hiking</p>
-                <span>•</span>
-                <p>High Intensity Training</p>
-                <span>•</span>
-                <p>Sandboarding</p>
-                <span>•</span>
-                <p>Full body conditioning</p>
-                <span>•</span>
-                <p>BOXING</p>
-                <span>•</span>
-                <p>Township Tours</p>
-                <span>•</span>
-                <p>STRENGTH TRAINING</p>
-                <span>•</span>
-                <p>Bungee Jumping</p>
-                <span>•</span>
-                <p>LADIES ONLY BOXERCISE & RESISTANCE TRAINING</p>
-                <span>•</span>
-                <p>Kirstenbosch Gardens</p>
-                <span>•</span>
-                <p>Box Fit Group Classes</p>
-                <span>•</span>
-                <p>Junior Boxing</p>
-              </div>
-            </div> */}
-          </div>
-        </section>
+        <InfoCard
+          title={"Join our online boxercise classes!"}
+          content={`Join our Cape Town-based online boxercise classes for a
+              high-energy workout combining boxing techniques and fitness
+              training. Each session includes a warm-up, boxing drills,
+              bodyweight exercises, and a cool-down for recovery. Suitable for
+              all fitness levels, our virtual classes on Zoom require no special
+              equipment—train from home and get fit with us!`}
+          video={"/video/WhatsApp Video 2025-03-11 at 17.23.45.mp4"}
+          alt
+        />
       </main>
     </div>
   );

@@ -198,7 +198,7 @@ const hiking_trails = [
     image: "/images/hiking/Twelve_Apostles_and_Missing_Link_Loop2.png",
   },
   {
-    title: "Lion's Head (Sunset / Sunrise / Full Moon Hikes)",
+    title: "Lion's Head \n (Sunset / Sunrise / Full Moon Hikes)",
     location: "Table Mountain National Park",
     distance: "4.3km",
     time: "",
@@ -312,11 +312,27 @@ const hiking_trails = [
 ];
 
 const galleryImages = [
-  { image: "/images/hiking/biskop_steps.png" },
-  { image: "/images/hiking/biskop_steps.png" },
-  { image: "/images/hiking/biskop_steps.png" },
-  { image: "/images/hiking/biskop_steps.png" },
-  { image: "/images/hiking/biskop_steps.png" },
+  { image: "/images/adventures/IMG_0305.jpeg" },
+  { image: "/images/adventures/IMG_0307.jpeg" },
+  { image: "/images/adventures/IMG_0308.jpeg" },
+  { image: "/images/adventures/IMG_0310.jpeg" },
+  { image: "/images/adventures/IMG_0311.jpeg" },
+  { image: "/images/adventures/IMG_0312.jpeg" },
+  { image: "/images/adventures/IMG_0313.jpeg" },
+  { image: "/images/adventures/IMG_0314.jpeg" },
+  { image: "/images/adventures/IMG_0315.jpeg" },
+  { image: "/images/adventures/IMG_0316.jpeg" },
+  { image: "/images/adventures/IMG_0317.jpeg" },
+  { image: "/images/adventures/IMG_0318.jpeg" },
+  { image: "/images/adventures/IMG_0320.jpeg" },
+  { image: "/images/adventures/IMG_0323.jpeg" },
+  { image: "/images/adventures/IMG_0324.jpeg" },
+  { image: "/images/adventures/IMG_0325.jpeg" },
+  { image: "/images/adventures/IMG_0329.jpeg" },
+  { image: "/images/adventures/IMG_0328.jpeg" },
+  { image: "/images/adventures/IMG_0330.jpeg" },
+  { image: "/images/adventures/IMG_0338.jpeg" },
+  { image: "/images/Fitness/07Fitness.png" },
 ];
 
 function SampleNextArrow(props) {
@@ -365,11 +381,11 @@ export default function Adventures() {
     prevArrow: <SamplePrevArrow />,
   };
   return (
-    <main>
+    <main className="overflow-hidden">
       <SubHero
         title={"Find Your Next Adventure!"}
         subtitle={"Unforgettable Tours and Experiences Await"}
-        image={"/images/Fitness/Fitness04.jpeg"}
+        image={"/images/hiking/Constantia_Nek_to_Kirstenbosch2.png"}
       />
       <div className="adventure-section relative py-16 w-full bg-slate-50">
         <Slider {...settings} className="relative">
@@ -389,7 +405,18 @@ export default function Adventures() {
           ))}
         </Slider>
       </div>
-      <div className="py-16 bg-green-100 flex flex-col items-center">
+      <div className="py-16 flex flex-col items-center">
+        <div className="adventure-section relative py-2 w-full">
+          <div className="item cta-label flex flex-col items-center justify-center gap-3 pb-10 w-full">
+            <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
+              Adventurer’s Quest: Trails that Tell a Story
+            </h2>
+            <p className="text-xl text-pretty text-[grey] text-center w-[60%]">
+              Reach New Heights with Our Ultimate Hiking Guide
+            </p>
+          </div>
+        </div>
+
         {hiking_trails.map((trail, index) => (
           <div
             key={index}
@@ -406,11 +433,13 @@ export default function Adventures() {
                 alt={"activity."}
               />
             </div>
-            <div className="hiking-card-content w-[250px]">
+            <div className="hiking-card-content w-[250px] text-[gray] font-light">
               <p className={`hiking-card-level ${trail.level.toLowerCase()}`}>
                 {trail.level}
               </p>
-              <h3 className="hiking-card-title font-bold">{trail.title}</h3>
+              <h3 className="hiking-card-title whitespace-pre-line font-bold">
+                {trail.title}
+              </h3>
               <p className="hiking-card-location">
                 <span>
                   <i class="fa fa-map-marker text-base " aria-hidden="true"></i>
@@ -432,7 +461,7 @@ export default function Adventures() {
                   <p className="hiking-card-time flex gap-2 items-center">
                     <span>
                       <i
-                        className="fa-solid fa-clock text-base text-black"
+                        className="fa-solid fa-clock text-base"
                         aria-hidden="true"
                       />
                     </span>
@@ -445,12 +474,28 @@ export default function Adventures() {
         ))}
       </div>
 
-      <div class="gallery-header hiking-header">
-        <h2>Past Adventures</h2>
-        <h5>Our Hiking Trail Tales Through the Years</h5>
+      <div className="adventure-section relative py-12 w-full bg-slate-50">
+        <div className="item cta-label flex flex-col items-center justify-center gap-3 pb-10 w-full">
+          <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
+            Past Adventures
+          </h2>
+          <p className="text-xl text-pretty text-[grey] text-center w-[60%]">
+            Our Hiking Trail Tales Through the Years
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-4 justify-center">
+          {galleryImages.map((item, index) => (
+            <div key={index} className="w-80 h-80 relative zoomImg">
+              <Image
+                src={item.image}
+                alt={`Masonry image ${index + 1}`}
+                fill
+                className="object-cover"
+              />
+            </div>
+          ))}
+        </div>
       </div>
-
-      <div className="hiking gallery"></div>
     </main>
   );
 }

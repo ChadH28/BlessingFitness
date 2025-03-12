@@ -92,7 +92,7 @@ export default function Booking() {
       <SubHero
         title={"Reserve Your Fitness Journey"}
         subtitle={"Book Your Classes and Training Sessions Today"}
-        image={"/images/BLACKANDWHITE.jpeg"}
+        image={"/images/new/WhatsApp Image 2025-03-11 at 16.48.00.jpeg"}
       />
 
       {/* promotion section */}
@@ -106,12 +106,12 @@ export default function Booking() {
                 <strong>for only R3,200</strong>
               </p>
               <p>
-                Every member that pays 3 months upfront (R1,000 x 3 ) will get
-                R200 dicount each month
+                Every member that pays 3 months upfront (R1,000 x 3) will get
+                R200 discount each month
               </p>
               <p>
-                Every student that pays 3 months upfront (R950 x 3 ) will get
-                R50 dicount each month
+                Every student that pays 3 months upfront (R950 x 3) will get R50
+                discount each month
               </p>
             </div>
           </div>
@@ -165,24 +165,25 @@ export default function Booking() {
 
       <div
         id="schedule"
-        class="
+        className="
         anchor_adj
         relative flex items-center justify-center h-1/2
       bg-fixed bg-center bg-cover custom-img
       "
       >
-        <div class="table-heading flex flex-col items-center gap-2 p-10 justify-center w-100 text-[#a94442] font-semibold">
-          <h2>TIME TABLE</h2>
-          <h4>(Bootcamp classes time table)</h4>
-          <h5>Note: Classes are to be held at The Ring Reloaded Boxing Gym</h5>
+        <div className="table-heading flex flex-col items-center gap-2 p-10 justify-center w-100 text-[white] font-semibold">
+          <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
+            Bootcamp Class Timetable – Get Fit at The Ring Reloaded boxing gym!
+          </h2>
+          <p>Limited Spots Available – Book 24 Hours in Advance!</p>
           <p>
-            24h bookings are essential for group classes, limited space
-            available
+            High-Energy Group Workouts • Expert Coaching • Results-Driven
+            Training
           </p>
         </div>
       </div>
 
-      <div class="timetable-container relative my-12">
+      <div className="timetable-container relative my-12">
         <TableCard
           day={"MONDAY"}
           workout={"HIIT"}

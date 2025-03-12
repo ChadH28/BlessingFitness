@@ -12,14 +12,13 @@ export default function Hero({ title, image, slider }) {
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Automatically switch slides
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 4000); // Slide duration: 5 seconds
+    }, 1000); // Keep duration consistent
 
-    return () => clearInterval(interval); // Cleanup the interval on unmount
-  }, [slides.length]);
+    return () => clearInterval(interval);
+  }, [slides.length]); // Remove unnecessary dependencies
 
   return (
     <header className="h-[70vh] w-screen relative z-10">
@@ -34,14 +33,15 @@ export default function Hero({ title, image, slider }) {
             slides.map((slide, index) => (
               <div
                 key={index}
-                className={`hero-image absolute inset-0 flex items-center justify-center transition-opacity transition-scale duration-700 ease-in-out w-screen h-[inherit] ${
-                  index === currentIndex ? "opacity-100" : "opacity-0"
+                className={`hero-image absolute inset-0 flex items-center justify-center w-screen h-[inherit] transition-transform duration-1000 ${
+                  index === currentIndex ? "opacity-100 " : "opacity-0 "
                 }`}
               >
                 <Image
                   src={slide ?? "/hero-images/home.jpg"}
                   alt="hero image"
                   fill
+                  priority
                   style={{ objectFit: "cover" }}
                 />
               </div>
@@ -51,6 +51,7 @@ export default function Hero({ title, image, slider }) {
               src={image ?? "/hero-images/home.jpg"}
               alt="hero image"
               fill
+              priority
               style={{ objectFit: "cover" }}
             />
           )}

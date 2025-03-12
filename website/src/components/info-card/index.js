@@ -11,26 +11,43 @@ export default function InfoCard({
   greyscale,
   background,
   textc,
+  video,
 }) {
   return (
     <div
       className={`flex ${
         alt ? "flex-row-reverse" : "flex-row"
-      } max-[1024px]:flex-col`}
+      } max-[1024px]:flex-col h-fit`}
     >
-      <div
-        className={`image-container h-[400px] max-[1024px]:h-[350px]  max-[1024px]:w-screen w-1/2 relative ${
-          greyscale && "grayscale"
-        }`}
-      >
-        <Image
-          src={image ?? "/card-images/football.jpg"}
-          alt="FN Rangers descriptive card"
-          fill
-          style={{ objectFit: "cover" }}
-          sizes="(max-width: 1024px) 75vw, 100vw"
-        />
-      </div>
+      {video ? (
+        <div className="md:w-1/2">
+          <video
+            className="object-contain h-[350px] h-inherit max-[1024px]:h-[350px] w-screen
+              "
+            autoPlay
+            loop
+            muted
+          >
+            <source src={video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      ) : (
+        <div
+          className={`image-container min-h-[350px] h-inherit max-[1024px]:h-[350px]  max-[1024px]:w-screen w-1/2 relative ${
+            greyscale && "grayscale"
+          }`}
+        >
+          <Image
+            src={image ?? "/card-images/football.jpg"}
+            alt="FN Rangers descriptive card"
+            fill
+            style={{ objectFit: "cover" }}
+            sizes="(max-width: 1024px) 75vw, 100vw"
+          />
+        </div>
+      )}
+
       <div
         style={{
           background: background,

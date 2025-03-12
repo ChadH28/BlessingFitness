@@ -1,30 +1,10 @@
 "use client";
 import InfoCard from "@/components/info-card";
 import SubHero from "@/components/sub-hero";
+import { sliderImages } from "@/data/images";
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
-
-const sliderImages = [
-  {
-    image: "/images/Fitness/RESIZED/01Fitness.jpg",
-  },
-  {
-    image: "/images/adventures/IMG_0304.jpeg",
-  },
-  {
-    image: "/images/Fitness/RESIZED/02Fitness.jpg",
-  },
-  {
-    image: "/images/adventures/IMG_0307.jpeg",
-  },
-  {
-    image: "/images/Fitness/03Fitness.jpeg",
-  },
-  {
-    image: "/images/adventures/IMG_0306.jpeg",
-  },
-];
 
 function SampleNextArrow(props) {
   const { style, onClick } = props;
@@ -95,7 +75,7 @@ export default function About() {
         image={"/images/Fitness/2Fitness.jpeg"}
         buttonlabel={"Get fit"}
         buttonlink={"/fitness"}
-        background={"var(--secondary)"}
+        background={"#F5F5F5"}
         textc={"#00000"}
       />
 
@@ -108,7 +88,7 @@ export default function About() {
         buttonlabel={"Explore more"}
         buttonlink={"/adventures"}
         alt
-        background={"var(--primary)"}
+        background={"#2C2C2C"}
         textc={"#fff"}
       />
 
@@ -117,10 +97,10 @@ export default function About() {
         content={
           "Join the ultimate workout experience with Boxfit, designed to challenge your body and mind. Our high-intensity classes incorporate cardio, strength, and boxing drills, all led by a supportive and empowering community. Say goodbye to boring workouts and hello to lasting results."
         }
-        image={"/images/adventures/tablemountain.jpg"}
+        image={"/images/hiking/Platteklip_Gorge_to_Upper_Cable_Station1.png"}
         buttonlabel={"Sign up now and join the tribe"}
         buttonlink={"/booking"}
-        background={"var(--secondary)"}
+        background={"#F5F5F5"}
         textc={"#00000"}
       />
 
@@ -133,7 +113,7 @@ export default function About() {
         buttonlabel={"Subscribe"}
         buttonlink={"https://www.youtube.com/@total.blessing"}
         alt
-        background={"var(--primary)"}
+        background={"#2C2C2C"}
         textc={"#fff"}
       />
 
