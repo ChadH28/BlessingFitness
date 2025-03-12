@@ -294,7 +294,7 @@ export const hiking_trails = [
     distance: "4.2km",
     time: "1hr 29min",
     level: "Moderate",
-    image: "/images/hiking/Platteklip_Gorge_to_Upper_Cable_Station3.png",
+    image: "/images/hiking/Hermanus_Fernkloof_Waterfall3.png",
   },
   {
     title: "Krom River Trail",
@@ -372,10 +372,6 @@ export const pricelist = {
       price: "R450",
       description: "Assessment fee",
     },
-    // {
-    //   price: "R250",
-    //   description: "30 mins",
-    // },
   ],
   one_on: [
     {
@@ -412,3 +408,12 @@ export const pricelist = {
     },
   ],
 };
+
+export const slides = [
+  "/images/Fitness/Fitness07.jpeg",
+  "/images/hiking/Helderberg_Farm1.png",
+  "/images/Fitness/04Fitness.jpeg",
+  "/images/hiking/Jonkershoek_Waterfalls_Day_Hiking_Trail2.png",
+  "/images/Fitness/3Fitness.jpeg",
+  "/images/adventures/IMG_0307.jpeg",
+];

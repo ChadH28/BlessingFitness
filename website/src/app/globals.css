@@ -38,10 +38,6 @@ body {
   }
 }
 
-.hero-image {
-  animation: zoomInOut 20s infinite ease-in;
-}
-
 .hero-image::after,
 .subhero::after {
   left: 0;

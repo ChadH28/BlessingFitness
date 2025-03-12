@@ -12,6 +12,7 @@ export default function InfoCard({
   background,
   textc,
   video,
+  cover,
 }) {
   return (
     <div
@@ -22,8 +23,9 @@ export default function InfoCard({
       {video ? (
         <div className="md:w-1/2">
           <video
-            className="object-contain h-[350px] h-inherit max-[1024px]:h-[350px] w-screen
-              "
+            className={`object-${
+              cover ? "cover" : "contain"
+            } h-[350px] h-inherit max-[1024px]:h-[350px] w-screen`}
             autoPlay
             loop
             muted

@@ -43,9 +43,19 @@ export default function Fitness() {
       </div>
 
       <InfoCard
+        title={"Let's Get Fit!"}
+        content={`For those who like workouts, progressive learning and earned rewards. Ready to give you exciting and challenging training programmes, train those who are interested in improving boxing skills or those seeking physical fitness in general. Goals are from losing weight to building strong physique to test one's courage and intellect in battle. Passionate and Committed to our Clients.`}
+        image={"/images/new/WhatsApp Image 2025-03-11 at 16.45.43.jpeg"}
+        background={"#000"}
+        textc={"#fff"}
+        alt
+      />
+
+      <InfoCard
         title={"Box Fit Group Classes"}
         content={`Whether you are looking to lose weight, tone up, stretch it out, hone your boxing skills, or release extra energy, the variety of classes offered at Total Blessing will help you get strong and fit in an energy-fuelled, motivating, and friendly environment where you will find yourself being pushed to your limits in every class, during every session.`}
-        image={"/images/Fitness/04Fitness.jpeg"}
+        video={"/video/WhatsApp Video 2025-03-12 at 14.16.57.mp4"}
+        cover
         background={"#000"}
         textc={"#fff"}
       />
@@ -54,13 +64,6 @@ export default function Fitness() {
         title={"Junior Boxing"}
         content={`We offer junior boxing for children (boys and girls) between the ages of 4 and 15 as you can never be too young to discover the benefits that comes with boxing training.\n\nThe classes are split according to ages and include cardio and boxing, and will assist in developing your child’s focus, self-control, concentration and discipline.`}
         image={"/images/new/WhatsApp Image 2025-03-11 at 16.43.36.jpeg"}
-        background={"#000"}
-        textc={"#fff"}
-      />
-      <InfoCard
-        title={"Let's Get Fit!"}
-        content={`For those who like Workouts, progressive learning and earned rewards. Ready to give you exciting and challenging training programmes, train those who are interested in improving boxing skills or those seeking physical fitness in general. Goals are from losing weight to building strong physique to test one's courage and intellect in battle. Passionate and Committed to our Clients.`}
-        image={"/images/new/WhatsApp Image 2025-03-11 at 16.45.43.jpeg"}
         background={"#000"}
         textc={"#fff"}
       />
@@ -90,15 +93,18 @@ export default function Fitness() {
             Group classes:
           </p>
           <p>
-            Join our 4-Week Boxfit Bootcamp Group Classes and feel the
-            challenge, conquer it, and experience body and energy transformation
-            through an amazing fitness journey. Our classes are professional and
-            of the highest quality, providing the ideal environment for you to
-            reach your fitness goals. Whether you are looking to lose weight,
-            build a strong physique, or test your courage and intellect in
-            battle, our passionate and committed team is{" "}
-            <span style={{ color: "red" }}> here to help you</span> reach your
-            goals.
+            Join Total Blessings 4-Week Boxfit Bootcamp and push your limits
+            in a high-energy, transformative fitness journey. As a passionate
+            boxer, trainer, and wellness coach, Blessing leads professional,
+            top-quality classes designed to help you lose weight, build
+            strength, and boost endurance.
+            <br />
+            <br />
+            Whether you want to sculpt your physique, enhance your mental
+            toughness, or embrace the challenge of boxing, our dedicated team is{" "}
+            <span style={{ color: "red" }}> here to help you</span> every step
+            of the way. Step into the ring, conquer your goals, and experience
+            the power of Boxfit! 🥊
           </p>
         </div>
         <div className="md:w-1/2">

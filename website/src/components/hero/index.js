@@ -3,22 +3,15 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Hero({ title, image, slider }) {
-  const slides = [
-    "/images/Fitness/Fitness07.jpeg",
-    "/images/Fitness/3Fitness.jpeg",
-    "/images/adventures/IMG_0307.jpeg",
-    "/images/home3.jpeg",
-    "/images/bessingBlac.png",
-  ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 1000); // Keep duration consistent
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % slider.length);
+    }, 4000); // Keep duration consistent
 
     return () => clearInterval(interval);
-  }, [slides.length]); // Remove unnecessary dependencies
+  }, [slider.length]); // Remove unnecessary dependencies
 
   return (
     <header className="h-[70vh] w-screen relative z-10">
@@ -30,14 +23,17 @@ export default function Hero({ title, image, slider }) {
         </div>
         <div className="overflow-hidden w-screen h-full relative">
           {slider ? (
-            slides.map((slide, index) => (
+            slider.map((slide, index) => (
               <div
                 key={index}
-                className={`hero-image absolute inset-0 flex items-center justify-center w-screen h-[inherit] transition-transform duration-1000 ${
-                  index === currentIndex ? "opacity-100 " : "opacity-0 "
+                className={`hero-image absolute inset-0 flex items-center justify-center w-screen h-[inherit] transition-opacity duration-1000 ${
+                  index === currentIndex ? "opacity-100 " : "opacity-0"
                 }`}
               >
                 <Image
+                  className={`transition-transform duration-1000 ${
+                    index === currentIndex ? " scale-100" : "scale-125"
+                  }`}
                   src={slide ?? "/hero-images/home.jpg"}
                   alt="hero image"
                   fill

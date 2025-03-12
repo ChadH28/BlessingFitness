@@ -1,6 +1,6 @@
 "use client";
 import SubHero from "@/components/sub-hero";
-import { activities, hiking_trails } from "@/data/pageData";
+import { activities, galleryImages, hiking_trails } from "@/data/pageData";
 import Image from "next/image";
 import Slider from "react-slick";
 
@@ -111,7 +111,10 @@ export default function Adventures() {
               </h3>
               <p className="hiking-card-location">
                 <span>
-                  <i class="fa fa-map-marker text-base " aria-hidden="true"></i>
+                  <i
+                    className="fa fa-map-marker text-base "
+                    aria-hidden="true"
+                  />
                 </span>
                 {"  "}
                 {trail.location}
@@ -120,7 +123,7 @@ export default function Adventures() {
                 {trail.distance && (
                   <p className="hiking-card-distance">
                     <span>
-                      <i class="fa fa-tree" aria-hidden="true" />
+                      <i className="fa fa-tree" aria-hidden="true" />
                     </span>
                     {"  "}
                     {trail.distance}
