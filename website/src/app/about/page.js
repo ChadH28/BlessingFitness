@@ -1,7 +1,7 @@
 "use client";
 import InfoCard from "@/components/info-card";
 import SubHero from "@/components/sub-hero";
-import { sliderImages } from "@/data/images";
+import { galleryImages } from "@/data/pageData";
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
@@ -130,7 +130,7 @@ export default function About() {
           </Link>
         </div>
         <Slider {...settings} className="relative">
-          {sliderImages.map((activity, index) => (
+          {galleryImages.map((activity, index) => (
             <div key={index} className="h-auto px-6">
               <div className="h-[350px] relative">
                 <Image

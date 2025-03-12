@@ -1,92 +1,9 @@
 import PriceCard from "@/components/price-card";
 import SubHero from "@/components/sub-hero";
 import TableCard from "@/components/timetable-card";
-import Image from "next/image";
-import Link from "next/link";
+import { pricelist } from "@/data/pageData";
 
 export default function Booking() {
-  const pricelist = {
-    ladies_only: [
-      {
-        price: "R650",
-        description: "per month",
-      },
-      {
-        price: "R200",
-        description: "per dropin",
-      },
-    ],
-    group: [
-      {
-        price: "R1,200",
-        description: "per month",
-      },
-      {
-        price: "R1,000",
-        description: "per monthly student",
-      },
-      {
-        price: "R200",
-        description: "per dropin student",
-      },
-      {
-        price: "R220",
-        description: "per dropin",
-      },
-    ],
-    sessions: [
-      {
-        price: "R4,000",
-        description: "10 x 45 mins",
-      },
-      {
-        price: "R3,500",
-        description: "10 x 30 mins",
-      },
-      {
-        price: "R450",
-        description: "Assessment fee",
-      },
-      // {
-      //   price: "R250",
-      //   description: "30 mins",
-      // },
-    ],
-    one_on: [
-      {
-        price: "R5,000",
-        description: "10 sessions",
-      },
-      {
-        price: "R550",
-        description: "1 hour",
-      },
-      {
-        price: "R450",
-        description: "45 mins",
-      },
-      {
-        price: "R400",
-        description: "30 mins",
-      },
-    ],
-    three_on: [
-      {
-        price: "R1,050",
-        description: "1 hour",
-      },
-    ],
-    two_on: [
-      {
-        price: "R7,000",
-        description: "10 sessions",
-      },
-      {
-        price: "R750",
-        description: "1 hour",
-      },
-    ],
-  };
   return (
     <main>
       <SubHero
