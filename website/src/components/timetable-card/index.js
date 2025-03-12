@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 function TableCard({ day, workout, workout_desc, time_am, time_pm, image }) {
   return (
@@ -22,13 +21,17 @@ function TableCard({ day, workout, workout_desc, time_am, time_pm, image }) {
         <p className="text-[#565656]">{workout_desc}</p>
         <span className="text-[#565656] text-sm">{time_am}</span>
         <span className="text-[#565656] text-sm">{time_pm}</span>
-        <Link
+        <a
+          aria-label="booking enquiry"
           className="bg-[#df2828] mt-2 px-5 py-2 text-white uppercase rounded-md text-sm"
-          href="https://calendly.com/mteroblessing/30min?month=2024-02"
+          href={`https://wa.me/27787589451?text=Booking%20enquiry%20for%20${workout.toLowerCase()}%20on%20${
+            day.charAt(0).toUpperCase() + day.slice(1).toLowerCase()
+          }`}
           target="_blank"
+          rel="noopener noreferrer"
         >
-          Book
-        </Link>
+          Book via whatsapp
+        </a>
       </div>
     </div>
   );

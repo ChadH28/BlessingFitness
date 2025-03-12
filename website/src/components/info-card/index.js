@@ -12,6 +12,7 @@ export default function InfoCard({
   background,
   textc,
   video,
+  external,
   cover,
 }) {
   return (
@@ -75,12 +76,24 @@ export default function InfoCard({
           {content}
         </p>
         {buttonlink && (
-          <Link
-            className="uppercase bg-[red] hover:bg-red-500 text-xs text-white font-extrabold w-fit rounded-sm px-4 py-2"
-            href={buttonlink}
-          >
-            {buttonlabel ?? "find out"}
-          </Link>
+          <>
+            {external ? (
+              <a
+                className="uppercase bg-[red] hover:bg-red-500 text-xs text-white font-extrabold w-fit rounded-sm px-4 py-2"
+                href={buttonlink}
+                target={external ? "_blank" : "_self"}
+              >
+                {buttonlabel ?? "find out"}
+              </a>
+            ) : (
+              <Link
+                className="uppercase bg-[red] hover:bg-red-500 text-xs text-white font-extrabold w-fit rounded-sm px-4 py-2"
+                href={buttonlink}
+              >
+                {buttonlabel ?? "find out"}
+              </Link>
+            )}
+          </>
         )}
       </div>
     </div>

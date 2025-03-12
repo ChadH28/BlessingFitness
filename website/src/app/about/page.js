@@ -131,7 +131,7 @@ export default function About() {
           </h2>
           <Link
             className="uppercase block bg-[red] hover:bg-red-500 text-xs text-white font-extrabold w-fit rounded-sm px-4 py-2"
-            href="/Adventures"
+            href="/adventures"
           >
             Explore More
           </Link>

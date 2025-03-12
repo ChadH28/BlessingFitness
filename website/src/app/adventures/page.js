@@ -56,23 +56,33 @@ export default function Adventures() {
         subtitle={"Unforgettable Tours and Experiences Await"}
         image={"/images/hiking/Constantia_Nek_to_Kirstenbosch2.png"}
       />
-      <div className="adventure-section relative py-16 w-full bg-slate-50">
+      <div className="adventure-section relative py-16 w-full flex flex-col gap-8 bg-slate-50">
         <Slider {...settings} className="relative">
           {activities.map((activity, index) => (
-            <div key={index} className="h-auto px-6">
+            <a
+              aria-label="booking enquiry"
+              href={`https://wa.me/27787589451?text=Booking%20enquiry%20for%20${activity.title}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={index}
+              className="h-auto px-6"
+            >
               <div className="h-[300px] relative">
                 <Image
                   style={{ objectFit: " cover" }}
                   fill
                   src={activity.image}
-                  alt={"activity."}
+                  alt={`activity - ${activity.title}`}
                 />
               </div>
               <h3 className="text-red-700 text-lg my-1">{activity.title}</h3>
               <p className="text-[gray]">{activity.description}</p>
-            </div>
+            </a>
           ))}
         </Slider>
+        <span className="bg-[#df2828] px-5 py-2 mx-auto w-fit text-center text-white uppercase rounded-md text-sm">
+          click on activity and Book via whatsapp
+        </span>
       </div>
       <div className="py-16 flex flex-col items-center">
         <div className="adventure-section relative py-2 w-full">
