@@ -3,6 +3,26 @@ import SubHero from "@/components/sub-hero";
 import VideoPlayer from "@/components/video-player";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Workout Programmes at Total Blessing Fitness in Cape Town",
+  description:
+    "exciting and challenging and train those who are interested improving boxing skills or those seeking physical fitness in general. Goals are from losing weight to building strong physique to test one's courage and intellect in battle. Passionate and Committed to our Clients",
+  openGraph: {
+    title: "Workout Programmes at Total Blessing Fitness in Cape Town",
+    description:
+      "exciting and challenging and train those who are interested improving boxing skills or those seeking physical fitness in general. Goals are from losing weight to building strong physique to test one's courage and intellect in battle. Passionate and Committed to our Clients",
+    url: "totalblessingfitnessandtraveltours.co.za/fitness",
+    images: [
+      {
+        url: "/og-about.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About Us",
+      },
+    ],
+  },
+};
+
 export default function Fitness() {
   return (
     <main className="overflow-hidden">

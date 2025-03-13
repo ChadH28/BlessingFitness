@@ -4,6 +4,26 @@ import { activities, galleryImages, hiking_trails } from "@/data/pageData";
 import Image from "next/image";
 import Slider from "react-slick";
 
+// export const metadata = {
+//   title: "Tour Around Cape Town with a personal Tour Guide",
+//   description:
+//     "Visit the world's famous tourist destination in Cape Town, from Stellenbosch Wine Farms to Kirstenbosch Quad Biking",
+//   openGraph: {
+//     title: "Tour Around Cape Town with a personal Tour Guide",
+//     description:
+//       "Visit the world's famous tourist destination in Cape Town, from Stellenbosch Wine Farms to Kirstenbosch Quad Biking",
+//     url: "totalblessingfitnessandtraveltours.co.za/adventures",
+//     images: [
+//       {
+//         url: "/og-about.jpg",
+//         width: 1200,
+//         height: 630,
+//         alt: "About Us",
+//       },
+//     ],
+//   },
+// };
+
 function SampleNextArrow(props) {
   const { style, onClick } = props;
   return (

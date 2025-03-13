@@ -417,3 +417,18 @@ export const slides = [
   "/images/Fitness/3Fitness.jpeg",
   "/images/adventures/IMG_0307.jpeg",
 ];
+
+export const highlights = [
+  { text: "Hiking" },
+  { text: "High Intensity Training" },
+  { text: "Sandboarding" },
+  { text: "Full body conditioning" },
+  { text: "BOXING" },
+  { text: "Township Tours" },
+  { text: "STRENGTH TRAINING" },
+  { text: "Bungee Jumping" },
+  { text: "Kirstenbosch Gardens" },
+  { text: "Box Fit Group Classes" },
+  { text: "Junior Boxing" },
+  { text: "LADIES BOXERCISE" },
+];

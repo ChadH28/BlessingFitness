@@ -1,56 +1,30 @@
-"use client";
 import InfoCard from "@/components/info-card";
+import ClientSlider from "@/components/slider";
 import SubHero from "@/components/sub-hero";
 import { galleryImages } from "@/data/pageData";
-import Image from "next/image";
 import Link from "next/link";
-import Slider from "react-slick";
 
-function SampleNextArrow(props) {
-  const { style, onClick } = props;
-  return (
-    <div
-      className="absolute z-10 w-2 h-16 right-0 top-1/2 translate-y-1/2 cursor-pointer bg-red-700"
-      style={{ ...style, display: "block" }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { style, onClick } = props;
-  return (
-    <div
-      className="absolute z-10 w-2 h-16 top-1/2 translate-y-1/2 cursor-pointer bg-red-700"
-      style={{ ...style, display: "block" }}
-      onClick={onClick}
-    />
-  );
-}
-
-export default function About() {
-  var settings = {
-    lazyLoad: true,
-    responsive: [
+export const metadata = {
+  title: "Cape Town's Physical Trainer and Travelling Destinations",
+  description:
+    "Expose yourself to our Fitness Classes and Travelling in Cape Town",
+  openGraph: {
+    title: "Cape Town's Physical Trainer and Travelling Destinations",
+    description:
+      "Expose yourself to our Fitness Classes and Travelling in Cape Town",
+    url: "totalblessingfitnessandtraveltours.co.za/about",
+    images: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+        url: "/og-about.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About Us",
       },
     ],
-    dots: false,
-    arrows: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-  };
+  },
+};
+
+export default function About() {
   return (
     <main>
       <SubHero
@@ -88,7 +62,6 @@ export default function About() {
         textc={"#00000"}
         alt
         animate
-
       />
 
       <InfoCard
@@ -102,7 +75,6 @@ export default function About() {
         background={"#2C2C2C"}
         textc={"#fff"}
         animate
-
       />
 
       <InfoCard
@@ -116,7 +88,6 @@ export default function About() {
         background={"#F5F5F5"}
         textc={"#00000"}
         animate
-
         alt
       />
 
@@ -131,7 +102,6 @@ export default function About() {
         background={"#2C2C2C"}
         textc={"#fff"}
         animate
-
       />
 
       <div className="adventure-section relative py-16 w-full bg-slate-50">
@@ -149,20 +119,7 @@ export default function About() {
             Explore More
           </Link>
         </div>
-        <Slider {...settings} className="relative">
-          {galleryImages.map((activity, index) => (
-            <div key={index} className="h-auto px-6">
-              <div className="h-[350px] relative">
-                <Image
-                  style={{ objectFit: " cover" }}
-                  fill
-                  src={activity.image}
-                  alt={"activity."}
-                />
-              </div>
-            </div>
-          ))}
-        </Slider>
+        <ClientSlider list={galleryImages} images />
       </div>
     </main>
   );

@@ -3,6 +3,26 @@ import SubHero from "@/components/sub-hero";
 import TableCard from "@/components/timetable-card";
 import { pricelist } from "@/data/pageData";
 
+export const metadata = {
+  title: "Booking a Private Fitness Trainer",
+  description:
+    "Check out a package that best suits you, book your Personal Fitness Trainer for Solo Training, Couple Training or Group Training",
+  openGraph: {
+    title: "Booking a Private Fitness Trainer",
+    description:
+      "Check out a package that best suits you, book your Personal Fitness Trainer for Solo Training, Couple Training or Group Training",
+    url: "totalblessingfitnessandtraveltours.co.za/booking",
+    images: [
+      {
+        url: "/og-about.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About Us",
+      },
+    ],
+  },
+};
+
 export default function Booking() {
   return (
     <main>
@@ -14,7 +34,10 @@ export default function Booking() {
 
       {/* promotion section */}
       <div className="flex justify-center w-full h-auto">
-        <div data-aos={'fade-up'} className="bg-black text-white sm:w-full lg:w-[500px] m-8 p-8 flex flex-col gap-2">
+        <div
+          data-aos={"fade-up"}
+          className="bg-black text-white sm:w-full lg:w-[500px] m-8 p-8 flex flex-col gap-2"
+        >
           <h2 className="text-3xl">SPECIAL PACKAGE</h2>
           <div className="text-xl leading-relaxed ">
             <div className="flex flex-col gap-4">
@@ -32,14 +55,6 @@ export default function Booking() {
               </p>
             </div>
           </div>
-          {/* <Link
-            className="bg-white text-black uppercase p-4 w-fit text-xs"
-            // href="https://calendly.com/mteroblessing/30min?month=2024-02"
-            href="https://wa.link/2fyjg5"
-            target="_blank"
-          >
-            Book Here
-          </Link> */}
         </div>
       </div>
 

@@ -1,46 +1,27 @@
-"use client";
 import Hero from "@/components/hero";
 import InfoCard from "@/components/info-card";
-import { slides } from "@/data/pageData";
-import Slider from "react-slick";
+import { highlights, slides } from "@/data/pageData";
+import ClientSlider from "@/components/slider";
 
-const activities = [
-  { text: "Hiking" },
-  { text: "High Intensity Training" },
-  { text: "Sandboarding" },
-  { text: "Full body conditioning" },
-  { text: "BOXING" },
-  { text: "Township Tours" },
-  { text: "STRENGTH TRAINING" },
-  { text: "Bungee Jumping" },
-  { text: "Kirstenbosch Gardens" },
-  { text: "Box Fit Group Classes" },
-  { text: "Junior Boxing" },
-  { text: "LADIES BOXERCISE" },
-];
-
-export default function Home() {
-  var settings = {
-    lazyLoad: true,
-    responsive: [
+export const metadata = {
+  title: "Total Blessing Fitness and Travel Tours Website",
+  description: "Cape Town's Fitness and Touring Hub. Discover the best fitness classes and travel adventures with Total Blessing Fitness and Travel  Tours.",
+  openGraph: {
+    title: "Total Blessing Fitness and Travel Tours Website",
+    description: "Cape Town's Fitness and Touring Hub. Discover the best fitness classes and travel adventures with Total Blessing Fitness and Travel  Tours.",
+    url: "totalblessingfitnessandtraveltours.co.za/",
+    images: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+        url: "/og-about.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About Us",
       },
     ],
-    dots: false,
-    arrows: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 750,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
+  },
+};
 
+export default function Home() {
   return (
     <main>
       <Hero title={"WHERE FITNESS MEETS ADVENTURE"} slider={slides} />
@@ -55,7 +36,7 @@ export default function Home() {
       />
 
       <InfoCard
-        title={"Find Exciting Journeys and Activities \n Cape Town awaits you"}
+        title={"Find Exciting Journeys and highlights \n Cape Town awaits you"}
         content={`From the Stellenbosch vineyards, Hout Bays harbor to
                       the Camps Bays iconic beach, all while taking in
                       Table Mountains breathtaking views. Its a
@@ -64,6 +45,7 @@ export default function Home() {
         buttonlink={"/adventures"}
         buttonlabel={"Explore More"}
         image={"/images/adventureHome.jpeg"}
+        animate
       />
 
       <InfoCard
@@ -75,15 +57,7 @@ export default function Home() {
         image={"/images/rem-bg/hom-resize-removebg-preview.png"}
       />
 
-      <Slider {...settings} className="py-14 mx-auto bg-slate-50">
-        {activities.map((activity, index) => (
-          <div key={index}>
-            <p className="uppercase text-center mx-auto text-[grey] font-extrabold text-2xl relative">
-              {activity.text}
-            </p>
-          </div>
-        ))}
-      </Slider>
+      <ClientSlider list={highlights} />
 
       <InfoCard
         title={"Unleash Your Potential with Our Programs"}
@@ -94,6 +68,7 @@ export default function Home() {
         buttonlink={"/fitness"}
         buttonlabel={"Get Fit"}
         image={"/images/Fitness/Fitness05.jpeg"}
+        animate
       />
 
       <InfoCard
