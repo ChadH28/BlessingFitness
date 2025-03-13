@@ -14,8 +14,11 @@ export default function Fitness() {
         image={"/images/Fitness/4Fitness.jpeg"}
       />
 
-      <div className="adventure-section relative py-12 w-full bg-slate-50">
-        <div className="item cta-label flex flex-col items-center justify-center gap-3 pb-10 w-full">
+      <div className="adventure-section relative py-14 w-full bg-slate-50">
+        <div
+          data-aos="fade-up"
+          className="item cta-label flex flex-col items-center justify-center gap-5 w-full"
+        >
           <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
             <span style={{ color: "red" }}>GET FIT</span> with us
           </h2>
@@ -33,7 +36,7 @@ export default function Fitness() {
           </p>
           <Link
             className="
-            bg-[#df2828] mt-2 px-5 py-2 text-white uppercase rounded-md text-sm
+            bg-[#df2828] px-5 py-2 text-white uppercase rounded-md text-sm
             "
             href="/booking"
           >
@@ -69,7 +72,10 @@ export default function Fitness() {
       />
 
       <div className="adventure-section relative py-14 w-full">
-        <div className="item cta-label flex flex-col items-center justify-center gap-3 pb-10 w-full">
+        <div
+          data-aos="fade-up"
+          className="item cta-label flex flex-col items-center justify-center gap-4 w-full"
+        >
           <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
             It&apos;s time to <span style={{ color: "red" }}>GET FIT</span> and
             <br />
@@ -87,14 +93,17 @@ export default function Fitness() {
       </div>
 
       <div className="flex gap-5 p-6 md:px-12 md:py-0 flex-col md:flex-row justify-center w-100 items-center">
-        <div className="md:w-1/2 text-[grey] flex flex-col gap-2 text-xl">
+        <div
+          data-aos="fade-right"
+          className="md:w-1/2 text-[grey] flex flex-col gap-2 text-base"
+        >
           <p>
             4-WEEK BOXFIT BOOTCAMP <br />
             Group classes:
           </p>
           <p>
-            Join Total Blessings 4-Week Boxfit Bootcamp and push your limits
-            in a high-energy, transformative fitness journey. As a passionate
+            Join Total Blessings 4-Week Boxfit Bootcamp and push your limits in
+            a high-energy, transformative fitness journey. As a passionate
             boxer, trainer, and wellness coach, Blessing leads professional,
             top-quality classes designed to help you lose weight, build
             strength, and boost endurance.

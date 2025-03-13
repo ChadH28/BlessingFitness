@@ -75,7 +75,7 @@ export default function Adventures() {
                   alt={`activity - ${activity.title}`}
                 />
               </div>
-              <h3 className="text-red-700 text-lg my-1">{activity.title}</h3>
+              <h3 className="text-[#df2828] text-lg my-1">{activity.title}</h3>
               <p className="text-[gray]">{activity.description}</p>
             </a>
           ))}
@@ -85,7 +85,10 @@ export default function Adventures() {
         </span>
       </div>
       <div className="py-16 flex flex-col items-center">
-        <div className="adventure-section relative py-2 w-full">
+        <div
+          data-aos="fade-up"
+          className="adventure-section relative py-2 w-full"
+        >
           <div className="item cta-label flex flex-col items-center justify-center gap-3 pb-10 w-full">
             <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
               Adventurer’s Quest: Trails that Tell a Story
@@ -99,6 +102,7 @@ export default function Adventures() {
         {hiking_trails.map((trail, index) => (
           <div
             key={index}
+            data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
             className={`py-5 h-auto px-6 w-100 flex gap-10 items-center ${
               index % 2 === 0 ? "flex-row-reverse" : "flex-row"
             }`}
@@ -157,7 +161,10 @@ export default function Adventures() {
       </div>
 
       <div className="adventure-section relative py-12 w-full bg-slate-50">
-        <div className="item cta-label flex flex-col items-center justify-center gap-3 pb-10 w-full">
+        <div
+          data-aos="fade-up"
+          className="item cta-label flex flex-col items-center justify-center gap-3 pb-10 w-full"
+        >
           <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
             Past Adventures
           </h2>
@@ -165,6 +172,7 @@ export default function Adventures() {
             Our Hiking Trail Tales Through the Years
           </p>
         </div>
+
         <div className="flex flex-wrap gap-4 justify-center">
           {galleryImages.map((item, index) => (
             <div key={index} className="w-80 h-80 relative zoomImg">

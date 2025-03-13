@@ -14,7 +14,7 @@ export default function Booking() {
 
       {/* promotion section */}
       <div className="flex justify-center w-full h-auto">
-        <div className="bg-black text-white sm:w-full lg:w-[500px] m-8 p-8 flex flex-col gap-2">
+        <div data-aos={'fade-up'} className="bg-black text-white sm:w-full lg:w-[500px] m-8 p-8 flex flex-col gap-2">
           <h2 className="text-3xl">SPECIAL PACKAGE</h2>
           <div className="text-xl leading-relaxed ">
             <div className="flex flex-col gap-4">

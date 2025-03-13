@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import AOSProvider from "@/components/aos";
 
 export const metadata = {
   title: "Create Next App",
@@ -20,7 +21,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Navigation />
-        {children}
+        <AOSProvider>{children}</AOSProvider>
         <Footer />
       </body>
     </html>

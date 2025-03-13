@@ -14,6 +14,7 @@ export default function InfoCard({
   video,
   external,
   cover,
+  animate,
 }) {
   return (
     <div
@@ -61,6 +62,7 @@ export default function InfoCard({
         }  content-container max-[1024px]:w-screen w-1/2 max-[1024px]:p-[20px] p-16 flex flex-col gap-5 justify-center`}
       >
         <h2
+          data-aos={animate && (alt ? "fade-right" : "fade-left")}
           className={`whitespace-pre-line ${
             textc ? `text-[${textc}]` : null
           }  uppercase font-extrabold max-[1024px]:text-2xl text-4xl`}
@@ -68,6 +70,7 @@ export default function InfoCard({
           {title}
         </h2>
         <p
+          data-aos={animate && (alt ? "fade-right" : "fade-left")}
           className={`max-[1024px]:text-xl ${
             textc ? `text-[${textc}]` : `text-[grey]`
           } text-pretty text-base`}
@@ -76,7 +79,7 @@ export default function InfoCard({
           {content}
         </p>
         {buttonlink && (
-          <>
+          <div data-aos={animate && (alt ? "fade-right" : "fade-left")}>
             {external ? (
               <a
                 className="uppercase bg-[red] hover:bg-red-500 text-xs text-white font-extrabold w-fit rounded-sm px-4 py-2"
@@ -93,7 +96,7 @@ export default function InfoCard({
                 {buttonlabel ?? "find out"}
               </Link>
             )}
-          </>
+          </div>
         )}
       </div>
     </div>

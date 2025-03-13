@@ -65,6 +65,7 @@ export default function About() {
         content={`Total Blessing Fitness & Tour Travel is a Cape Town based company that specializes in providing fitness and tour travel services. We offer a wide range of services, from personal training and group fitness classes to guided tours and travel packages. Our team of experienced professionals is dedicated to helping you reach your fitness and travel goals. We strive to provide the best possible experience for our clients, ensuring that they have a safe and enjoyable journey. We believe in creating lasting memories and providing an unforgettable experience. Our goal is to make sure that you have the best possible experience when you travel with us. 💪`}
         image={"/images/rem-bg/biskop_steps-removebg-preview.png"}
         alt
+        // animate
       />
 
       <InfoCard
@@ -72,6 +73,7 @@ export default function About() {
         content={`Meet Blessing Mutero, founder of Total Blessing Fitness and Travel Tours, a passionate boxer, fitness trainer, and wellness coach. Combining his love for health, adventure, and travel, he creates personalized fitness programs and immersive travel experiences. From boxing workouts to scenic hikes and wellness retreats, Blessing curates transformative journeys that energize the body and mind. Join him in exploring the world while prioritizing your health—every trip can be a total blessing! 🏃‍➡️`}
         video={"/video/VID-20250311-WA0001.mp4"}
         cover
+        // animate
       />
 
       <InfoCard
@@ -85,6 +87,8 @@ export default function About() {
         background={"#F5F5F5"}
         textc={"#00000"}
         alt
+        animate
+
       />
 
       <InfoCard
@@ -97,6 +101,8 @@ export default function About() {
         buttonlink={"/adventures"}
         background={"#2C2C2C"}
         textc={"#fff"}
+        animate
+
       />
 
       <InfoCard
@@ -109,6 +115,8 @@ export default function About() {
         buttonlink={"/booking"}
         background={"#F5F5F5"}
         textc={"#00000"}
+        animate
+
         alt
       />
 
@@ -122,10 +130,15 @@ export default function About() {
         buttonlink={"https://www.youtube.com/@total.blessing"}
         background={"#2C2C2C"}
         textc={"#fff"}
+        animate
+
       />
 
       <div className="adventure-section relative py-16 w-full bg-slate-50">
-        <div className="item cta-label flex flex-col items-center justify-center gap-3 pb-10 w-full">
+        <div
+          data-aos="fade-up"
+          className="item cta-label flex flex-col items-center justify-center gap-3 pb-10 w-full"
+        >
           <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
             Seek an <span style={{ color: "red" }}>adventure</span> with us
           </h2>

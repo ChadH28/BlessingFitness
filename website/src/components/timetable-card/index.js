@@ -16,7 +16,7 @@ function TableCard({ day, workout, workout_desc, time_am, time_pm, image }) {
     w-[inherit] h-[inherit] px-4 gap-1
     "
       >
-        <h2 className="pb-1 text-[#a94442]">{day}</h2>
+        <h2 className="pb-1 text-[#df2828]">{day}</h2>
         <h5 className="mt-2">{workout}</h5>
         <p className="text-[#565656]">{workout_desc}</p>
         <span className="text-[#565656] text-sm">{time_am}</span>
