@@ -14,7 +14,7 @@ export const metadata = {
     url: "https://totalblessingfitnessandtraveltours.co.za/fitness",
     images: [
       {
-        url: "/og-about.jpg",
+        url: "/images/logo3.png",
         width: 1200,
         height: 630,
         alt: "Total Blessing Fitness Programmes",

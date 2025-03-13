@@ -16,7 +16,7 @@ export const metadata = {
     url: "https://totalblessingfitnessandtraveltours.co.za/booking",
     images: [
       {
-        url: "/og-about.jpg",
+        url: "/images/logo3.png",
         width: 1200,
         height: 630,
         alt: "Personal Fitness Trainer Booking",

@@ -15,7 +15,7 @@ import Slider from "react-slick";
 //     url: "https://totalblessingfitnessandtraveltours.co.za/adventures",
 //     images: [
 //       {
-//         url: "/og-about.jpg",
+//         url: "/images/logo3.png",
 //         width: 1200,
 //         height: 630,
 //         alt: "Cape Town Adventure Tours",
