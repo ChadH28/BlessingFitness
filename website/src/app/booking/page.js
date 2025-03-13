@@ -4,20 +4,22 @@ import TableCard from "@/components/timetable-card";
 import { pricelist } from "@/data/pageData";
 
 export const metadata = {
-  title: "Booking a Private Fitness Trainer",
+  title:
+    "Book a Personal Fitness Trainer in Cape Town | Solo, Couple & Group Training",
   description:
-    "Check out a package that best suits you, book your Personal Fitness Trainer for Solo Training, Couple Training or Group Training",
+    "Find the perfect fitness training package for your needs in Cape Town. Book a personal trainer for one-on-one sessions, couple workouts, or group training to achieve your fitness goals.",
   openGraph: {
-    title: "Booking a Private Fitness Trainer",
+    title:
+      "Book a Personal Fitness Trainer in Cape Town | Solo, Couple & Group Training",
     description:
-      "Check out a package that best suits you, book your Personal Fitness Trainer for Solo Training, Couple Training or Group Training",
-    url: "totalblessingfitnessandtraveltours.co.za/booking",
+      "Find the perfect fitness training package for your needs in Cape Town. Book a personal trainer for one-on-one sessions, couple workouts, or group training to achieve your fitness goals.",
+    url: "https://totalblessingfitnessandtraveltours.co.za/booking",
     images: [
       {
         url: "/og-about.jpg",
         width: 1200,
         height: 630,
-        alt: "About Us",
+        alt: "Personal Fitness Trainer Booking",
       },
     ],
   },

@@ -5,24 +5,25 @@ import Image from "next/image";
 import Slider from "react-slick";
 
 // export const metadata = {
-//   title: "Tour Around Cape Town with a personal Tour Guide",
+//   title: "Cape Town Adventure Tours with Personal Guides | Explore Stellenbosch & Kirstenbosch",
 //   description:
-//     "Visit the world's famous tourist destination in Cape Town, from Stellenbosch Wine Farms to Kirstenbosch Quad Biking",
+//     "Embark on an unforgettable adventure in Cape Town with expert-guided tours. From Stellenbosch wine estates to exhilarating quad biking in Kirstenbosch, experience the best of South Africa's top destinations.",
 //   openGraph: {
-//     title: "Tour Around Cape Town with a personal Tour Guide",
+//     title: "Cape Town Adventure Tours with Personal Guides | Explore Stellenbosch & Kirstenbosch",
 //     description:
-//       "Visit the world's famous tourist destination in Cape Town, from Stellenbosch Wine Farms to Kirstenbosch Quad Biking",
-//     url: "totalblessingfitnessandtraveltours.co.za/adventures",
+//       "Embark on an unforgettable adventure in Cape Town with expert-guided tours. From Stellenbosch wine estates to exhilarating quad biking in Kirstenbosch, experience the best of South Africa's top destinations.",
+//     url: "https://totalblessingfitnessandtraveltours.co.za/adventures",
 //     images: [
 //       {
 //         url: "/og-about.jpg",
 //         width: 1200,
 //         height: 630,
-//         alt: "About Us",
+//         alt: "Cape Town Adventure Tours",
 //       },
 //     ],
 //   },
 // };
+
 
 function SampleNextArrow(props) {
   const { style, onClick } = props;

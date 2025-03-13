@@ -5,20 +5,21 @@ import { galleryImages } from "@/data/pageData";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Cape Town's Physical Trainer and Travelling Destinations",
+  title: "Expert Personal Training & Travel Adventures in Cape Town | About Us",
   description:
-    "Expose yourself to our Fitness Classes and Travelling in Cape Town",
+    "Discover Total Blessing Fitness & Travel Tours – your destination for expert personal training, group fitness, and guided travel experiences in Cape Town. Join us for a healthier, more adventurous lifestyle.",
   openGraph: {
-    title: "Cape Town's Physical Trainer and Travelling Destinations",
+    title:
+      "Expert Personal Training & Travel Adventures in Cape Town | About Us",
     description:
-      "Expose yourself to our Fitness Classes and Travelling in Cape Town",
-    url: "totalblessingfitnessandtraveltours.co.za/about",
+      "Discover Total Blessing Fitness & Travel Tours – your destination for expert personal training, group fitness, and guided travel experiences in Cape Town. Join us for a healthier, more adventurous lifestyle.",
+    url: "https://totalblessingfitnessandtraveltours.co.za/about",
     images: [
       {
         url: "/og-about.jpg",
         width: 1200,
         height: 630,
-        alt: "About Us",
+        alt: "About Total Blessing Fitness & Travel Tours",
       },
     ],
   },
