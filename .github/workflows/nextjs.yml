@@ -22,17 +22,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Move to the website directory
-      - name: Change directory to website
-        run: cd website
-
-      # Set up Node.js
+      # Set up Node.js (using version 20 or compatible)
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "16"  # Or your preferred Node.js version
+          node-version: "20"  # Use Node.js version 20, which is compatible with Next.js
 
-      # Install dependencies
+      # Install dependencies inside the 'website' directory
       - name: Install dependencies
         run: npm install
         working-directory: ./website  # Ensure we run this inside the 'website' directory
