@@ -2065,7 +2065,6 @@ img:last-child:nth-child(5) {
 /* Style individual timetable items */
 .timetable {
     flex: 0 0 calc(30% - 20px);
-    /* Adjust the width as needed */
     background-color: #ffffff;
     border: 1px solid #ddd;
     padding: 10px;
