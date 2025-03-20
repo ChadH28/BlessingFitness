@@ -4,7 +4,8 @@ const nextConfig = {
   output: "export",
   distDir: "dist",
   trailingSlash: true,
-  assetPrefix: ".",
+  basePath: "/BlessingFitness", // Matches your GitHub repo name
+  assetPrefix: "/BlessingFitness/", // Ensures assets load correctly
 };
 
 export default nextConfig;
