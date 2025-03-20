@@ -6,7 +6,6 @@
     "dev": "next dev --turbopack",
     "generate": "next build && next export",
     "build": "next build",
-    "export": "next export",
     "start": "next start",
     "lint": "next lint"
   },
