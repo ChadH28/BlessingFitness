@@ -2,7 +2,6 @@ import InfoCard from "@/components/info-card";
 import ClientSlider from "@/components/slider";
 import SubHero from "@/components/sub-hero";
 import { galleryImages } from "@/data/pageData";
-import Link from "next/link";
 
 export const metadata = {
   title: "Expert Personal Training & Travel Adventures in Cape Town | About Us",
@@ -29,7 +28,7 @@ export default function About() {
   return (
     <main>
       <SubHero
-        title={"Get Fit. Have Fun. Feel Great!"}
+        title={"Discover Our Story while getting Fit and Having Fun!"}
         subtitle={
           "Transform Your Health with Workouts You'll Love and Elevate Your Fitness!"
         }

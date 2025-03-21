@@ -122,7 +122,7 @@ export default function Adventures() {
           <div
             key={index}
             data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-            className={`py-5 h-auto px-6 w-full flex flex-col gap-10 items-center ${
+            className={`py-5 h-auto px-6 lg:px-16 w-full flex flex-col gap-10 items-center ${
               index % 2 === 0 ? "lg:flex-row-reverse" : "lg:flex-row"
             }`}
           >
