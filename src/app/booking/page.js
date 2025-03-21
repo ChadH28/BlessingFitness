@@ -105,11 +105,11 @@ export default function Booking() {
       bg-fixed bg-center bg-cover custom-img
       "
       >
-        <div className="table-heading flex flex-col items-center gap-2 p-10 justify-center w-100 text-[white] font-semibold">
-          <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
+        <div className="table-heading flex flex-col items-center gap-2 p-10 text-balance justify-center text-center w-100 text-[white] font-semibold">
+          <h2 className="max-[1024px]:text-2xl text-4xl font-bold uppercase ">
             Bootcamp Class Timetable – Get Fit at The Ring Reloaded boxing gym!
           </h2>
-          <p>Limited Spots Available – Book 24 Hours in Advance!</p>
+          <p >Limited Spots Available – Book 24 Hours in Advance!</p>
           <p>
             High-Energy Group Workouts • Expert Coaching • Results-Driven
             Training

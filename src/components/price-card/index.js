@@ -14,7 +14,7 @@ export default function PriceCard({
       } max-[1024px]:flex-col`}
     >
       <div
-        className={`image-container overflow-hidden h-[21.875rem] max-[1024px]:h-[21.875rem]  max-[1024px]:w-screen w-1/2 relative ${
+        className={`image-container overflow-hidden h-[21.875rem] max-[1024px]:h-fit  w-100 lg:w-1/2 relative ${
           greyscale && "grayscale"
         }`}
       >
@@ -29,7 +29,7 @@ export default function PriceCard({
       </div>
       <div
         className={`content-container max-[1024px]:w-screen w-1/2 max-[1024px]:p-[20px] px-10 py-5 flex flex-col gap-5 justify-center ${
-          alt ? "text-right" : "text-left"
+          alt ? "lg:text-right" : "lg:text-left"
         }`}
       >
         <h2 className="uppercase font-extrabold text-red-800 max-[1024px]:text-2xl text-3xl">
