@@ -41,11 +41,7 @@ export default function Home() {
 
       <InfoCard
         title={"Find Exciting Journeys and highlights \n Cape Town awaits you"}
-        content={`From the Stellenbosch vineyards, Hout Bays harbor to
-                      the Camps Bays iconic beach, all while taking in
-                      Table Mountains breathtaking views. Its a
-                      journey through South African culture, nature, and history
-                      in one.`}
+        content={`From the Stellenbosch vineyards, Hout Bays harbor to the Camps Bays iconic beach, all while taking in Table Mountains breathtaking views. Its a journey through South African culture, nature, and history in one.`}
         buttonlink={"/adventures"}
         buttonlabel={"Explore More"}
         image={"/images/adventureHome.jpeg"}
@@ -65,10 +61,7 @@ export default function Home() {
 
       <InfoCard
         title={"Unleash Your Potential with Our Programs"}
-        content={`From Monday to Saturday, we have classes you can join in
-                      your desired day and time that better suits you. From
-                      boxing to cardio and any fitness needs you want
-                      exclusively, let your personal coach guide you through it.`}
+        content={`From Monday to Saturday, we have classes you can join in your desired day and time that better suits you. From boxing to cardio and any fitness needs you want exclusively, let your personal coach guide you through it.`}
         buttonlink={"/fitness"}
         buttonlabel={"Get Fit"}
         image={"/images/Fitness/Fitness05.jpeg"}
@@ -77,12 +70,7 @@ export default function Home() {
 
       <InfoCard
         title={"Join our online boxercise classes!"}
-        content={`Join our Cape Town-based online boxercise classes for a
-              high-energy workout combining boxing techniques and fitness
-              training. Each session includes a warm-up, boxing drills,
-              bodyweight exercises, and a cool-down for recovery. Suitable for
-              all fitness levels, our virtual classes on Zoom require no special
-              equipment—train from home and get fit with us!`}
+        content={`Join our Cape Town-based online boxercise classes for a high-energy workout combining boxing techniques and fitness training. Each session includes a warm-up, boxing drills, bodyweight exercises, and a cool-down for recovery. Suitable for all fitness levels, our virtual classes on Zoom require no special equipment—train from home and get fit with us!`}
         video={"/video/WhatsApp Video 2025-03-11 at 17.23.45.mp4"}
         buttonlink={
           "https://wa.me/27787589451?text=Online%20boxercise%20class%20enquiry"

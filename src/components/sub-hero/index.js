@@ -13,14 +13,18 @@ export default function SubHero({ title, subtitle, image }) {
             {subtitle}
           </p>
         </div>
-        <img
-          className="subhero overflow-hidden w-screen h-[inherit] relative"
-          priority
-          src={image ?? "/hero-images/home.jpg"}
-          alt="hero image"
-          fill
-          style={{ objectFit: "cover" }}
-        />
+        <span className="overflow-hidden subhero elative w-screen h-[inherit]">
+          <img
+            className="w-screen h-[inherit]
+            left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute scale-125
+            "
+            priority="true"
+            src={image ?? "/hero-images/home.jpg"}
+            alt="hero image"
+            fill
+            style={{ objectFit: "cover" }}
+          />
+        </span>
       </div>
     </header>
   );

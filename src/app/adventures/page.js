@@ -108,7 +108,7 @@ export default function Adventures() {
           data-aos="fade-up"
           className="adventure-section relative py-2 w-full"
         >
-          <div className="item cta-label flex flex-col items-center justify-center gap-3 pb-10 w-full">
+          <div className="item cta-label flex flex-col items-center justify-center gap-4 w-full">
             <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
               Adventurer’s Quest: Trails that Tell a Story
             </h2>
@@ -122,11 +122,11 @@ export default function Adventures() {
           <div
             key={index}
             data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-            className={`py-5 h-auto px-6 w-100 flex gap-10 items-center ${
-              index % 2 === 0 ? "flex-row-reverse" : "flex-row"
+            className={`py-5 h-auto px-6 lg:px-16 w-full flex flex-col gap-10 items-center ${
+              index % 2 === 0 ? "lg:flex-row-reverse" : "lg:flex-row"
             }`}
           >
-            <div className="h-[21.875rem] relative w-[40.625rem]">
+            <div className="h-[21.875rem] relative w-full lg:w-[40.625rem]">
               <img
                 className="rounded-3xl w-[inherit] h-[inherit] absolute"
                 style={{ objectFit: "cover" }}
