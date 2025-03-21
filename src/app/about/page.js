@@ -53,7 +53,7 @@ export default function About() {
       <InfoCard
         title={"FITNESS"}
         content={
-          "Our classes are professional and of the highest quality, providing the ideal environment for you to reach your fitness goals. So, dont be left out of Cape Town’s best local cultural, nature, dining and drinking hotspots. 🧘"
+          "Our classes are professional and of the highest quality, providing the ideal environment for you to reach your fitness goals."
         }
         image={"/images/Fitness/2Fitness.jpeg"}
         buttonlabel={"Get fit"}
@@ -67,7 +67,7 @@ export default function About() {
       <InfoCard
         title={"TRAVEL & TOURS"}
         content={
-          "Our Scheduled Public Tours operate several days a week, offering you a variety of epic day trips. 🪂"
+          "Our Scheduled Public Tours operate several days a week, offering you a variety of epic day trips. So, dont be left out of Cape Town’s best local cultural, nature, dining and drinking hotspots "
         }
         image={"/images/adventures/tablemountain.jpg"}
         buttonlabel={"Explore more"}
@@ -80,7 +80,7 @@ export default function About() {
       <InfoCard
         title={"JOIN THE FITNESS TRIBE"}
         content={
-          "Join the ultimate workout experience with Boxfit, designed to challenge your body and mind. Our high-intensity classes incorporate cardio, strength, and boxing drills, all led by a supportive and empowering community. Say goodbye to boring workouts and hello to lasting results. 🧗‍♂️"
+          "Join the ultimate workout experience with Boxfit, designed to challenge your body and mind. Our high-intensity classes incorporate cardio, strength, and boxing drills, all led by a supportive and empowering community. Say goodbye to boring workouts and hello to lasting results."
         }
         image={"/images/hiking/Platteklip_Gorge_to_Upper_Cable_Station1.png"}
         buttonlabel={"Sign up now and join the tribe"}
@@ -94,7 +94,7 @@ export default function About() {
       <InfoCard
         title={"Discover Fitness and Travel Adventures on Our YouTube Channel"}
         content={
-          "Dive into a world of exhilarating fitness routines and breathtaking travel destinations with our exclusive YouTube channel. Whether youre looking to stay fit, explore new places, or simply find inspiration, our videos offer something for everyone. Join us as we take you on a behind the scenes look of the team and on a journey of health, adventure, and discovery. 🏋️"
+          "Dive into a world of exhilarating fitness routines and breathtaking travel destinations with our exclusive YouTube channel. Whether youre looking to stay fit, explore new places, or simply find inspiration, our videos offer something for everyone. Join us as we take you on a behind the scenes look of the team and on a journey of health, adventure, and discovery."
         }
         image={"/images/Fitness/3Fitness.jpeg"}
         buttonlabel={"Subscribe"}
