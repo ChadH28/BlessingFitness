@@ -53,8 +53,9 @@ export default function ClientSlider({ list, images }) {
         <>
           {images ? (
             <div key={index} className="h-auto px-6">
-              <div className="h-[350px] relative">
-                <Image
+              <div className="h-[21.875rem] relative">
+                <img
+                  className="h-[inherit]"
                   style={{ objectFit: " cover" }}
                   fill
                   src={activity.image}

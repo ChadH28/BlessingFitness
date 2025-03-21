@@ -24,7 +24,6 @@ import Slider from "react-slick";
 //   },
 // };
 
-
 function SampleNextArrow(props) {
   const { style, onClick } = props;
   return (
@@ -89,7 +88,7 @@ export default function Adventures() {
               className="h-auto px-6"
             >
               <div className="h-[300px] relative">
-                <Image
+                <img
                   style={{ objectFit: " cover" }}
                   fill
                   src={activity.image}
@@ -129,12 +128,12 @@ export default function Adventures() {
             }`}
           >
             <div className="h-[21.875rem] relative w-[40.625rem]">
-              <Image
-                className="rounded-3xl"
-                style={{ objectFit: " cover" }}
+              <img
+                className="rounded-3xl w-[inherit] h-[inherit] absolute"
+                style={{ objectFit: "cover" }}
                 fill
                 src={trail.image}
-                alt={"activity."}
+                alt={`${trail.title}-imagery`}
               />
             </div>
             <div className="hiking-card-content w-[250px] text-[gray] font-light">
@@ -196,12 +195,15 @@ export default function Adventures() {
 
         <div className="flex flex-wrap gap-4 justify-center">
           {galleryImages.map((item, index) => (
-            <div key={index} className="w-80 h-80 relative zoomImg">
-              <Image
+            <div
+              key={index}
+              className="w-80 h-80 overflow-hidden relative zoomImg"
+            >
+              <img
+                className="object-cover w-[inherit] h-[inherit] absolute"
                 src={item.image}
                 alt={`Masonry image ${index + 1}`}
                 fill
-                className="object-cover"
               />
             </div>
           ))}

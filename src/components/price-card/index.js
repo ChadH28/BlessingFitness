@@ -14,11 +14,12 @@ export default function PriceCard({
       } max-[1024px]:flex-col`}
     >
       <div
-        className={`image-container h-[300px] max-[1024px]:h-[350px]  max-[1024px]:w-screen w-1/2 relative ${
+        className={`image-container overflow-hidden h-[21.875rem] max-[1024px]:h-[21.875rem]  max-[1024px]:w-screen w-1/2 relative ${
           greyscale && "grayscale"
         }`}
       >
-        <Image
+        <img
+          className={`image-container relative ${greyscale && "grayscale"}`}
           src={image ?? "/card-images/football.jpg"}
           alt="FN Rangers descriptive card"
           fill

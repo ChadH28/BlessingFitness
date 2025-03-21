@@ -24,26 +24,23 @@ export default function Hero({ title, image, slider }) {
         <div className="overflow-hidden w-screen h-full relative">
           {slider ? (
             slider.map((slide, index) => (
-              <div
-                key={index}
-                className={`hero-image absolute inset-0 flex items-center justify-center w-screen h-[inherit] transition-opacity duration-1000 ${
-                  index === currentIndex ? "opacity-100 " : "opacity-0"
-                }`}
-              >
-                <Image
+              <div key={index}>
+                <img
                   className={`transition-transform duration-1000 ${
                     index === currentIndex ? " scale-100" : "scale-125"
-                  }`}
+                  }
+               hero-image absolute inset-0 object-fill flex items-center justify-center w-screen h-[inherit] transition-opacity duration-1000 ${
+                 index === currentIndex ? "opacity-100 " : "opacity-0"
+               }`}
                   src={slide ?? "/hero-images/home.jpg"}
                   alt="hero image"
                   fill
-                  priority
-                  style={{ objectFit: "cover" }}
+                  priority='true'
                 />
               </div>
             ))
           ) : (
-            <Image
+            <img
               src={image ?? "/hero-images/home.jpg"}
               alt="hero image"
               fill

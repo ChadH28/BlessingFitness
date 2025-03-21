@@ -113,12 +113,12 @@ export default function About() {
           <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
             Seek an <span style={{ color: "red" }}>adventure</span> with us
           </h2>
-          <Link
+          <a
             className="uppercase block bg-[red] hover:bg-red-500 text-xs text-white font-extrabold w-fit rounded-sm px-4 py-2"
             href="/adventures"
           >
             Explore More
-          </Link>
+          </a>
         </div>
         <ClientSlider list={galleryImages} images />
       </div>

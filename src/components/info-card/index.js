@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
-
 export default function InfoCard({
   image,
   alt,
@@ -25,9 +22,7 @@ export default function InfoCard({
       {video ? (
         <div className="md:w-1/2">
           <video
-            className={`object-${
-              cover ? "cover" : "contain"
-            } h-[350px] h-inherit max-[1024px]:h-[350px] w-screen`}
+            className={`object-${cover ? "cover" : "contain"} h-[21.875rem] h-inherit max-[1024px]:h-[21.875rem] w-screen`}
             autoPlay
             loop
             muted
@@ -38,11 +33,13 @@ export default function InfoCard({
         </div>
       ) : (
         <div
-          className={`image-container min-h-[350px] h-inherit max-[1024px]:h-[350px]  max-[1024px]:w-screen w-1/2 relative ${
-            greyscale && "grayscale"
+          className={`relative image-container h-fit overflow-hidden min-h-[21.875rem]  max-[1024px]:w-screen w-1/2
           }`}
         >
-          <Image
+          <img
+            className={`
+              left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute scale-125
+              object-fill h-[inherit] w-auto ${greyscale && "grayscale"}`}
             src={image ?? "/card-images/football.jpg"}
             alt="FN Rangers descriptive card"
             fill
@@ -89,12 +86,12 @@ export default function InfoCard({
                 {buttonlabel ?? "find out"}
               </a>
             ) : (
-              <Link
+              <a
                 className="uppercase bg-[red] hover:bg-red-500 text-xs text-white font-extrabold w-fit rounded-sm px-4 py-2"
                 href={buttonlink}
               >
                 {buttonlabel ?? "find out"}
-              </Link>
+              </a>
             )}
           </div>
         )}

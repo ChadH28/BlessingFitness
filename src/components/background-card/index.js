@@ -15,7 +15,7 @@ export default function InfoCard({
           greyscale && "grayscale"
         }`}
       >
-        <Image
+        <img
           src={image ?? "/card-images/football.jpg"}
           alt="FN Rangers descriptive card"
           fill
@@ -34,12 +34,12 @@ export default function InfoCard({
           {content}
         </p>
         {buttonlink && (
-          <Link
+          <a
             className="uppercase bg-[red] hover:bg-red-500 text-xs text-white font-extrabold w-fit px-4 py-2"
             href={buttonlink}
           >
             {buttonlabel ?? "find out"}
-          </Link>
+          </a>
         )}
       </div>
     </div>

@@ -54,14 +54,14 @@ export default function Fitness() {
             </b>{" "}
             in advance.
           </p>
-          <Link
+          <a
             className="
             bg-[#df2828] px-5 py-2 text-white uppercase rounded-md text-sm
             "
             href="/booking"
           >
             Find out more
-          </Link>
+          </a>
         </div>
       </div>
 
@@ -101,14 +101,14 @@ export default function Fitness() {
             <br />
             have a great time doing it!
           </h2>
-          <Link
+          <a
             className="
             bg-[#df2828] block h-fit w-fit px-5 py-2 text-white uppercase rounded-sm text-sm
             "
             href="booking#schedule"
           >
             Boxfit bootcamp group classes time table
-          </Link>
+          </a>
         </div>
       </div>
 
