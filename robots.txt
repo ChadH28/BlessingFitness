@@ -3,7 +3,4 @@ Disallow: /private/
 Disallow: /tmp/
 Disallow: /test/
 
-User-agent: Googlebot
-Disallow: /nogooglebot/
-
 Sitemap: https://totalblessingfitnessandtraveltours.co.za/sitemap.xml
