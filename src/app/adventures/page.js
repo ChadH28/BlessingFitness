@@ -1,7 +1,6 @@
 "use client";
 import SubHero from "@/components/sub-hero";
 import { activities, galleryImages, hiking_trails } from "@/data/pageData";
-import Image from "next/image";
 import Slider from "react-slick";
 
 // export const metadata = {

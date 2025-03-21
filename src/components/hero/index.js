@@ -14,8 +14,8 @@ export default function Hero({ title, image, slider }) {
   }, [slider.length]); // Remove unnecessary dependencies
 
   return (
-    <header className="h-[70vh] w-screen relative z-10">
-      <div className="flex max-[1024px]:flex-col overflow-hidden h-[70vh]">
+    <header className="h-[40vh] lg:h-[70vh] w-screen relative z-10">
+      <div className="flex max-[1024px]:flex-col overflow-hidden h-[40vh] lg:h-[70vh]">
         <div className="hero-content flex flex-col justify-center items-center absolute h-full w-screen">
           <h1 className="z-10 text-white mx-[50px] max-[1024px]:mx-[20px]  max-[1024px]:text-2xl text-5xl">
             {title}

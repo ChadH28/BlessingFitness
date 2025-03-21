@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /private/
-Disallow: /tmp/
-Disallow: /test/
-
-Sitemap: https://totalblessingfitnessandtraveltours.co.za/sitemap.xml
