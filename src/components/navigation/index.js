@@ -1,14 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navdata } from "@/data/navdata";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export default function Navigation() {
-  const pathname = usePathname();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [currentPath, setCurrentPath] = useState("");
+
+  useEffect(() => {
+    setCurrentPath(window.location.pathname);
+  }, []);
 
   const toggleMenu = () => {
     setMobileMenuOpen((prev) => !prev);
@@ -34,7 +35,7 @@ export default function Navigation() {
               <li key={index}>
                 <a
                   className={`text-xs font-semibold uppercase transition-all hover:text-tertiary ${
-                    pathname === links.url
+                    currentPath.includes(links.url)
                       ? "text-tertiary font-extrabold"
                       : "text-text"
                   }`}
@@ -63,19 +64,13 @@ export default function Navigation() {
                 aria-hidden="true"
               />
             </a>
-            <a
-              href="https://www.facebook.com/muteroblessing/"
-              target="_blank"
-            >
+            <a href="https://www.facebook.com/muteroblessing/" target="_blank">
               <i
                 className="fa-brands hover:text-black text-tertiary fa-facebook"
                 aria-hidden="true"
               />
             </a>
-            <a
-              href="https://www.youtube.com/@total.blessing"
-              target="_blank"
-            >
+            <a href="https://www.youtube.com/@total.blessing" target="_blank">
               <i
                 className="fa-brands hover:text-black text-tertiary fa-youtube"
                 aria-hidden="true"
@@ -85,10 +80,13 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Menu Toggle Button */}
-        <button onClick={toggleMenu} className="md:hidden">
-          <i
-            className={`fa-solid ${isMobileMenuOpen ? "fa-xmark" : "fa-bars"}`}
-          />
+        <button
+          onClick={toggleMenu}
+          className={`text-xl flex items-center align-center md:hidden rotate-${
+            isMobileMenuOpen ? "180" : "0"
+          }`}
+        >
+          🥊
         </button>
 
         {/* Mobile Menu */}
@@ -99,7 +97,7 @@ export default function Navigation() {
                 <li key={index}>
                   <a
                     className={`text-sm font-bold uppercase transition-all hover:text-tertiary ${
-                      pathname === links.url
+                      currentPath.includes(links.url)
                         ? "text-tertiary font-extrabold"
                         : "text-text"
                     }`}
@@ -138,10 +136,7 @@ export default function Navigation() {
                   aria-hidden="true"
                 />
               </a>
-              <a
-                href="https://www.youtube.com/@total.blessing"
-                target="_blank"
-              >
+              <a href="https://www.youtube.com/@total.blessing" target="_blank">
                 <i
                   className="fa-brands text-tertiary fa-youtube"
                   aria-hidden="true"
