@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import React from "react";
 import Slider from "react-slick";
 
 function SampleNextArrow(props) {
@@ -50,14 +51,14 @@ export default function ClientSlider({ list, images }) {
   return (
     <Slider {...settings} className="py-14 mx-auto bg-slate-50">
       {list.map((activity, index) => (
-        <>
+        <React.Fragment key={index}>
           {images ? (
-            <div key={index} className="h-auto px-6">
-              <div className="h-[21.875rem] relative">
+            <div  className="h-auto px-6">
+              <div className="h-[21.875rem] w-full relative">
                 <img
-                  className="h-[inherit]"
+                  className="h-[inherit] w-[inherit]"
                   style={{ objectFit: " cover" }}
-                  fill
+                  fill='true'
                   src={activity.image}
                   alt={"activity."}
                 />
@@ -70,7 +71,7 @@ export default function ClientSlider({ list, images }) {
               </p>
             </div>
           )}
-        </>
+        </React.Fragment>
       ))}
     </Slider>
   );

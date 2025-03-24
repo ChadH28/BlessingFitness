@@ -410,11 +410,9 @@ export const pricelist = {
 };
 
 export const slides = [
-  "/images/Fitness/Fitness07.jpeg",
+  "/images/Fitness/3Fitness.jpeg",
   "/images/hiking/Helderberg_Farm1.png",
   "/images/Fitness/04Fitness.jpeg",
-  "/images/hiking/Jonkershoek_Waterfalls_Day_Hiking_Trail2.png",
-  "/images/Fitness/3Fitness.jpeg",
   "/images/adventures/IMG_0307.jpeg",
 ];
 

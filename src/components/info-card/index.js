@@ -22,7 +22,9 @@ export default function InfoCard({
       {video ? (
         <div className="md:w-1/2">
           <video
-            className={`object-${cover ? "cover" : "contain"} h-[21.875rem] h-inherit max-[1024px]:h-[21.875rem] w-screen`}
+            className={`object-${
+              cover ? "cover" : "contain"
+            } h-[21.875rem] h-inherit max-[1024px]:h-[21.875rem] w-screen`}
             autoPlay
             loop
             muted
@@ -33,17 +35,14 @@ export default function InfoCard({
         </div>
       ) : (
         <div
-          className={`relative image-container h-fit overflow-hidden min-h-[21.875rem]  max-[1024px]:w-screen w-1/2
-          }`}
+          className={`relative image-container overflow-hidden min-h-[21.875rem] w-1/2 max-[1024px]:w-screen`}
         >
           <img
             className={`
-              left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute scale-125
-              object-fill h-[inherit] w-auto ${greyscale && "grayscale"}`}
+            left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute scale-[1.3]
+            object-cover h-[inherit] w-auto ${greyscale && "grayscale"}`}
             src={image ?? "/card-images/football.jpg"}
             alt="FN Rangers descriptive card"
-            fill
-            style={{ objectFit: "cover" }}
             sizes="(max-width: 1024px) 75vw, 100vw"
           />
         </div>

@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   output: "export",
-  // trailingSlash: true, 
+  trailingSlash: false, 
   // basePath: "/", // Must match the GitHub repo name exactly
   // assetPrefix: "/", // Ensures assets load correctly
   images: {
