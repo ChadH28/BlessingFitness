@@ -18,7 +18,7 @@ export default function InfoCard({
         <img
           src={image ?? "/card-images/football.jpg"}
           alt="FN Rangers descriptive card"
-          fill
+          fill='true'
           style={{ objectFit: "cover" }}
           sizes="(max-width: 1024px) 75vw, 100vw"
         />

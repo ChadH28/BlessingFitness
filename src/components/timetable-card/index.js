@@ -6,7 +6,7 @@ function TableCard({ day, workout, workout_desc, time_am, time_pm, image }) {
         <img
           className="timetable-image left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute w-120 h-100 scale-150 opacity-15"
           loading="lazy"
-          fill
+          fill='true'
           style={{ objectFit: "cover" }}
           src={image}
           alt="Image 3"

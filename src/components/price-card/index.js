@@ -22,7 +22,7 @@ export default function PriceCard({
           className={`image-container relative ${greyscale && "grayscale"}`}
           src={image ?? "/card-images/football.jpg"}
           alt="FN Rangers descriptive card"
-          fill
+          fill='true'
           style={{ objectFit: "cover" }}
           sizes="(max-width: 1024px) 75vw, 100vw"
         />

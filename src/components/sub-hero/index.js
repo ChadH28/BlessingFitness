@@ -21,7 +21,7 @@ export default function SubHero({ title, subtitle, image }) {
             priority="true"
             src={image ?? "/hero-images/home.jpg"}
             alt="hero image"
-            fill
+            fill='true'
             style={{ objectFit: "cover" }}
           />
         </span>
