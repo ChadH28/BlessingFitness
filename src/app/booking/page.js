@@ -49,11 +49,11 @@ export default function Booking() {
               </p>
               <p>
                 Every member that pays 3 months upfront (R1,000 x 3) will get
-                R200 discount each month
+                R200 discount from the initial R1,200 each month
               </p>
               <p>
                 Every student that pays 3 months upfront (R950 x 3) will get R50
-                discount each month
+                discount from the initial R1,000 each month
               </p>
             </div>
           </div>
