@@ -20,7 +20,7 @@ export default function InfoCard({
       } max-[1024px]:flex-col h-fit`}
     >
       {video ? (
-        <div className="md:w-1/2">
+        <div className="w-1/2 max-[1024px]:w-screen">
           <video
             className={`object-${
               cover ? "cover" : "contain"

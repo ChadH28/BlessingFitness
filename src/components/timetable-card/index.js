@@ -1,7 +1,7 @@
 
 function TableCard({ day, workout, workout_desc, time_am, time_pm, image }) {
   return (
-    <div class="timetable relative rounded-xl flex justify-center items-center flex-col text-center overflow-hidden min-w-full lg:min-w-96">
+    <div className="timetable relative rounded-xl flex justify-center items-center flex-col text-center overflow-hidden min-w-full lg:min-w-96">
       <div className="cover overflow-hidden flex justify-center items-center">
         <img
           className="timetable-image left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute w-120 h-100 scale-150 opacity-15"
