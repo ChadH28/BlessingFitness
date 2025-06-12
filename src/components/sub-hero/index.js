@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
-import Image from "next/image";
 
 export default function SubHero({ title, subtitle, image }) {
   return (

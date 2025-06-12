@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import AdventureSlider from "@/components/adventure-slider";
 import SubHero from "@/components/sub-hero";
 import { activities, galleryImages, hiking_trails } from "@/data/pageData";
