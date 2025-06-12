@@ -4,15 +4,13 @@ import TableCard from "@/components/timetable-card";
 import { pricelist } from "@/data/pageData";
 
 export const metadata = {
-  title:
-    "Book a Personal Fitness Trainer in Cape Town | Solo, Couple & Group Training",
+  title: "Cape Town Personal Trainer | One-on-One & Group Fitness",
   description:
-    "Find the perfect fitness training package for your needs in Cape Town. Book a personal trainer for one-on-one sessions, couple workouts, or group training to achieve your fitness goals.",
+    "Achieve your fitness goals with expert training in Cape Town. Book solo, couple, or group sessions with a certified personal trainer today",
   openGraph: {
-    title:
-      "Book a Personal Fitness Trainer in Cape Town | Solo, Couple & Group Training",
+    title: "Cape Town Personal Trainer | One-on-One & Group Fitness",
     description:
-      "Find the perfect fitness training package for your needs in Cape Town. Book a personal trainer for one-on-one sessions, couple workouts, or group training to achieve your fitness goals.",
+      "Achieve your fitness goals with expert training in Cape Town. Book solo, couple, or group sessions with a certified personal trainer today.",
     url: "https://totalblessingfitnessandtraveltours.co.za/booking",
     images: [
       {
@@ -109,7 +107,7 @@ export default function Booking() {
           <h2 className="max-[1024px]:text-2xl text-4xl font-bold uppercase ">
             Bootcamp Class Timetable – Get Fit at The Ring Reloaded boxing gym!
           </h2>
-          <p >Limited Spots Available – Book 24 Hours in Advance!</p>
+          <p>Limited Spots Available – Book 24 Hours in Advance!</p>
           <p>
             High-Energy Group Workouts • Expert Coaching • Results-Driven
             Training

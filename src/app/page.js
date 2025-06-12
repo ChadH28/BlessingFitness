@@ -4,15 +4,13 @@ import { highlights, slides } from "@/data/pageData";
 import ClientSlider from "@/components/slider";
 
 export const metadata = {
-  title:
-    "Total Blessing Fitness & Travel Tours | Cape Town's Top Fitness & Adventure Hub",
+  title: "Train & Travel in Cape Town | Total Blessing Fitness Tours",
   description:
-    "Experience the best fitness classes, wellness retreats, and adventure tours in Cape Town. Join Total Blessing Fitness & Travel Tours for expert-led workouts and unforgettable travel experiences.",
+    "Discover fitness, wellness retreats & adventure in Cape Town. Total Blessing blends expert workouts with unforgettable guided travel experiences.",
   openGraph: {
-    title:
-      "Total Blessing Fitness & Travel Tours | Cape Town's Top Fitness & Adventure Hub",
+    title: "Train & Travel in Cape Town | Total Blessing Fitness Tours",
     description:
-      "Experience the best fitness classes, wellness retreats, and adventure tours in Cape Town. Join Total Blessing Fitness & Travel Tours for expert-led workouts and unforgettable travel experiences.",
+      "Discover fitness, wellness retreats & adventure in Cape Town. Total Blessing blends expert workouts with unforgettable guided travel experiences.",
     url: "https://totalblessingfitnessandtraveltours.co.za/",
     images: [
       {

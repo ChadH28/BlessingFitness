@@ -4,14 +4,14 @@ import { activities, galleryImages, hiking_trails } from "@/data/pageData";
 
 export const metadata = {
   title:
-    "Cape Town Adventure Tours with Personal Guides | Explore Stellenbosch & Kirstenbosch",
+    "Guided Cape Town Tours: Stellenbosch, Cape Town National Park & Kirstenbosch Adventures",
   description:
-    "Embark on an unforgettable adventure in Cape Town with expert-guided tours. From Stellenbosch wine estates to exhilarating quad biking in Kirstenbosch, experience the best of South Africa's top destinations.",
+    "Discover Cape Town with personal guides. Wine taste in Stellenbosch, ride quads in Kirstenbosch & explore SA's scenic gems on epic day tours.",
   openGraph: {
     title:
-      "Cape Town Adventure Tours with Personal Guides | Explore Stellenbosch & Kirstenbosch",
+      "Guided Cape Town Tours: Stellenbosch, Cape Town National Park & Kirstenbosch Adventures",
     description:
-      "Embark on an unforgettable adventure in Cape Town with expert-guided tours. From Stellenbosch wine estates to exhilarating quad biking in Kirstenbosch, experience the best of South Africa's top destinations.",
+      "Discover Cape Town with personal guides. Wine taste in Stellenbosch, ride quads in Kirstenbosch & explore SA's scenic gems on epic day tours.",
     url: "https://totalblessingfitnessandtraveltours.co.za/adventures",
     images: [
       {
@@ -61,7 +61,7 @@ export default function Adventures() {
               <img
                 className="rounded-3xl w-[inherit] h-[inherit] absolute"
                 style={{ objectFit: "cover" }}
-                fill='true'
+                fill="true"
                 src={trail.image}
                 alt={`${trail.title}-imagery`}
               />
@@ -133,7 +133,7 @@ export default function Adventures() {
                 className="object-cover w-[inherit] h-[inherit] absolute"
                 src={item.image}
                 alt={`Masonry image ${index + 1}`}
-                fill='true'
+                fill="true"
               />
             </div>
           ))}
