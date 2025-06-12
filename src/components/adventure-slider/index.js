@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
 import Slider from "react-slick";
@@ -59,16 +60,20 @@ export default function AdventureSlider({ list }) {
             key={index}
             className="h-auto px-6"
           >
-            <div className="h-[300px] relative">
+            <div className="h-80 relative">
               <img
-                style={{ objectFit: " cover" }}
+                style={{
+                  objectFit: "cover",
+                  width: "100%",
+                  height: "inherit",
+                }}
                 fill="true"
                 src={activity.image}
                 alt={`activity - ${activity.title}`}
               />
             </div>
             <h3 className="text-[#df2828] text-lg my-1">{activity.title}</h3>
-            <p className="text-[gray]">{activity.description}</p>
+            <p className="text-[gray] w-[inherit]">{activity.description}</p>
           </a>
         ))}
       </Slider>

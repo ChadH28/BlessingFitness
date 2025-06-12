@@ -11,7 +11,7 @@
   --primaryred: #EA1E23ff;
   --primary-grey: #B9B9B8ff;
   --blacktransgradient: linear-gradient(to top,
-      var(--foreground),
+      #000000,
       transparent);
 }
 
@@ -35,6 +35,7 @@ body {
   h1,
   h2 {
     text-wrap: balance;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 }
 
@@ -65,10 +66,12 @@ body {
     transform: scale(1);
     opacity: 1;
   }
+
   80% {
     transform: scale(1.1);
     opacity: 1;
   }
+
   100% {
     transform: scale(1.2);
     opacity: 0;

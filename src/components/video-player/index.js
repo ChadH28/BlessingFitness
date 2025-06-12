@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { useRef } from "react";
 
 export default function VideoPlayer({ title, text, video }) {

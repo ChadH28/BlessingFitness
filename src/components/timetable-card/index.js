@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 
 function TableCard({ day, workout, workout_desc, time_am, time_pm, image }) {
   return (

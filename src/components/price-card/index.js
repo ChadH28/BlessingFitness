@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 
 export default function PriceCard({
   image,
@@ -14,7 +14,7 @@ export default function PriceCard({
       } max-[1024px]:flex-col`}
     >
       <div
-        className={`image-container overflow-hidden h-[21.875rem] max-[1024px]:h-fit  w-100 lg:w-1/2 relative ${
+        className={`image-container overflow-hidden h-96 max-[1024px]:h-fit  w-100 lg:w-1/2 relative ${
           greyscale && "grayscale"
         }`}
       >

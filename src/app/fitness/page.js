@@ -1,16 +1,15 @@
 import InfoCard from "@/components/info-card";
 import SubHero from "@/components/sub-hero";
 import VideoPlayer from "@/components/video-player";
-import Link from "next/link";
 
 export const metadata = {
-  title: "Fitness & Boxing Programs in Cape Town | Total Blessing Fitness",
+  title: "Boxing & Fitness Classes in Cape Town | Total Blessing",
   description:
-    "Achieve your fitness goals with Total Blessing Fitness. Join our exciting boxing and fitness programs in Cape Town, designed for weight loss, building strength, or testing your courage. Passionate trainers dedicated to your success.",
+    "Get fit with boxing and strength training in Cape Town. Total Blessing offers fun, high-impact workouts led by passionate personal trainers.",
   openGraph: {
-    title: "Fitness & Boxing Programs in Cape Town | Total Blessing Fitness",
+    title: "Boxing & Fitness Classes in Cape Town | Total Blessing",
     description:
-      "Achieve your fitness goals with Total Blessing Fitness. Join our exciting boxing and fitness programs in Cape Town, designed for weight loss, building strength, or testing your courage. Passionate trainers dedicated to your success.",
+      "Get fit with boxing and strength training in Cape Town. Total Blessing offers fun, high-impact workouts led by passionate personal trainers.",
     url: "https://totalblessingfitnessandtraveltours.co.za/fitness",
     images: [
       {
