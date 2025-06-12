@@ -20,11 +20,11 @@ export default function InfoCard({
       } max-[1024px]:flex-col h-fit`}
     >
       {video ? (
-        <div className="w-1/2 max-[1024px]:w-screen">
+        <div className={`w-1/2 max-[1024px]:w-screen ${!cover && "bg-black"} `}>
           <video
             className={`object-${
               cover ? "cover" : "contain"
-            } h-[21.875rem] h-inherit max-[1024px]:h-[21.875rem] w-screen`}
+            } h-[21.875rem] h-inherit max-[1024px]:h-96 w-screen`}
             autoPlay
             loop
             muted
@@ -35,12 +35,12 @@ export default function InfoCard({
         </div>
       ) : (
         <div
-          className={`relative image-container overflow-hidden min-h-[21.875rem] w-1/2 max-[1024px]:w-screen`}
+          className={`relative image-container overflow-hidden min-h-[21.875rem] h-full w-1/2 max-[1024px]:w-screen`}
         >
           <img
             className={`
             left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute scale-[1.3]
-            object-cover h-[inherit] w-auto ${greyscale && "grayscale"}`}
+            object-cover h-[inherit] w-full ${greyscale && "grayscale"}`}
             src={image ?? "/card-images/football.jpg"}
             alt="FN Rangers descriptive card"
             sizes="(max-width: 1024px) 75vw, 100vw"
@@ -55,7 +55,7 @@ export default function InfoCard({
         }}
         className={`${
           background ? `bg-[${background}]` : `bg-white`
-        }  content-container max-[1024px]:w-screen w-1/2 max-[1024px]:p-[20px] p-16 flex flex-col gap-5 justify-center`}
+        }  content-container max-[1024px]:w-screen w-1/2 max-[1024px]:p-5 p-16 flex flex-col gap-5 justify-center`}
       >
         <h2
           data-aos={animate && (alt ? "fade-right" : "fade-left")}

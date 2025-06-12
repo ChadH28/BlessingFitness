@@ -54,7 +54,7 @@ export default function Home() {
         content={"Book Your Next Session Today"}
         buttonlink={"/booking"}
         buttonlabel={"Book Now"}
-        image={"/images/rem-bg/hom-resize-removebg-preview.png"}
+        image={"/images/hiking/India_Venster_to_Upper_Cable_Station3.png"}
       />
 
       <ClientSlider list={highlights} />
