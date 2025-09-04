@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-html-link-for-pages */
 "use client";
 
 import { useEffect, useState } from "react";
@@ -38,7 +40,13 @@ export default function Navigation() {
                     currentPath.includes(links.url)
                       ? "text-tertiary font-extrabold"
                       : "text-text"
-                  }`}
+                  }
+                  ${
+                    links.type == "button"
+                      ? "bg-tertiary px-3 py-2 text-white hover:text-white rounded-md"
+                      : ""
+                  }
+                  `}
                   href={links.url}
                 >
                   {links.label}

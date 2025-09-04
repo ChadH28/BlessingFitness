@@ -21,11 +21,11 @@ export default function InfoCard({
       } max-[1024px]:flex-col h-fit`}
     >
       {video ? (
-        <div className={`w-1/2 max-[1024px]:w-screen ${!cover && "bg-black"} `}>
+        <div className={`lg:w-1/2 w-screen ${!cover && "bg-black"} `}>
           <video
             className={`object-${
               cover ? "cover" : "contain"
-            } h-[21.875rem] h-inherit max-[1024px]:h-96 w-screen`}
+            } lg:h-[21.875rem] h-inherit h-96 w-screen`}
             autoPlay
             loop
             muted
@@ -36,15 +36,17 @@ export default function InfoCard({
         </div>
       ) : (
         <div
-          className={`relative image-container overflow-hidden min-h-[21.875rem] h-full w-1/2 max-[1024px]:w-screen`}
+          className={`relative
+image-container overflow-hidden lg:min-h-[25rem] md:min-h-[21.875rem] min-h-80 h-full lg:w-1/2 w-full`}
         >
           <img
             className={`
-            left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute scale-[1.3]
-            object-cover h-[inherit] w-full ${greyscale && "grayscale"}`}
-            src={image ?? "/card-images/football.jpg"}
-            alt="FN Rangers descriptive card"
+          left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute
+          object-cover h-[inherit] w-full ${greyscale && "grayscale"}`}
+            src={image ?? ""}
+            alt="BFT descriptive card"
             sizes="(max-width: 1024px) 75vw, 100vw"
+            fetchPriority="low"
           />
         </div>
       )}
