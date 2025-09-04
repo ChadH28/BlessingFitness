@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
     <>
-      <footer className="px-[50px] max-[1024px]:px-[20px] py-10 flex gap-6 flex-wrap">
-        <div className="w-full flex justify-between items-start">
+      <footer className="lg:px-12 px-5 py-10 flex gap-6 flex-col w-full">
+        <div className="flex justify-between gap-3 items-start">
           <div>
             <strong className="text-red-600">Our Address</strong>
             <br />
@@ -22,11 +22,11 @@ export default function Footer() {
           </div>
           <div>
             <strong className="text-red-600">Schedules</strong>
-            <p className="whitespace-pre-line">{`Mon - Fri :- 7:30am - 7:30pm\nSat :- 7:00am - 2:00pm`}</p>
+            <p className="text-balance whitespace-pre-line">{`Mon - Fri :- 7:30am - 7:30pm\nSat :- 7:00am - 2:00pm`}</p>
           </div>
         </div>
         <hr className="w-full" />
-        <div className="copyright w-full flex justify-center content-center">
+        <div className="copyright flex justify-center content-center">
           <p>© 2025. All rights reserved</p>
         </div>
       </footer>
