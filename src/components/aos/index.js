@@ -7,8 +7,10 @@ import "aos/dist/aos.css"; // Import AOS styles
 const AOSProvider = ({ children }) => {
   useEffect(() => {
     AOS.init({
-      duration: 2000, // Animation duration
+      duration: 800, // Reduced from 2000ms to 800ms
       once: true, // Run animation only once
+      offset: 100, // Start animation 100px before element enters viewport
+      easing: 'ease-out-cubic', // Smoother easing
     });
   }, []);
 
