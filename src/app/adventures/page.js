@@ -35,111 +35,96 @@ export default function Adventures() {
       />
       <AdventureSlider list={activities} />
 
-      <div className="py-16 flex flex-col items-center">
-        <div
-          data-aos="fade-up"
-          className="adventure-section relative py-2 w-full"
-        >
-          <div className="item cta-label flex flex-col items-center justify-center gap-4 w-full">
-            <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
-              Adventurer’s Quest: Trails that Tell a Story
-            </h2>
-            <p className="text-xl text-pretty text-[grey] text-center w-[60%]">
-              Reach New Heights with Our Ultimate Hiking Guide
-            </p>
-          </div>
-        </div>
-
-        {hiking_trails.map((trail, index) => (
-          <div
-            key={index}
-            data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-            className={`py-5 h-auto px-6 lg:px-16 w-full flex flex-col gap-10 items-center ${
-              index % 2 === 0 ? "lg:flex-row-reverse" : "lg:flex-row"
-            }`}
-          >
-            <div className="h-[21.875rem] relative w-full lg:w-[40.625rem]">
-              <img
-                className="rounded-3xl w-[inherit] h-[inherit] absolute"
-                style={{ objectFit: "cover" }}
-                fill="true"
-                src={trail.image}
-                alt={`${trail.title}-imagery`}
-              />
-            </div>
-            <div className="hiking-card-content w-[250px] text-[gray] font-light">
-              <p className={`hiking-card-level ${trail.level.toLowerCase()}`}>
-                {trail.level}
-              </p>
-              <h3 className="hiking-card-title whitespace-pre-line font-bold">
-                {trail.title}
-              </h3>
-              <p className="hiking-card-location">
-                <span>
-                  <i
-                    className="fa fa-map-marker text-base "
-                    aria-hidden="true"
-                  />
-                </span>
-                {"  "}
-                {trail.location}
-              </p>
-              <div className="hiking-card-info">
-                {trail.distance && (
-                  <p className="hiking-card-distance">
-                    <span>
-                      <i className="fa fa-tree" aria-hidden="true" />
-                    </span>
-                    {"  "}
-                    {trail.distance}
-                  </p>
-                )}
-                {trail.time && (
-                  <p className="hiking-card-time flex gap-2 items-center">
-                    <span>
-                      <i
-                        className="fa-solid fa-clock text-base"
-                        aria-hidden="true"
-                      />
-                    </span>
-                    {trail.time}
-                  </p>
-                )}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="adventure-section relative py-12 w-full bg-slate-50">
-        <div
-          data-aos="fade-up"
-          className="item cta-label flex flex-col items-center justify-center gap-3 pb-10 w-full"
-        >
-          <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
-            Past Adventures
+      <section className="py-16 md:py-24 max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="flex flex-col items-center justify-center gap-4 mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold uppercase text-gray-900">
+            {`Adventurer's Quest:`} Trails that Tell a Story
           </h2>
-          <p className="text-xl text-pretty text-[grey] text-center w-[60%]">
-            Our Hiking Trail Tales Through the Years
+          <p className="text-lg text-gray-500 max-w-xl">
+            Reach New Heights with Our Ultimate Hiking Guide
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-4 justify-center">
-          {galleryImages.map((item, index) => (
+        <div className="space-y-16">
+          {hiking_trails.map((trail, index) => (
             <div
               key={index}
-              className="w-80 h-80 overflow-hidden relative zoomImg"
+              className={`flex flex-col lg:flex-row gap-6 lg:gap-12 items-center ${
+                index % 2 === 0 ? "lg:flex-row-reverse" : ""
+              }`}
             >
-              <img
-                className="object-cover w-[inherit] h-[inherit] absolute"
-                src={item.image}
-                alt={`Masonry image ${index + 1}`}
-                fill="true"
-              />
+              <div className="w-full lg:w-1/2">
+                <div className="relative overflow-hidden rounded-2xl bg-gray-100 shadow-lg aspect-[4/3]">
+                  <img
+                    className="w-full h-full object-cover absolute inset-0"
+                    src={trail.image}
+                    alt={`${trail.title}-imagery`}
+                  />
+                </div>
+              </div>
+              <div className="w-full lg:w-1/2 space-y-4">
+                <p className={`text-sm font-bold uppercase tracking-wider ${
+                  trail.level.toLowerCase() === "easy" ? "text-green-600" :
+                  trail.level.toLowerCase() === "moderate" ? "text-orange-600" :
+                  "text-red-600"
+                }`}>
+                  {trail.level}
+                </p>
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 whitespace-pre-line">
+                  {trail.title}
+                </h3>
+                <p className="flex items-center gap-2 text-gray-500">
+                  <i className="fa fa-map-marker text-base" aria-hidden="true" />
+                  {trail.location}
+                </p>
+                <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+                  {trail.distance && (
+                    <p className="flex items-center gap-2">
+                      <i className="fa fa-tree" aria-hidden="true" />
+                      {trail.distance}
+                    </p>
+                  )}
+                  {trail.time && (
+                    <p className="flex items-center gap-2">
+                      <i className="fa-solid fa-clock" aria-hidden="true" />
+                      {trail.time}
+                    </p>
+                  )}
+                </div>
+              </div>
             </div>
           ))}
         </div>
-      </div>
+      </section>
+
+      <section className="py-16 md:py-24 w-full bg-white border-y border-gray-100">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+          <div className="flex flex-col items-center justify-center gap-3 pb-10 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold uppercase text-gray-900">
+              Past Adventures
+            </h2>
+            <p className="text-lg text-gray-500 max-w-xl">
+              Our Hiking Trail Tales Through the Years
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-4 justify-center">
+            {galleryImages.map((item, index) => (
+              <div
+                key={index}
+                className="w-80 h-80 overflow-hidden relative zoomImg"
+              >
+                <img
+                  className="object-cover w-[inherit] h-[inherit] absolute"
+                  src={item.image}
+                  alt={`Masonry image ${index + 1}`}
+                  fill="true"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

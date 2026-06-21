@@ -24,7 +24,7 @@ export const metadata = {
 
 export default function Fitness() {
   return (
-    <main>
+    <main className="bg-[#f8f9fb]">
       <SubHero
         title={"WORKOUT PROGRAMMES TAILORED TO YOUR FITTING"}
         subtitle={
@@ -33,36 +33,31 @@ export default function Fitness() {
         image={"/images/Fitness/4Fitness.jpeg"}
       />
 
-      <div className="adventure-section relative py-14 w-full bg-slate-50">
-        <div
-          data-aos="fade-up"
-          className="item cta-label flex flex-col items-center justify-center gap-5 w-full"
-        >
-          <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
-            <span style={{ color: "red" }}>GET FIT</span> with us
+      <section className="py-16 md:py-24 px-6 md:px-10 max-w-[1400px] mx-auto">
+        <div className="flex flex-col items-center justify-center gap-5 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold uppercase">
+            <span className="text-[#dc2626]">GET FIT</span> with us
           </h2>
-          <p className="text-xl text-pretty text-[grey] text-center w-2/3">
+          <p className="text-lg text-gray-500 max-w-2xl">
             The best investment is in self, and we compensate long-term
             self-investment by giving you
-            <b className="mx-1" style={{ color: "red" }}>
+            <b className="mx-1 text-[#dc2626]">
               20% OFF
             </b>{" "}
-            when pay{" "}
-            <b className="mx-1" style={{ color: "red" }}>
+            when you pay{" "}
+            <b className="mx-1 text-[#dc2626]">
               3 MONTHS
             </b>{" "}
             in advance.
           </p>
           <a
-            className="
-            bg-[#df2828] px-5 py-2 text-white uppercase rounded-md text-sm
-            "
+            className="inline-flex h-11 items-center justify-center rounded-lg bg-[#dc2626] px-6 text-sm font-bold uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#b91c1c] shadow-sm"
             href="/booking"
           >
             Find out more
           </a>
         </div>
-      </div>
+      </section>
 
       <InfoCard
         title={"Let's Get Fit!"}
@@ -81,66 +76,61 @@ export default function Fitness() {
         background={"#000"}
         textc={"#fff"}
       />
+
       <InfoCard
         alt
         title={"Junior Boxing"}
-        content={`We offer junior boxing for children (boys and girls) between the ages of 4 and 15 as you can never be too young to discover the benefits that comes with boxing training.\n\nThe classes are split according to ages and include cardio and boxing, and will assist in developing your child’s focus, self-control, concentration and discipline.`}
+        content={`We offer junior boxing for children (boys and girls) between the ages of 4 and 15 as you can never be too young to discover the benefits that comes with boxing training.\n\nThe classes are split according to ages and include cardio and boxing, and will assist in developing your child's focus, self-control, concentration and discipline.`}
         image={"/images/new/WhatsApp Image 2025-03-11 at 16.43.36.jpeg"}
         background={"#000"}
         textc={"#fff"}
       />
 
-      <div className="adventure-section relative py-14 w-full">
-        <div
-          data-aos="fade-up"
-          className="item cta-label flex flex-col items-center justify-center gap-4 w-full"
-        >
-          <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
-            It&apos;s time to <span style={{ color: "red" }}>GET FIT</span> and
+      <section className="py-16 md:py-24 px-6 md:px-10 max-w-[1400px] mx-auto">
+        <div className="flex flex-col items-center justify-center gap-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold uppercase">
+            {`It's time to`} <span className="text-[#dc2626]">GET FIT</span> and
             <br />
             have a great time doing it!
           </h2>
           <a
-            className="
-            bg-[#df2828] block h-fit w-fit px-5 py-2 text-white uppercase rounded-sm text-sm
-            "
+            className="inline-flex h-11 items-center justify-center rounded-lg bg-[#dc2626] px-6 text-sm font-bold uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#b91c1c] shadow-sm"
             href="booking#schedule"
           >
             Boxfit bootcamp group classes time table
           </a>
         </div>
-      </div>
+      </section>
 
-      <div className="flex gap-5 p-6 md:px-12 md:py-0 flex-col md:flex-row justify-center w-100 items-center">
-        <div
-          data-aos="fade-right"
-          className="md:w-1/2 text-[grey] flex flex-col gap-2 text-base"
-        >
-          <p>
-            4-WEEK BOXFIT BOOTCAMP <br />
-            Group classes:
-          </p>
-          <p>
-            Join Total Blessings 4-Week Boxfit Bootcamp and push your limits in
-            a high-energy, transformative fitness journey. As a passionate
-            boxer, trainer, and wellness coach, Blessing leads professional,
-            top-quality classes designed to help you lose weight, build
-            strength, and boost endurance.
-            <br />
-            <br />
-            Whether you want to sculpt your physique, enhance your mental
-            toughness, or embrace the challenge of boxing, our dedicated team is{" "}
-            <span style={{ color: "red" }}> here to help you</span> every step
-            of the way. Step into the ring, conquer your goals, and experience
-            the power of Boxfit! 🥊
-          </p>
+      <section className="max-w-[1400px] mx-auto px-6 md:px-10 pb-16 md:pb-24">
+        <div className="flex flex-col md:flex-row gap-8 items-center">
+          <div className="md:w-1/2 text-gray-500 flex flex-col gap-4 text-base">
+            <p className="font-bold text-gray-900">
+              4-WEEK BOXFIT BOOTCAMP <br />
+              Group classes:
+            </p>
+            <p className="leading-relaxed">
+              Join Total Blessings 4-Week Boxfit Bootcamp and push your limits in
+              a high-energy, transformative fitness journey. As a passionate
+              boxer, trainer, and wellness coach, Blessing leads professional,
+              top-quality classes designed to help you lose weight, build
+              strength, and boost endurance.
+              <br />
+              <br />
+              Whether you want to sculpt your physique, enhance your mental
+              toughness, or embrace the challenge of boxing, our dedicated team is{" "}
+              <span className="font-bold text-[#dc2626]"> here to help you</span> every step
+              of the way. Step into the ring, conquer your goals, and experience
+              the power of Boxfit! 🥊
+            </p>
+          </div>
+          <div className="md:w-1/2">
+            <VideoPlayer
+              video={"/video/WhatsApp Video 2025-03-10 at 22.37.28.mp4"}
+            />
+          </div>
         </div>
-        <div className="md:w-1/2">
-          <VideoPlayer
-            video={"/video/WhatsApp Video 2025-03-10 at 22.37.28.mp4"}
-          />
-        </div>
-      </div>
+      </section>
     </main>
   );
 }

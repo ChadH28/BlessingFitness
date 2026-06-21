@@ -3,28 +3,23 @@
 
 export default function SubHero({ title, subtitle, image }) {
   return (
-    <header className="h-[50vh] w-screen relative mt-20">
-      <div className="relative flex max-[1024px]:flex-col overflow-hidden h-[inherit]">
-        <div className="uppercase hero-content flex flex-col justify-center items-center absolute h-full w-screen">
-          <h1 className="drop-shadow-xs z-10 text-white mx-14 max-[1024px]:mx-5  max-[1024px]:text-2xl text-5xl font-[800] text-center">
-            {title}
-          </h1>
-          <p className="z-10 text-white mx-[50px] max-[1024px]:mx-5  max-[1024px]:text-l text-xl font-[400] text-center">
-            {subtitle}
-          </p>
-        </div>
-        <span className="overflow-hidden subhero relative w-screen h-[inherit]">
-          <img
-            className="w-screen h-[inherit]
-            left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute scale-125
-            "
-            priority="true"
-            src={image ?? "/hero-images/home.jpg"}
-            alt="hero image"
-            fill="true"
-            style={{ objectFit: "cover" }}
-          />
-        </span>
+    <header className="relative mt-20 h-[40vh] min-h-[320px] overflow-hidden">
+      <div className="absolute inset-0">
+        <img
+          className="w-full h-full object-cover"
+          priority="true"
+          src={image ?? "/hero-images/home.jpg"}
+          alt="hero image"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/10" />
+      </div>
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center">
+        <h1 className="text-white text-3xl md:text-5xl font-bold leading-tight max-w-3xl mx-auto drop-shadow-sm">
+          {title}
+        </h1>
+        <p className="mt-4 text-white/90 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-sm">
+          {subtitle}
+        </p>
       </div>
     </header>
   );

@@ -105,23 +105,20 @@ export default function About() {
         animate
       />
 
-      <div className="adventure-section relative py-16 w-full bg-slate-50">
-        <div
-          data-aos="fade-up"
-          className="item cta-label flex flex-col items-center justify-center gap-3 pb-10 w-full"
-        >
-          <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
-            Seek an <span style={{ color: "red" }}>adventure</span> with us
+      <section className="py-16 md:py-24 w-full bg-white border-y border-gray-100">
+        <div className="flex flex-col items-center justify-center gap-4 pb-10 max-w-[1400px] mx-auto px-6 md:px-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-center uppercase text-gray-900">
+            Seek an <span className="text-[#dc2626]">adventure</span> with us
           </h2>
           <a
-            className="uppercase block bg-[red] hover:bg-red-500 text-xs text-white font-extrabold w-fit rounded-sm px-4 py-2"
+            className="inline-flex h-11 items-center justify-center rounded-lg bg-[#dc2626] px-6 text-sm font-bold uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#b91c1c] shadow-sm"
             href="/adventures"
           >
             Explore More
           </a>
         </div>
         <ClientSlider list={galleryImages} images />
-      </div>
+      </section>
     </main>
   );
 }
