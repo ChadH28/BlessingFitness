@@ -1,35 +1,100 @@
+import Image from "next/image";
+import Link from "next/link";
+
+const footerLinks = [
+  { label: "Our story", href: "/about" },
+  { label: "Fitness", href: "/fitness" },
+  { label: "Outdoor training", href: "/fitness/outdoor-training" },
+  { label: "Adventures", href: "/adventures" },
+  { label: "Booking options", href: "/booking" },
+];
+
 export default function Footer() {
   return (
-    <>
-      <footer className="lg:px-12 px-5 py-10 flex gap-6 flex-col w-full">
-        <div className="flex justify-between gap-3 items-start">
+    <footer className="border-t border-foreground/10 bg-paper px-5 py-14 text-foreground sm:px-8 md:py-18">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-10 border-b border-foreground/15 pb-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <strong className="text-red-600">Our Address</strong>
-            <br />
+            <Link
+              href="/"
+              aria-label="Total Blessing home"
+              className="inline-flex items-center gap-3"
+            >
+              <Image
+                src="/images/logo3.png"
+                alt=""
+                width={52}
+                height={52}
+                className="h-12 w-12 object-contain"
+              />
+              <span className="max-w-[13rem] text-xs font-extrabold uppercase leading-relaxed tracking-[0.12em]">
+                Total Blessing Fitness & Travel Tours
+              </span>
+            </Link>
+            <p className="mt-5 max-w-sm text-sm leading-relaxed text-foreground/65">
+              Fitness coaching and guided Cape Town experiences, led by a local
+              team.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xs font-extrabold uppercase tracking-[0.18em] text-tertiary">
+              Explore
+            </h2>
+            <ul className="mt-4 space-y-3">
+              {footerLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-foreground/70 transition hover:text-tertiary"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-xs font-extrabold uppercase tracking-[0.18em] text-tertiary">
+              Find us
+            </h2>
             <a
               target="_blank"
-              href="https://www.google.com/maps/dir/-33.91039,18.50459/277+Main+Rd,+Sea+Point,+Cape+Town,+8060/@-33.9151888,18.3681501,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x1dcc673aef9ff6e5:0xfdae4c917b53c398!2m2!1d18.3940621!2d-33.9111697?entry=ttu&g_ep=EgoyMDI1MDMxMC4wIKXMDSoASAFQAw%3D%3D"
-              className="whitespace-pre-line"
-            >{`277 Main Rd, Seapoint,\n Cape Town,\n 8060`}</a>
-          </div>
-          <div>
-            <strong className="text-red-600">Contact Us</strong>
-            <br />
+              rel="noopener noreferrer"
+              href="https://maps.google.com/?q=Ring+Reloaded+boxing+gym,+277+Main+Rd,+Sea+Point,+Cape+Town"
+              className="mt-4 block text-sm leading-relaxed text-foreground/70 transition hover:text-tertiary"
+            >
+              Ring Reloaded Boxing Gym
+              <br />
+              277 Main Rd, Sea Point
+              <br />
+              Cape Town, 8060
+            </a>
             <a
               href="tel:+27787589451"
-              className="whitespace-pre-line"
-            >{`(+27) 78-758-9451`}</a>
-          </div>
-          <div>
-            <strong className="text-red-600">Schedules</strong>
-            <p className="text-balance whitespace-pre-line">{`Mon - Fri :- 7:30am - 7:30pm\nSat :- 7:00am - 2:00pm`}</p>
+              className="mt-4 inline-flex min-h-11 items-center text-sm font-bold text-foreground transition hover:text-tertiary"
+            >
+              +27 78 758 9451
+            </a>
           </div>
         </div>
-        <hr className="w-full" />
-        <div className="copyright flex justify-center content-center">
-          <p>© 2025. All rights reserved</p>
+
+        <div className="flex flex-col gap-3 pt-6 text-xs text-foreground/55 sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            © {new Date().getFullYear()} Total Blessing Fitness & Travel Tours.
+            All rights reserved.
+          </p>
+          <a
+            href="https://wa.me/27787589451"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-11 items-center font-bold uppercase tracking-[0.12em] text-tertiary transition hover:text-foreground"
+          >
+            Message us on WhatsApp
+          </a>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 }

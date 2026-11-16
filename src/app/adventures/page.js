@@ -1,25 +1,26 @@
-/* eslint-disable @next/next/no-img-element */
-import AdventureSlider from "@/components/adventure-slider";
+import Image from "next/image";
+import Link from "next/link";
 import SubHero from "@/components/sub-hero";
+import { createWhatsAppLink } from "@/lib/whatsapp";
 import { activities, galleryImages, hiking_trails } from "@/data/pageData";
 
 export const metadata = {
   title:
-    "Guided Cape Town Tours: Stellenbosch, Cape Town National Park & Kirstenbosch Adventures",
+    "Guided Cape Town Tours: Stellenbosch, Cape Point & Kirstenbosch Adventures",
   description:
-    "Discover Cape Town with personal guides. Wine taste in Stellenbosch, ride quads in Kirstenbosch & explore SA's scenic gems on epic day tours.",
+    "Explore Cape Town through local outdoor, cultural and nature experiences with Total Blessing Fitness and Travel Tours.",
   openGraph: {
     title:
-      "Guided Cape Town Tours: Stellenbosch, Cape Town National Park & Kirstenbosch Adventures",
+      "Guided Cape Town Tours: Stellenbosch, Cape Point & Kirstenbosch Adventures",
     description:
-      "Discover Cape Town with personal guides. Wine taste in Stellenbosch, ride quads in Kirstenbosch & explore SA's scenic gems on epic day tours.",
+      "Explore Cape Town through local outdoor, cultural and nature experiences with Total Blessing Fitness and Travel Tours.",
     url: "https://totalblessingfitnessandtraveltours.co.za/adventures",
     images: [
       {
-        url: "/images/logo3.png",
+        url: "/images/hiking/Constantia_Nek_to_Kirstenbosch2.png",
         width: 1200,
         height: 630,
-        alt: "Cape Town Adventure Tours",
+        alt: "A hiking trail in the Cape landscape",
       },
     ],
   },
@@ -27,119 +28,193 @@ export const metadata = {
 
 export default function Adventures() {
   return (
-    <main className="overflow-hidden">
+    <main className="mesh-light">
       <SubHero
-        title={"Find Your Next Adventure!"}
-        subtitle={"Unforgettable Tours and Experiences Await"}
-        image={"/images/hiking/Constantia_Nek_to_Kirstenbosch2.png"}
+        title="Find your next adventure."
+        subtitle="Discover Cape Town’s trails, coast, culture and outdoor experiences with a local team."
+        image="/images/hiking/Constantia_Nek_to_Kirstenbosch2.png"
+        eyebrow="Explore the Cape"
+        buttonlink="#experiences"
+        buttonlabel="Explore experiences"
+        secondarylink="#hiking"
+        secondarylabel="Browse hiking trails"
       />
-      <AdventureSlider list={activities} />
 
-      <div className="py-16 flex flex-col items-center">
-        <div
-          data-aos="fade-up"
-          className="adventure-section relative py-2 w-full"
-        >
-          <div className="item cta-label flex flex-col items-center justify-center gap-4 w-full">
-            <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
-              Adventurer’s Quest: Trails that Tell a Story
-            </h2>
-            <p className="text-xl text-pretty text-[grey] text-center w-[60%]">
-              Reach New Heights with Our Ultimate Hiking Guide
+      <section
+        id="experiences"
+        aria-labelledby="experiences-title"
+        className="mx-auto max-w-7xl scroll-mt-24 px-5 py-20 sm:px-8 md:py-28"
+      >
+        <div className="mb-9 flex flex-col gap-4 md:mb-12 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-tertiary">
+              Outside starts here
             </p>
+            <h2
+              id="experiences-title"
+              className="mt-3 max-w-3xl text-3xl font-black uppercase leading-[0.98] tracking-tight md:text-5xl"
+            >
+              Make room for a new view.
+            </h2>
           </div>
-        </div>
-
-        {hiking_trails.map((trail, index) => (
-          <div
-            key={index}
-            data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-            className={`py-5 h-auto px-6 lg:px-16 w-full flex flex-col gap-10 items-center ${
-              index % 2 === 0 ? "lg:flex-row-reverse" : "lg:flex-row"
-            }`}
-          >
-            <div className="h-[21.875rem] relative w-full lg:w-[40.625rem]">
-              <img
-                className="rounded-3xl w-[inherit] h-[inherit] absolute"
-                style={{ objectFit: "cover" }}
-                fill="true"
-                src={trail.image}
-                alt={`${trail.title}-imagery`}
-              />
-            </div>
-            <div className="hiking-card-content w-[250px] text-[gray] font-light">
-              <p className={`hiking-card-level ${trail.level.toLowerCase()}`}>
-                {trail.level}
-              </p>
-              <h3 className="hiking-card-title whitespace-pre-line font-bold">
-                {trail.title}
-              </h3>
-              <p className="hiking-card-location">
-                <span>
-                  <i
-                    className="fa fa-map-marker text-base "
-                    aria-hidden="true"
-                  />
-                </span>
-                {"  "}
-                {trail.location}
-              </p>
-              <div className="hiking-card-info">
-                {trail.distance && (
-                  <p className="hiking-card-distance">
-                    <span>
-                      <i className="fa fa-tree" aria-hidden="true" />
-                    </span>
-                    {"  "}
-                    {trail.distance}
-                  </p>
-                )}
-                {trail.time && (
-                  <p className="hiking-card-time flex gap-2 items-center">
-                    <span>
-                      <i
-                        className="fa-solid fa-clock text-base"
-                        aria-hidden="true"
-                      />
-                    </span>
-                    {trail.time}
-                  </p>
-                )}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="adventure-section relative py-12 w-full bg-slate-50">
-        <div
-          data-aos="fade-up"
-          className="item cta-label flex flex-col items-center justify-center gap-3 pb-10 w-full"
-        >
-          <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
-            Past Adventures
-          </h2>
-          <p className="text-xl text-pretty text-[grey] text-center w-[60%]">
-            Our Hiking Trail Tales Through the Years
+          <p className="max-w-md text-sm leading-relaxed text-foreground/65 md:text-base">
+            Choose an experience to ask about details, dates and arrangements
+            directly with the team.
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-4 justify-center">
-          {galleryImages.map((item, index) => (
-            <div
-              key={index}
-              className="w-80 h-80 overflow-hidden relative zoomImg"
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {activities.map((activity) => (
+            <article
+              key={activity.title}
+              className="flex flex-col overflow-hidden rounded-3xl border border-foreground/10 bg-paper shadow-[0_16px_44px_rgba(23,32,29,0.07)]"
             >
-              <img
-                className="object-cover w-[inherit] h-[inherit] absolute"
-                src={item.image}
-                alt={`Masonry image ${index + 1}`}
-                fill="true"
-              />
-            </div>
+              <div className="relative aspect-[4/3] overflow-hidden bg-foreground/10">
+                <Image
+                  src={activity.image}
+                  alt={`${activity.title} experience`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+              <div className="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 className="text-xl font-black uppercase leading-tight tracking-tight md:text-2xl">
+                  {activity.title}
+                </h3>
+                <p className="mt-3 line-clamp-4 text-sm leading-relaxed text-foreground/65">
+                  {activity.description}
+                </p>
+                <a
+                  href={createWhatsAppLink(
+                    `Hi Total Blessing, I'm interested in the ${activity.title} experience. Could you please share more details?`
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary mt-5 w-full"
+                >
+                  Ask about this experience
+                </a>
+              </div>
+            </article>
           ))}
         </div>
-      </div>
+      </section>
+
+      <section
+        id="hiking"
+        aria-labelledby="hiking-title"
+        className="bg-[#17201d] px-5 py-20 text-white sm:px-8 md:py-28"
+      >
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-9 flex flex-col gap-4 md:mb-12 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-sun">
+                Trail notes
+              </p>
+              <h2
+                id="hiking-title"
+                className="mt-3 max-w-3xl text-3xl font-black uppercase leading-[0.98] tracking-tight md:text-5xl"
+              >
+                Find your trail.
+              </h2>
+            </div>
+            <p className="max-w-md text-sm leading-relaxed text-white/65 md:text-base">
+              Compare the listed locations, distances and difficulty levels.
+              Trail conditions can change, so enquire before planning your
+              outing.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {hiking_trails.map((trail, index) => (
+              <article
+                key={`${trail.title}-${trail.location}-${index}`}
+                className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04]"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden bg-white/10">
+                  <Image
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 hover:scale-105"
+                    src={trail.image}
+                    alt={`${trail.title.replace(/\n/g, " ")} trail`}
+                  />
+                </div>
+                <div className="p-5">
+                  <p
+                    className={`text-xs font-extrabold uppercase tracking-[0.14em] ${trail.level.toLowerCase() === "easy" ? "text-emerald-300" : trail.level.toLowerCase() === "moderate" ? "text-sun" : "text-rose-300"}`}
+                  >
+                    {trail.level} trail
+                  </p>
+                  <h3 className="mt-2 whitespace-pre-line text-lg font-black uppercase leading-tight">
+                    {trail.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/65">
+                    {trail.location}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-xs font-semibold text-white/80">
+                    {trail.distance && <span>{trail.distance}</span>}
+                    {trail.time && <span>{trail.time}</span>}
+                  </div>
+                  <a
+                    href={createWhatsAppLink(
+                      `Hi Total Blessing, I'm interested in hiking ${trail.title.replace(/\n/g, " ")}. Could you please share more details?`
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-flex min-h-11 items-center gap-2 text-xs font-extrabold uppercase tracking-[0.1em] text-sun hover:text-white"
+                  >
+                    Enquire about this trail{" "}
+                    <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        aria-labelledby="gallery-title"
+        className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-28"
+      >
+        <div className="mb-9 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-tertiary">
+              Out there together
+            </p>
+            <h2
+              id="gallery-title"
+              className="mt-3 text-3xl font-black uppercase leading-[0.98] tracking-tight md:text-5xl"
+            >
+              Past adventures.
+            </h2>
+          </div>
+          <Link href="/booking" className="btn-primary w-fit">
+            Plan your next move
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          {galleryImages.map((item, index) => (
+            <figure
+              key={`${item.image}-${index}`}
+              className={`relative aspect-square overflow-hidden rounded-2xl bg-foreground/10 ${
+                index === 0 ? "col-span-2 row-span-2" : ""
+              }`}
+            >
+              <Image
+                fill
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                className="object-cover transition-transform duration-700 hover:scale-105"
+                src={item.image}
+                alt="Cape Town outdoor experience with Total Blessing"
+              />
+            </figure>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

@@ -1,48 +1,65 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
+import { createWhatsAppLink } from "@/lib/whatsapp";
 
 export default function PriceCard({
   image,
-  alt,
+  imageAlt = "",
   title,
-  greyscale,
-  pricinglist,
+  description,
+  pricinglist = [],
 }) {
+  const enquiryLink = createWhatsAppLink(
+    `Hi Total Blessing, I'm interested in ${title}. Could you please share more details?`
+  );
+
   return (
-    <div
-      className={`flex ${
-        alt ? "flex-row-reverse" : "flex-row"
-      } max-[1024px]:flex-col`}
-    >
-      <div
-        className={`image-container overflow-hidden h-96 max-[1024px]:h-fit  w-100 lg:w-1/2 relative ${
-          greyscale && "grayscale"
-        }`}
-      >
-        <img
-          className={`image-container relative ${greyscale && "grayscale"}`}
-          src={image ?? "/card-images/football.jpg"}
-          alt="FN Rangers descriptive card"
-          fill='true'
-          style={{ objectFit: "cover" }}
-          sizes="(max-width: 1024px) 75vw, 100vw"
-        />
+    <article className="flex h-full flex-col overflow-hidden rounded-3xl border border-foreground/10 bg-paper shadow-[0_16px_44px_rgba(23,32,29,0.07)]">
+      <div className="relative aspect-[4/3] overflow-hidden bg-foreground/10">
+        {image && (
+          <Image
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover transition-transform duration-700 hover:scale-105"
+            src={image}
+            alt={imageAlt}
+          />
+        )}
       </div>
-      <div
-        className={`content-container max-[1024px]:w-screen w-1/2 max-[1024px]:p-[20px] px-10 py-5 flex flex-col gap-5 justify-center ${
-          alt ? "lg:text-right" : "lg:text-left"
-        }`}
-      >
-        <h2 className="uppercase font-extrabold text-red-800 max-[1024px]:text-2xl text-3xl">
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <h3 className="text-xl font-black uppercase leading-tight tracking-tight text-foreground md:text-2xl">
           {title}
-        </h2>
-        {pricinglist &&
-          pricinglist.map((pricing, index) => (
-            <p key={index} className="max-[1024px]:text-sm text-l">
-              <strong className="text-3xl text-red-800">{pricing.price}</strong>{" "}
-              / {pricing.description}
-            </p>
-          ))}
+        </h3>
+        {description && (
+          <p className="mt-2 text-sm leading-relaxed text-foreground/65">
+            {description}
+          </p>
+        )}
+        {pricinglist.length > 0 && (
+          <ul className="mt-5 space-y-3">
+            {pricinglist.map((pricing, index) => (
+              <li
+                key={`${pricing.price}-${pricing.description}-${index}`}
+                className="flex items-baseline justify-between gap-3 border-t border-foreground/10 pt-3"
+              >
+                <span className="text-xs font-semibold uppercase tracking-wide text-foreground/60">
+                  {pricing.description}
+                </span>
+                <strong className="shrink-0 text-xl font-black text-tertiary">
+                  {pricing.price}
+                </strong>
+              </li>
+            ))}
+          </ul>
+        )}
+        <a
+          href={enquiryLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary mt-6 w-full"
+        >
+          Enquire on WhatsApp
+        </a>
       </div>
-    </div>
+    </article>
   );
 }

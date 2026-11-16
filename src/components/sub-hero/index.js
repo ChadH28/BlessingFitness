@@ -1,30 +1,59 @@
-/* eslint-disable @next/next/no-img-element */
-"use client";
+import Image from "next/image";
+import Link from "next/link";
 
-export default function SubHero({ title, subtitle, image }) {
+export default function SubHero({
+  title,
+  subtitle,
+  image,
+  eyebrow = "Total Blessing · Cape Town",
+  buttonlink,
+  buttonlabel,
+  secondarylink,
+  secondarylabel,
+}) {
   return (
-    <header className="h-[50vh] w-screen relative mt-20">
-      <div className="relative flex max-[1024px]:flex-col overflow-hidden h-[inherit]">
-        <div className="uppercase hero-content flex flex-col justify-center items-center absolute h-full w-screen">
-          <h1 className="drop-shadow-xs z-10 text-white mx-14 max-[1024px]:mx-5  max-[1024px]:text-2xl text-5xl font-[800] text-center">
-            {title}
-          </h1>
-          <p className="z-10 text-white mx-[50px] max-[1024px]:mx-5  max-[1024px]:text-l text-xl font-[400] text-center">
+    <header className="relative isolate flex min-h-[68svh] items-end overflow-hidden bg-[#17201d] pb-14 pt-32 text-white sm:pb-20 md:min-h-[74svh]">
+      <Image
+        priority
+        sizes="100vw"
+        fill
+        className="object-cover object-center"
+        src={image ?? "/images/adventureHome.jpeg"}
+        alt=""
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-r from-[#101916]/85 via-[#101916]/45 to-[#101916]/10"
+      />
+      <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-8 md:px-12">
+        <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-sun md:text-sm">
+          {eyebrow}
+        </p>
+        <h1 className="max-w-4xl text-4xl font-black uppercase leading-[0.96] tracking-tight sm:text-5xl md:text-7xl">
+          {title}
+        </h1>
+        {subtitle && (
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 md:text-xl">
             {subtitle}
           </p>
-        </div>
-        <span className="overflow-hidden subhero relative w-screen h-[inherit]">
-          <img
-            className="w-screen h-[inherit]
-            left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute scale-125
-            "
-            priority="true"
-            src={image ?? "/hero-images/home.jpg"}
-            alt="hero image"
-            fill="true"
-            style={{ objectFit: "cover" }}
-          />
-        </span>
+        )}
+        {(buttonlink || secondarylink) && (
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            {buttonlink && (
+              <Link href={buttonlink} className="btn-primary px-7">
+                {buttonlabel ?? "Find out more"}
+              </Link>
+            )}
+            {secondarylink && (
+              <Link
+                href={secondarylink}
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/65 bg-white/10 px-7 text-center text-xs font-extrabold uppercase tracking-[0.08em] text-white backdrop-blur-md transition hover:bg-white/20"
+              >
+                {secondarylabel ?? "Explore"}
+              </Link>
+            )}
+          </div>
+        )}
       </div>
     </header>
   );
