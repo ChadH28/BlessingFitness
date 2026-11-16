@@ -23,7 +23,7 @@ export default function SubHero({
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-t from-[#101916]/90 via-[#101916]/40 to-[#101916]/15"
+        className="absolute inset-0 bg-gradient-to-r from-[#101916]/85 via-[#101916]/45 to-[#101916]/10"
       />
       <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-8 md:px-12">
         <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-sun md:text-sm">

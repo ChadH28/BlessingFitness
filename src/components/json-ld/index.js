@@ -7,6 +7,7 @@ export default function JsonLd() {
   let data = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://totalblessingfitnessandtraveltours.co.za/#localbusiness",
     name: "Total Blessing Fitness and Travel Tours",
     image: "https://totalblessingfitnessandtraveltours.co.za/images/logo3.png",
     url: "https://totalblessingfitnessandtraveltours.co.za",

@@ -71,6 +71,38 @@ export default function Fitness() {
         secondarylabel="Explore packages"
       />
 
+      <section className="relative z-10 mx-auto -mt-5 max-w-7xl px-5 sm:px-8 md:-mt-8">
+        <Link
+          href="/fitness/outdoor-training"
+          className="group grid overflow-hidden rounded-3xl bg-[#17201d] text-white shadow-xl md:grid-cols-[0.85fr_1.15fr]"
+        >
+          <div className="relative aspect-[16/10] overflow-hidden md:aspect-auto md:min-h-[19rem]">
+            <Image
+              src="/images/hiking/biskop_steps.png"
+              alt=""
+              fill
+              sizes="(max-width: 768px) 100vw, 40vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+          </div>
+          <div className="flex flex-col justify-center p-6 sm:p-8 md:p-10">
+            <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-sun">
+              New · Signature outdoor sessions
+            </p>
+            <h2 className="mt-3 text-2xl font-black uppercase leading-tight md:text-4xl">
+              Running classes & Biskop Steps training
+            </h2>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/70">
+              Take your workout to the Atlantic Seaboard with coastal runs and
+              stair training in Clifton.
+            </p>
+            <span className="mt-5 inline-flex min-h-11 items-center gap-2 text-xs font-extrabold uppercase tracking-[0.1em]">
+              Explore outdoor training <span aria-hidden="true">→</span>
+            </span>
+          </div>
+        </Link>
+      </section>
+
       <section
         aria-labelledby="programs-title"
         className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-28"
