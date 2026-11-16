@@ -27,7 +27,7 @@ export const metadata = {
 
 export default function About() {
   return (
-    <main>
+    <main className="mesh-light">
       <SubHero
         title={"Discover Our Story while getting Fit and Having Fun!"}
         subtitle={
@@ -105,23 +105,32 @@ export default function About() {
         animate
       />
 
-      <div className="adventure-section relative py-16 w-full bg-slate-50">
-        <div
-          data-aos="fade-up"
-          className="item cta-label flex flex-col items-center justify-center gap-3 pb-10 w-full"
-        >
-          <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
-            Seek an <span style={{ color: "red" }}>adventure</span> with us
+      <section className="mesh-dark-section relative py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <div
+            data-aos="fade-up"
+            className="flex flex-col items-center justify-center gap-6 pb-10 text-center"
+          >
+          <h2 className="text-3xl font-extrabold uppercase tracking-tight leading-[0.95] text-foreground md:text-5xl">
+            Seek an <span className="text-tertiary">adventure</span> with us
           </h2>
           <a
-            className="uppercase block bg-[red] hover:bg-red-500 text-xs text-white font-extrabold w-fit rounded-sm px-4 py-2"
+            className="btn-primary btn-glass block w-fit rounded-full px-8 py-3 text-xs font-bold uppercase tracking-wider text-foreground"
             href="/adventures"
           >
             Explore More
           </a>
         </div>
-        <ClientSlider list={galleryImages} images />
+          </div>
+      </section>
+
+      <section className="py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="glass overflow-hidden rounded-3xl p-8 md:p-16">
+            <ClientSlider list={galleryImages} images />
       </div>
+          </div>
+      </section>
     </main>
   );
 }

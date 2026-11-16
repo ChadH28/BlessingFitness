@@ -24,7 +24,7 @@ export const metadata = {
 
 export default function Fitness() {
   return (
-    <main>
+    <main className="mesh-light">
       <SubHero
         title={"WORKOUT PROGRAMMES TAILORED TO YOUR FITTING"}
         subtitle={
@@ -33,15 +33,16 @@ export default function Fitness() {
         image={"/images/Fitness/4Fitness.jpeg"}
       />
 
-      <div className="adventure-section relative py-14 w-full bg-slate-50">
-        <div
-          data-aos="fade-up"
-          className="item cta-label flex flex-col items-center justify-center gap-5 w-full"
-        >
-          <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
-            <span style={{ color: "red" }}>GET FIT</span> with us
+      <section className="mesh-dark-section relative py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <div
+            data-aos="fade-up"
+            className="flex flex-col items-center justify-center gap-6 text-center"
+          >
+          <h2 className="text-3xl font-extrabold uppercase tracking-tight leading-[0.95] text-foreground md:text-5xl">
+            <span className="text-tertiary">GET FIT</span> with us
           </h2>
-          <p className="text-xl text-pretty text-[grey] text-center w-2/3">
+          <p className="max-w-[65ch] text-pretty text-base leading-relaxed text-foreground/70 md:text-xl">
             The best investment is in self, and we compensate long-term
             self-investment by giving you
             <b className="mx-1" style={{ color: "red" }}>
@@ -55,7 +56,7 @@ export default function Fitness() {
           </p>
           <a
             className="
-            bg-[#df2828] px-5 py-2 text-white uppercase rounded-md text-sm
+            btn-primary inline-block rounded-full bg-tertiary px-8 py-3 text-xs font-bold uppercase tracking-wider text-white
             "
             href="/booking"
           >
@@ -63,6 +64,7 @@ export default function Fitness() {
           </a>
         </div>
       </div>
+      </section>
 
       <InfoCard
         title={"Let's Get Fit!"}
@@ -90,19 +92,20 @@ export default function Fitness() {
         textc={"#fff"}
       />
 
-      <div className="adventure-section relative py-14 w-full">
-        <div
-          data-aos="fade-up"
-          className="item cta-label flex flex-col items-center justify-center gap-4 w-full"
-        >
-          <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
-            It&apos;s time to <span style={{ color: "red" }}>GET FIT</span> and
+      <section className="relative py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <div
+            data-aos="fade-up"
+            className="flex flex-col items-center justify-center gap-6 text-center"
+          >
+          <h2 className="text-3xl font-extrabold uppercase tracking-tight leading-[0.95] text-foreground md:text-5xl">
+            It&apos;s time to <span className="text-tertiary">GET FIT</span> and
             <br />
             have a great time doing it!
           </h2>
           <a
             className="
-            bg-[#df2828] block h-fit w-fit px-5 py-2 text-white uppercase rounded-sm text-sm
+            btn-primary block h-fit w-fit rounded-full bg-tertiary px-8 py-3 text-xs font-bold uppercase tracking-wider text-white
             "
             href="booking#schedule"
           >
@@ -110,37 +113,41 @@ export default function Fitness() {
           </a>
         </div>
       </div>
+      </section>
 
-      <div className="flex gap-5 p-6 md:px-12 md:py-0 flex-col md:flex-row justify-center w-100 items-center">
-        <div
-          data-aos="fade-right"
-          className="md:w-1/2 text-[grey] flex flex-col gap-2 text-base"
-        >
-          <p>
-            4-WEEK BOXFIT BOOTCAMP <br />
-            Group classes:
-          </p>
-          <p>
-            Join Total Blessings 4-Week Boxfit Bootcamp and push your limits in
-            a high-energy, transformative fitness journey. As a passionate
-            boxer, trainer, and wellness coach, Blessing leads professional,
-            top-quality classes designed to help you lose weight, build
-            strength, and boost endurance.
-            <br />
-            <br />
-            Whether you want to sculpt your physique, enhance your mental
-            toughness, or embrace the challenge of boxing, our dedicated team is{" "}
-            <span style={{ color: "red" }}> here to help you</span> every step
-            of the way. Step into the ring, conquer your goals, and experience
-            the power of Boxfit! 🥊
-          </p>
+      <section className="relative py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center">
+            <div
+              data-aos="fade-right"
+              className="flex flex-col gap-4 text-foreground/70"
+            >
+              <p>
+                4-WEEK BOXFIT BOOTCAMP | Group classes:
+              </p>
+              <p>
+                Join Total Blessings 4-Week Boxfit Bootcamp and push your limits in
+                a high-energy, transformative fitness journey. As a passionate
+                boxer, trainer, and wellness coach, Blessing leads professional,
+                top-quality classes designed to help you lose weight, build
+                strength, and boost endurance.
+                <br />
+                <br />
+                Whether you want to sculpt your physique, enhance your mental
+                toughness, or embrace the challenge of boxing, our dedicated team is{" "}
+                <span className="text-tertiary"> here to help you</span> every step
+                of the way. Step into the ring, conquer your goals, and experience
+                the power of Boxfit! 🥊
+              </p>
+            </div>
+            <div className="md:col-span-1">
+              <VideoPlayer
+                video={"/video/WhatsApp Video 2025-03-10 at 22.37.28.mp4"}
+              />
+            </div>
+          </div>
         </div>
-        <div className="md:w-1/2">
-          <VideoPlayer
-            video={"/video/WhatsApp Video 2025-03-10 at 22.37.28.mp4"}
-          />
-        </div>
-      </div>
+      </section>
     </main>
   );
 }

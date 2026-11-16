@@ -1,9 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import { useState } from "react";
+
 export default function SubHero({ title, subtitle, image }) {
+  const [loaded, setLoaded] = useState(false);
   return (
-    <header className="h-[50vh] w-screen relative mt-20">
+    <header className="relative mt-20 flex h-[70vh] w-screen items-center justify-center overflow-hidden grain-overlay">
       <div className="relative flex max-[1024px]:flex-col overflow-hidden h-[inherit]">
         <div className="uppercase hero-content flex flex-col justify-center items-center absolute h-full w-screen">
           <h1 className="drop-shadow-xs z-10 text-white mx-14 max-[1024px]:mx-5  max-[1024px]:text-2xl text-5xl font-[800] text-center">
@@ -15,10 +18,8 @@ export default function SubHero({ title, subtitle, image }) {
         </div>
         <span className="overflow-hidden subhero relative w-screen h-[inherit]">
           <img
-            className="w-screen h-[inherit]
-            left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute scale-125
-            "
-            priority="true"
+            className={`h-full w-full scale-105 object-cover transition-all duration-[4000ms] ease-[cubic-bezier(0.23,1,0.32,1)] ${loaded ? 'scale-100' : 'scale-110'}`}
+            loading="lazy"
             src={image ?? "/hero-images/home.jpg"}
             alt="hero image"
             fill="true"

@@ -2,15 +2,21 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 "use client";
 
+
 import { useEffect, useState } from "react";
 import { navdata } from "@/data/navdata";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentPath, setCurrentPath] = useState("");
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     setCurrentPath(window.location.pathname);
+
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleMenu = () => {
@@ -18,14 +24,18 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed z-50 shadow-lg w-full bg-background">
-      <div className="flex items-center justify-between px-[50px] py-[20px] md:flex-nowrap max-[1024px]:px-4 max-[1024px]:flex-wrap">
+    <nav
+      className={`fixed top-0 z-50 w-full transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${
+        scrolled ? "glass border-b border-white/20 py-3" : "bg-transparent py-5"
+      }`}
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:flex-nowrap max-[1024px]:px-4 max-[1024px]:flex-wrap">
         {/* Logo */}
-        <a href="/" className="logo-container">
+        <a href="/" className="logo-container transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-105">
           <img
-            width={80}
-            height={80}
-            alt="FN Rangers Logo"
+            width={72}
+            height={72}
+            alt="Total Blessing Fitness"
             src="/images/logo3.png"
           />
         </a>
@@ -36,10 +46,10 @@ export default function Navigation() {
             {navdata.map((links, index) => (
               <li key={index}>
                 <a
-                  className={`text-xs font-semibold uppercase transition-all hover:text-tertiary ${
+                  className={`group relative text-xs font-semibold uppercase tracking-wide transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:text-tertiary ${
                     currentPath.includes(links.url)
                       ? "text-tertiary font-extrabold"
-                      : "text-text"
+                      : "text-foreground/80"
                   }
                   ${
                     links.type == "button"
@@ -56,7 +66,7 @@ export default function Navigation() {
           </ul>
 
           {/* Social Media Links */}
-          <div className="hidden md:flex gap-4">
+          <div className="hidden md:flex gap-5">
             <a href="https://wa.link/2fyjg5" target="_blank">
               <i
                 className="fa-brands hover:text-black  text-tertiary fa-whatsapp"
@@ -90,7 +100,7 @@ export default function Navigation() {
         {/* Mobile Menu Toggle Button */}
         <button
           onClick={toggleMenu}
-          className={`text-xl flex items-center align-center md:hidden rotate-${
+          className={`flex items-center justify-center rounded-full p-2 text-xl transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] md:hidden rotate-${
             isMobileMenuOpen ? "180" : "0"
           }`}
         >
@@ -99,15 +109,15 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-background w-full flex flex-col items-start py-6">
-            <ul className="flex flex-col gap-4">
+          <div className="absolute top-full left-0 w-full border-b border-foreground/5 bg-background/95 px-6 py-8 backdrop-blur-xl md:hidden">
+            <ul className="flex flex-col gap-5">
               {navdata.map((links, index) => (
                 <li key={index}>
                   <a
-                    className={`text-sm font-bold uppercase transition-all hover:text-tertiary ${
+                    className={`block text-lg font-bold uppercase tracking-wide transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:text-tertiary ${
                       currentPath.includes(links.url)
                         ? "text-tertiary font-extrabold"
-                        : "text-text"
+                      : "text-foreground/80"
                     }`}
                     href={links.url}
                     onClick={() => setMobileMenuOpen(false)}
@@ -119,10 +129,10 @@ export default function Navigation() {
             </ul>
 
             {/* Mobile Social Media Links */}
-            <div className="flex gap-4 mt-4">
+            <div className="mt-8 flex gap-6 border-t border-foreground/5 pt-6">
               <a href="https://wa.link/2fyjg5" target="_blank">
                 <i
-                  className="fa-brands text-tertiary fa-whatsapp"
+                  className="text-foreground/60 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:text-tertiary hover:scale-110 fa-brands text-xl fa-whatsapp"
                   aria-hidden="true"
                 />
               </a>
@@ -131,7 +141,7 @@ export default function Navigation() {
                 target="_blank"
               >
                 <i
-                  className="fa-brands text-tertiary fa-instagram"
+                  className="text-foreground/60 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:text-tertiary hover:scale-110 fa-brands text-xl fa-instagram"
                   aria-hidden="true"
                 />
               </a>
@@ -140,13 +150,13 @@ export default function Navigation() {
                 target="_blank"
               >
                 <i
-                  className="fa-brands text-tertiary fa-facebook"
+                  className="text-foreground/60 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:text-tertiary hover:scale-110 fa-brands text-xl fa-facebook"
                   aria-hidden="true"
                 />
               </a>
               <a href="https://www.youtube.com/@total.blessing" target="_blank">
                 <i
-                  className="fa-brands text-tertiary fa-youtube"
+                  className="text-foreground/60 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:text-tertiary hover:scale-110 fa-brands text-xl fa-youtube"
                   aria-hidden="true"
                 />
               </a>

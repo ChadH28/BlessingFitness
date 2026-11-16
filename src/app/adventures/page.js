@@ -27,7 +27,7 @@ export const metadata = {
 
 export default function Adventures() {
   return (
-    <main className="overflow-hidden">
+    <main className="mesh-light overflow-hidden">
       <SubHero
         title={"Find Your Next Adventure!"}
         subtitle={"Unforgettable Tours and Experiences Await"}
@@ -54,27 +54,25 @@ export default function Adventures() {
           <div
             key={index}
             data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-            className={`py-5 h-auto px-6 lg:px-16 w-full flex flex-col gap-10 items-center ${
-              index % 2 === 0 ? "lg:flex-row-reverse" : "lg:flex-row"
-            }`}
+            className={`py-5 h-auto px-6 lg:px-16 w-full flex flex-col gap-10 items-center ${index % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
           >
-            <div className="h-[21.875rem] relative w-full lg:w-[40.625rem]">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bento-shadow lg:w-[40.625rem]">
               <img
-                className="rounded-3xl w-[inherit] h-[inherit] absolute"
-                style={{ objectFit: "cover" }}
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full object-cover transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-105"
+                loading="lazy"
                 fill="true"
                 src={trail.image}
                 alt={`${trail.title}-imagery`}
               />
             </div>
-            <div className="hiking-card-content w-[250px] text-[gray] font-light">
+            <div className="rounded-2xl bg-white/80 p-6 backdrop-blur-md">
               <p className={`hiking-card-level ${trail.level.toLowerCase()}`}>
                 {trail.level}
               </p>
-              <h3 className="hiking-card-title whitespace-pre-line font-bold">
+              <h3 className="text-2xl font-extrabold uppercase tracking-tight leading-[0.95] whitespace-pre-line font-bold">
                 {trail.title}
               </h3>
-              <p className="hiking-card-location">
+              <p className="flex items-center gap-2 text-sm text-foreground/60">
                 <span>
                   <i
                     className="fa fa-map-marker text-base "
@@ -84,7 +82,7 @@ export default function Adventures() {
                 {"  "}
                 {trail.location}
               </p>
-              <div className="hiking-card-info">
+              <div className="flex flex-col gap-2 text-sm text-foreground/60">
                 {trail.distance && (
                   <p className="hiking-card-distance">
                     <span>
@@ -111,12 +109,13 @@ export default function Adventures() {
         ))}
       </div>
 
-      <div className="adventure-section relative py-12 w-full bg-slate-50">
-        <div
-          data-aos="fade-up"
-          className="item cta-label flex flex-col items-center justify-center gap-3 pb-10 w-full"
-        >
-          <h2 className="max-[1024px]:text-2xl text-4xl font-bold text-center uppercase">
+      <section className="mesh-dark-section relative py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <div
+            data-aos="fade-up"
+            className="flex flex-col items-center justify-center gap-6 pb-10 text-center"
+          >
+            <h2 className="text-3xl font-extrabold uppercase tracking-tight leading-[0.95] text-foreground md:text-5xl">
             Past Adventures
           </h2>
           <p className="text-xl text-pretty text-[grey] text-center w-[60%]">
@@ -124,11 +123,11 @@ export default function Adventures() {
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
           {galleryImages.map((item, index) => (
             <div
               key={index}
-              className="w-80 h-80 overflow-hidden relative zoomImg"
+              className={`aspect-square overflow-hidden rounded-2xl bento-shadow ${index===0?'col-span-2 row-span-2':''}`}
             >
               <img
                 className="object-cover w-[inherit] h-[inherit] absolute"
@@ -140,6 +139,7 @@ export default function Adventures() {
           ))}
         </div>
       </div>
+    </section>
     </main>
   );
 }

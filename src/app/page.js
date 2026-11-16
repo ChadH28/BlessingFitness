@@ -25,14 +25,16 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main>
+    <main className="mesh-light">
       <Hero
         title={"WHERE FITNESS MEETS ADVENTURE"}
         subtitle={"Join the Blessing fitness and travel tours community today"}
         slider={slides}
       />
 
-      <div className="flex flex-col items-center gap-2 p-10 text-balance justify-center text-center w-100 text-[white] font-semibold bg-[#000]">
+      <section className="relative py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="glass-dark overflow-hidden rounded-3xl p-8 text-center md:p-16">
         <p>Closest Gym</p>
         <a
           target="_blank"
@@ -47,6 +49,8 @@ export default function Home() {
           See my booking options
         </a>
       </div>
+        </div>
+      </section>
 
       <InfoCard
         title={"Meet the team behind the adventure"}
@@ -75,7 +79,14 @@ export default function Home() {
         image={"/images/hiking/India_Venster_to_Upper_Cable_Station3.png"}
       />
 
-      <ClientSlider list={highlights} />
+      <section className="mesh-dark-section py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="glass overflow-hidden rounded-3xl p-8 md:p-16">
+            <h2 className="mb-12 text-center text-3xl font-extrabold uppercase tracking-tight text-foreground md:text-4xl">Highlights</h2>
+            <ClientSlider list={highlights} />
+          </div>
+        </div>
+      </section>
 
       <InfoCard
         title={"Unleash Your Potential with Our Programs"}

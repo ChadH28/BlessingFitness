@@ -21,7 +21,7 @@ export default function InfoCard({
       } max-[1024px]:flex-col h-fit`}
     >
       {video ? (
-        <div className={`lg:w-1/2 w-screen ${!cover && "bg-black"} `}>
+        <div className={`lg:col-span-5 relative aspect-[4/3] w-full overflow-hidden rounded-2xl bento-shadow ${!cover&&"bg-black"}`}>
           <video
             className={`object-${
               cover ? "cover" : "contain"
@@ -40,10 +40,8 @@ export default function InfoCard({
 image-container overflow-hidden lg:min-h-[25rem] md:min-h-[21.875rem] min-h-80 h-full lg:w-1/2 w-full`}
         >
           <img
-            className={`
-          left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute
-          object-cover h-[inherit] w-full ${greyscale && "grayscale"}`}
-            src={image ?? ""}
+            className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full object-cover transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${greyscale?"grayscale":""} hover:scale-105`}
+            src={image??""}
             alt="BFT descriptive card"
             sizes="(max-width: 1024px) 75vw, 100vw"
             fetchPriority="low"
@@ -52,49 +50,32 @@ image-container overflow-hidden lg:min-h-[25rem] md:min-h-[21.875rem] min-h-80 h
       )}
 
       <div
-        style={{
-          background: background,
-          color: textc,
-        }}
-        className={`${
-          background ? `bg-[${background}]` : `bg-white`
-        }  content-container max-[1024px]:w-screen w-1/2 max-[1024px]:p-5 p-16 flex flex-col gap-5 justify-center`}
+        style={{background:background||'#ffffff',color:textc||'#171717'}}
+        className={`content-container glass lg:col-span-7 rounded-2xl p-8 md:p-12 ${background?`bg-[${background}]`:"bg-white"} flex flex-col gap-6 justify-center`}
       >
         <h2
-          data-aos={animate && (alt ? "fade-right" : "fade-left")}
-          className={`whitespace-pre-line ${
-            textc ? `text-[${textc}]` : null
-          }  uppercase font-extrabold max-[1024px]:text-2xl text-4xl`}
+          data-aos={animate&&(alt?"fade-right":"fade-left")}
+          data-aos-delay="100"
+          className={`whitespace-pre-line text-3xl font-extrabold uppercase tracking-tight leading-[0.95] ${textc?`text-[${textc}]`:"text-foreground"} md:text-4xl lg:text-5xl`}
         >
           {title}
         </h2>
         <p
-          data-aos={animate && (alt ? "fade-right" : "fade-left")}
-          className={`max-[1024px]:text-xl ${
-            textc ? `text-[${textc}]` : `text-[grey]`
-          } text-pretty text-base`}
-          style={{ whiteSpace: "preserve-breaks" }}
+          data-aos={animate&&(alt?"fade-right":"fade-left")}
+          data-aos-delay="200"
+          className={`max-w-[65ch] text-pretty text-base leading-relaxed ${textc?`text-[${textc}]`:"text-foreground/70"} md:text-xl`}
+          style={{whiteSpace:"preserve-breaks"}}
         >
           {content}
         </p>
-        {buttonlink && (
-          <div data-aos={animate && (alt ? "fade-right" : "fade-left")}>
-            {external ? (
-              <a
-                className="uppercase bg-[red] hover:bg-red-500 text-xs text-white font-extrabold w-fit rounded-sm px-4 py-2"
-                href={buttonlink}
-                target={external ? "_blank" : "_self"}
-              >
-                {buttonlabel ?? "find out"}
-              </a>
-            ) : (
-              <a
-                className="uppercase bg-[red] hover:bg-red-500 text-xs text-white font-extrabold w-fit rounded-sm px-4 py-2"
-                href={buttonlink}
-              >
-                {buttonlabel ?? "find out"}
-              </a>
-            )}
+        {buttonlink&&(
+          <div data-aos={animate&&(alt?"fade-right":"fade-left")} data-aos-delay="300">
+            <a className="btn-primary inline-block rounded-full bg-tertiary px-6 py-3 text-xs font-bold uppercase tracking-wider text-white"
+              href={buttonlink}
+              target={external?"_blank":"_self"}
+              rel={external?"noopener noreferrer":undefined}>
+              {buttonlabel??"Find out more"}
+            </a>
           </div>
         )}
       </div>

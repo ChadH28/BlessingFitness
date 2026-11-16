@@ -25,7 +25,7 @@ export const metadata = {
 
 export default function Booking() {
   return (
-    <main>
+    <main className="mesh-light">
       <SubHero
         title={"Reserve Your Fitness Journey"}
         subtitle={"Book Your Classes and Training Sessions Today"}
@@ -33,12 +33,13 @@ export default function Booking() {
       />
 
       {/* promotion section */}
-      <div className="flex justify-center w-full h-auto">
-        <div
-          data-aos={"fade-up"}
-          className="bg-black text-white sm:w-full lg:w-[500px] m-8 p-8 flex flex-col gap-2"
-        >
-          <h2 className="text-3xl">SPECIAL PACKAGE</h2>
+      <section className="mesh-dark-section relative py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <div
+            data-aos="fade-up"
+            className="glass-dark overflow-hidden rounded-3xl p-8 text-white md:max-w-2xl"
+          >
+          <h2 className="text-3xl font-extrabold uppercase tracking-tight leading-[0.95]">SPECIAL PACKAGE</h2>
           <div className="text-xl leading-relaxed ">
             <div className="flex flex-col gap-4">
               <p>
@@ -56,10 +57,13 @@ export default function Booking() {
             </div>
           </div>
         </div>
-      </div>
+          </div>
+      </section>
 
       {/* table */}
-      <div className="px-10 w-full h-auto">
+      <section className="py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="flex flex-col gap-12">
         <PriceCard
           image={"/images/Fitness/Fitness15.jpeg"}
           title={"Ladies only Saturday session"}
@@ -95,27 +99,25 @@ export default function Booking() {
         />
       </div>
 
-      <div
-        id="schedule"
-        className="
-        anchor_adj
-        relative flex items-center justify-center h-1/2
-      bg-fixed bg-center bg-cover custom-img
-      "
-      >
-        <div className="table-heading flex flex-col items-center gap-2 p-10 text-balance justify-center text-center w-100 text-[white] font-semibold">
+      <section className="relative py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="glass-dark overflow-hidden rounded-3xl p-8 text-center md:p-16">
+            <h2 className="mb-4 text-3xl font-extrabold uppercase tracking-tight leading-[0.95] text-white md:text-5xl">
           <h2 className="max-[1024px]:text-2xl text-4xl font-bold uppercase ">
             Bootcamp Class Timetable – Get Fit at The Ring Reloaded boxing gym!
           </h2>
-          <p>Limited Spots Available – Book 24 Hours in Advance!</p>
-          <p>
+          <p className="text-white/70">Limited Spots Available – Book 24 Hours in Advance!</p>
+          <p className="text-white/70">
             High-Energy Group Workouts • Expert Coaching • Results-Driven
             Training
           </p>
         </div>
       </div>
+    </section>
 
-      <div className="timetable-container relative my-12">
+    <section className="py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="timetable-container relative my-12">
         <TableCard
           day={"MONDAY"}
           workout={"HIIT"}
@@ -161,6 +163,7 @@ export default function Booking() {
           image={"/images/Fitness/Fitness16.jpeg"}
         />
       </div>
+    </section>
     </main>
   );
 }
