@@ -40,22 +40,20 @@ export default function NativeSlider({
 
   // Sync currentIndex with scroll position
   useEffect(() => {
-    if (!containerRef.current) return;
+    const container = containerRef.current;
+    if (!container) return undefined;
+
     const handleScroll = () => {
-      const slides = containerRef.current.querySelectorAll("[data-slide]");
+      const slides = container.querySelectorAll("[data-slide]");
       if (slides.length === 0) return;
-      const container = containerRef.current;
       const slideWidth = slides[0].offsetWidth;
       if (slideWidth > 0) {
         const index = Math.round(container.scrollLeft / slideWidth);
         setCurrentIndex(Math.min(Math.max(index, 0), slides.length - 1));
       }
     };
-    containerRef.current.addEventListener("scroll", handleScroll, {
-      passive: true,
-    });
-    return () =>
-      containerRef.current.removeEventListener("scroll", handleScroll);
+    container.addEventListener("scroll", handleScroll, { passive: true });
+    return () => container.removeEventListener("scroll", handleScroll);
   }, [slideCount]);
 
   const renderSlide = (item, index) => {
