@@ -69,8 +69,8 @@ const sessions = [
     title: "Retreat-style fitness",
     description:
       "Looking for a wellness retreat in South Africa with movement and time outdoors? Enquire about retreat-style fitness experiences and the details currently available.",
-    image: "/images/hiking/Helderberg_Farm1.png",
-    imageAlt: "Hiker taking in a mountain view in the Western Cape",
+    image: "/images/hiking/cape-mountain-valley.jpeg",
+    imageAlt: "A mountain valley seen from a Cape trail",
     message:
       "Hi Total Blessing, I'd like to ask about outdoor fitness or wellness retreat experiences.",
   },

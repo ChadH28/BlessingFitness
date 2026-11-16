@@ -52,9 +52,9 @@ const moments = [
     label: "Outdoor exploration",
   },
   {
-    image: "/images/Fitness/3Fitness.jpeg",
-    alt: "Fitness training at the boxing gym",
-    label: "Training together",
+    image: "/images/Fitness/personal-training.jpeg",
+    alt: "A client practicing strength training in the gym",
+    label: "Strength in motion",
   },
   {
     image: "/images/adventureHome.jpeg",

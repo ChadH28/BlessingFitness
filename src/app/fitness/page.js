@@ -29,8 +29,8 @@ const programs = [
     title: "Boxfit group classes",
     description:
       "Build fitness through boxing drills, cardio and strength work in an energetic group environment.",
-    image: "/images/Fitness/4Fitness.jpeg",
-    alt: "Boxing and fitness training",
+    image: "/images/Fitness/boxfit-coaching.jpeg",
+    alt: "A coach holding pads for a client during boxing training",
     href: "/booking#schedule",
     action: "View class times",
   },
@@ -38,8 +38,8 @@ const programs = [
     title: "Personal training",
     description:
       "Work toward your fitness goals with one-on-one or small-group coaching.",
-    image: "/images/Fitness/Fitness08.jpeg",
-    alt: "Personal fitness coaching",
+    image: "/images/Fitness/personal-training.jpeg",
+    alt: "A woman performing a strength exercise in the gym",
     href: "/booking#packages",
     action: "Explore session options",
   },
