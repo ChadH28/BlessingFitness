@@ -51,14 +51,16 @@ export default function PriceCard({
             ))}
           </ul>
         )}
-        <a
-          href={enquiryLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-primary mt-6 w-full"
-        >
-          Enquire on WhatsApp
-        </a>
+        <div className="mt-auto">
+          <a
+            href={enquiryLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary mt-6 w-full"
+          >
+            Enquire on WhatsApp
+          </a>
+        </div>
       </div>
     </article>
   );
