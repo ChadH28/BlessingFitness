@@ -69,8 +69,6 @@ export default function Home() {
       <Hero
         title="Move with purpose. Explore further."
         subtitle="Train with a local coach, then discover more of the Cape through fitness, guided adventures and time outdoors."
-        image="/images/hiking/Helderberg_Farm1.png"
-        imageAlt="A hiker taking in the Cape mountain landscape"
       />
 
       <section
