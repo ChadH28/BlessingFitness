@@ -16,9 +16,14 @@ export default {
         secondary: "var(--secondary)",
         primaryred: "var(--primaryred)",
         primarygrey: "var(--primary-grey)",
+        sand: "var(--sand)",
+        paper: "var(--paper)",
+        ocean: "var(--ocean)",
+        sun: "var(--sun)",
       },
       fontFamily: {
-        sans: ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", "sans-serif"],
+        sans: ["Avenir Next", "Montserrat", "Trebuchet MS", "sans-serif"],
+        display: ["Avenir Next", "Montserrat", "Trebuchet MS", "sans-serif"],
         serif: ["Georgia", "Cambria", "Times New Roman", "Times", "serif"],
       },
       spacing: {

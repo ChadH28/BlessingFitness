@@ -1,37 +1,65 @@
-"use client";
-
 import Image from "next/image";
+import { createWhatsAppLink } from "@/lib/whatsapp";
 
 export default function PriceCard({
   image,
-  alt,
+  imageAlt = "",
   title,
-  greyscale,
-  pricinglist,
+  description,
+  pricinglist = [],
 }) {
-  const flipped = Boolean(alt);
+  const enquiryLink = createWhatsAppLink(
+    `Hi Total Blessing, I'm interested in ${title}. Could you please share more details?`
+  );
+
   return (
-    <div className={`flex ${flipped ? "flex-row-reverse" : "flex-row"} max-[1024px]:flex-col`}>
-      <div className={`relative lg:col-span-5 aspect-[4/3] w-full overflow-hidden rounded-2xl bento-shadow ${greyscale && "grayscale"}`}>
-        <Image
-          fill
-          sizes="(max-width: 1024px) 75vw, 100vw"
-          className="object-cover transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-105"
-          src={image ?? "/card-images/football.jpg"}
-          alt={alt ? "Total Blessing" : "Price card"}
-        />
+    <article className="flex h-full flex-col overflow-hidden rounded-3xl border border-foreground/10 bg-paper shadow-[0_16px_44px_rgba(23,32,29,0.07)]">
+      <div className="relative aspect-[4/3] overflow-hidden bg-foreground/10">
+        {image && (
+          <Image
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover transition-transform duration-700 hover:scale-105"
+            src={image}
+            alt={imageAlt}
+          />
+        )}
       </div>
-      <div className={`content-container glass lg:col-span-7 rounded-2xl p-8 md:p-12 flex flex-col gap-6 justify-center ${flipped ? "lg:text-right" : "lg:text-left"}`}>
-        <h2 className="text-3xl font-extrabold uppercase tracking-tight leading-[0.95] text-tertiary md:text-4xl">
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <h3 className="text-xl font-black uppercase leading-tight tracking-tight text-foreground md:text-2xl">
           {title}
-        </h2>
-        {pricinglist && pricinglist.map((pricing, index) => (
-          <p key={index} className="max-w-[65ch] text-base leading-relaxed text-foreground/70 md:text-xl">
-            <strong className="text-3xl font-extrabold text-tertiary">{pricing.price}</strong>{" "}
-            <span className="text-sm uppercase tracking-wider text-foreground/50">/ {pricing.description}</span>
+        </h3>
+        {description && (
+          <p className="mt-2 text-sm leading-relaxed text-foreground/65">
+            {description}
           </p>
-        ))}
+        )}
+        {pricinglist.length > 0 && (
+          <ul className="mt-5 space-y-3">
+            {pricinglist.map((pricing, index) => (
+              <li
+                key={`${pricing.price}-${pricing.description}-${index}`}
+                className="flex items-baseline justify-between gap-3 border-t border-foreground/10 pt-3"
+              >
+                <span className="text-xs font-semibold uppercase tracking-wide text-foreground/60">
+                  {pricing.description}
+                </span>
+                <strong className="shrink-0 text-xl font-black text-tertiary">
+                  {pricing.price}
+                </strong>
+              </li>
+            ))}
+          </ul>
+        )}
+        <a
+          href={enquiryLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary mt-6 w-full"
+        >
+          Enquire on WhatsApp
+        </a>
       </div>
-    </div>
+    </article>
   );
 }
