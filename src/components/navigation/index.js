@@ -31,7 +31,7 @@ export default function Navigation() {
   return (
     <nav
       aria-label="Main navigation"
-      className="fixed inset-x-0 top-0 z-50 border-b border-foreground/10 bg-background/95 shadow-sm backdrop-blur-xl"
+      className="fixed inset-x-0 top-0 z-50 border-b border-foreground/10 bg-paper shadow-sm backdrop-blur-xl"
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link

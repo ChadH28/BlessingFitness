@@ -34,6 +34,7 @@ body {
   font-family: "Avenir Next", "Montserrat", "Trebuchet MS", sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  text-wrap: balance;
 }
 
 main {
@@ -69,7 +70,11 @@ a {
 
 .mesh-light {
   background:
-    radial-gradient(ellipse at 10% 12%, rgb(246 196 83 / 14%), transparent 34rem),
+    radial-gradient(
+      ellipse at 10% 12%,
+      rgb(246 196 83 / 14%),
+      transparent 34rem
+    ),
     radial-gradient(ellipse at 92% 38%, rgb(49 93 90 / 8%), transparent 36rem),
     var(--background);
 }
@@ -114,7 +119,9 @@ a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: background-color 180ms ease, transform 180ms ease;
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease;
 }
 
 .btn-primary:hover {
@@ -137,7 +144,9 @@ a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: border-color 180ms ease, background-color 180ms ease;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease;
 }
 
 .btn-secondary:hover {
