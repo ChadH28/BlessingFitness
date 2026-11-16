@@ -7,8 +7,8 @@
   --foreground: #000000;
   --primary: #000000;
   --secondary: #FDC941ff;
-  --tertiary: #EA1E23ff;
-  --primaryred: #EA1E23ff;
+  --tertiary: #C71B23ff;
+  --primaryred: #C71B23ff;
   --primary-grey: #B9B9B8ff;
   --blacktransgradient: linear-gradient(to top,
       #000000,
@@ -147,4 +147,13 @@ body {
 
 .zoomImg:hover>img {
   transform: scale(1.2);
+}
+
+/* Hide scrollbars for custom carousel containers */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }

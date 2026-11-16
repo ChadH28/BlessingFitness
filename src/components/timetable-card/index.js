@@ -1,16 +1,17 @@
-/* eslint-disable @next/next/no-img-element */
+"use client";
 
-function TableCard({day,workout,workout_desc,time_am,time_pm,image}){
-  return(
+import Image from "next/image";
+
+function TableCard({ day, workout, workout_desc, time_am, time_pm, image }) {
+  return (
     <div className="timetable relative flex min-w-full flex-col items-center justify-center overflow-hidden rounded-2xl bg-white/80 p-6 text-center backdrop-blur-md transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-2 hover:shadow-xl lg:min-w-96">
       <div className="absolute inset-0 overflow-hidden">
-        <img
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full scale-150 opacity-15"
-          loading="lazy"
-          fill="true"
-          style={{objectFit:"cover"}}
+        <Image
+          fill
+          sizes="100vw"
+          className="object-cover"
           src={image}
-          alt="Image 3"
+          alt="Timetable"
         />
       </div>
       <div className="relative z-10 flex w-full flex-col items-center justify-center gap-2 px-4 py-8">
@@ -23,9 +24,7 @@ function TableCard({day,workout,workout_desc,time_am,time_pm,image}){
         <a
           aria-label="booking enquiry"
           className="btn-primary mt-4 inline-block rounded-full bg-tertiary px-6 py-2 text-xs font-bold uppercase tracking-wider text-white"
-          href={`https://wa.me/27787589451?text=Booking%20enquiry%20for%20${workout.toLowerCase()}%20on%20${
-            day.charAt(0).toUpperCase()+day.slice(1).toLowerCase()
-          }`}
+          href={`https://wa.me/27787589451?text=Booking%20enquiry%20for%20${workout.toLowerCase()}%20on%20${day.charAt(0).toUpperCase() + day.slice(1).toLowerCase()}`}
           target="_blank"
           rel="noopener noreferrer"
         >

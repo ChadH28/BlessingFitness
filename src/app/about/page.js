@@ -1,5 +1,5 @@
 import InfoCard from "@/components/info-card";
-import ClientSlider from "@/components/slider";
+import NativeSlider from "@/components/native-slider";
 import SubHero from "@/components/sub-hero";
 import { galleryImages } from "@/data/pageData";
 
@@ -127,7 +127,7 @@ export default function About() {
       <section className="py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6">
           <div className="glass overflow-hidden rounded-3xl p-8 md:p-16">
-            <ClientSlider list={galleryImages} images />
+            <NativeSlider list={galleryImages} images />
       </div>
           </div>
       </section>

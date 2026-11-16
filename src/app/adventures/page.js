@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
-import AdventureSlider from "@/components/adventure-slider";
+import NativeSlider from "@/components/native-slider";
 import SubHero from "@/components/sub-hero";
 import { activities, galleryImages, hiking_trails } from "@/data/pageData";
+import Image from "next/image";
 
 export const metadata = {
   title:
@@ -16,7 +16,7 @@ export const metadata = {
     url: "https://totalblessingfitnessandtraveltours.co.za/adventures",
     images: [
       {
-        url: "/images/logo3.png",
+        url: "https://totalblessingfitnessandtraveltours.co.za/images/logo3.png",
         width: 1200,
         height: 630,
         alt: "Cape Town Adventure Tours",
@@ -33,7 +33,7 @@ export default function Adventures() {
         subtitle={"Unforgettable Tours and Experiences Await"}
         image={"/images/hiking/Constantia_Nek_to_Kirstenbosch2.png"}
       />
-      <AdventureSlider list={activities} />
+      <NativeSlider list={activities} adventure autoplaySpeed={2500} />
 
       <div className="py-16 flex flex-col items-center">
         <div
@@ -52,17 +52,19 @@ export default function Adventures() {
 
         {hiking_trails.map((trail, index) => (
           <div
-            key={index}
+            key={trail.title}
             data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-            className={`py-5 h-auto px-6 lg:px-16 w-full flex flex-col gap-10 items-center ${index % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
+            className={`py-5 h-auto px-6 lg:px-16 w-full flex flex-col gap-10 items-center ${
+              index % 2 === 0 ? "lg:flex-row-reverse" : "lg:flex-row"
+            }`}
           >
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bento-shadow lg:w-[40.625rem]">
-              <img
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full object-cover transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-105"
-                loading="lazy"
-                fill="true"
+              <Image
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-105"
                 src={trail.image}
-                alt={`${trail.title}-imagery`}
+                alt={`${trail.title} imagery`}
               />
             </div>
             <div className="rounded-2xl bg-white/80 p-6 backdrop-blur-md">
@@ -73,12 +75,7 @@ export default function Adventures() {
                 {trail.title}
               </h3>
               <p className="flex items-center gap-2 text-sm text-foreground/60">
-                <span>
-                  <i
-                    className="fa fa-map-marker text-base "
-                    aria-hidden="true"
-                  />
-                </span>
+                <i className="fa fa-map-marker text-base" aria-hidden="true" />
                 {"  "}
                 {trail.location}
               </p>
@@ -95,10 +92,7 @@ export default function Adventures() {
                 {trail.time && (
                   <p className="hiking-card-time flex gap-2 items-center">
                     <span>
-                      <i
-                        className="fa-solid fa-clock text-base"
-                        aria-hidden="true"
-                      />
+                      <i className="fa-solid fa-clock text-base" aria-hidden="true" />
                     </span>
                     {trail.time}
                   </p>
@@ -116,30 +110,32 @@ export default function Adventures() {
             className="flex flex-col items-center justify-center gap-6 pb-10 text-center"
           >
             <h2 className="text-3xl font-extrabold uppercase tracking-tight leading-[0.95] text-foreground md:text-5xl">
-            Past Adventures
-          </h2>
-          <p className="text-xl text-pretty text-[grey] text-center w-[60%]">
-            Our Hiking Trail Tales Through the Years
-          </p>
-        </div>
+              Past Adventures
+            </h2>
+            <p className="text-xl text-pretty text-[grey] text-center w-[60%]">
+              Our Hiking Trail Tales Through the Years
+            </p>
+          </div>
 
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-          {galleryImages.map((item, index) => (
-            <div
-              key={index}
-              className={`aspect-square overflow-hidden rounded-2xl bento-shadow ${index===0?'col-span-2 row-span-2':''}`}
-            >
-              <img
-                className="object-cover w-[inherit] h-[inherit] absolute"
-                src={item.image}
-                alt={`Masonry image ${index + 1}`}
-                fill="true"
-              />
-            </div>
-          ))}
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            {galleryImages.map((item, index) => (
+              <div
+                key={item.image}
+                className={`relative aspect-square overflow-hidden rounded-2xl bento-shadow ${index === 0 ? "col-span-2 row-span-2" : ""}`}
+              >
+                <Image
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover"
+                  src={item.image}
+                  alt={`Masonry image ${index + 1}`}
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </main>
   );
 }

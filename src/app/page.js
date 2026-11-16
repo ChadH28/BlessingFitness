@@ -1,7 +1,7 @@
 import Hero from "@/components/hero";
 import InfoCard from "@/components/info-card";
+import NativeSlider from "@/components/native-slider";
 import { highlights, slides } from "@/data/pageData";
-import ClientSlider from "@/components/slider";
 
 export const metadata = {
   title: "Train & Travel in Cape Town | Total Blessing Fitness Tours",
@@ -45,7 +45,7 @@ export default function Home() {
             Reloaded boxing gym, Seapoint
           </h2>
         </a>
-        <a className="uppercase underline" href="/booking">
+        <a className="inline-block uppercase underline px-4 py-2" href="/booking">
           See my booking options
         </a>
       </div>
@@ -83,7 +83,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="glass overflow-hidden rounded-3xl p-8 md:p-16">
             <h2 className="mb-12 text-center text-3xl font-extrabold uppercase tracking-tight text-foreground md:text-4xl">Highlights</h2>
-            <ClientSlider list={highlights} />
+            <NativeSlider list={highlights} autoplaySpeed={750} />
           </div>
         </div>
       </section>
