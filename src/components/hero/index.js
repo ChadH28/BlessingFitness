@@ -6,23 +6,23 @@ import Link from "next/link";
 
 const slides = [
   {
-    image: "/images/hiking/Helderberg_Farm1.png",
+    image: "/images/new/bike.jpeg",
     label: "Find your trail",
     position: "62% 42%",
   },
   {
-    image: "/images/adventureHome.jpeg",
+    image: "/images/new/hike.jpeg",
     label: "Move along the coast",
     position: "center center",
   },
   {
-    image: "/images/workout-home.jpeg",
+    image: "/images/new/box.jpeg",
     label: "Train with a local coach",
     position: "center 45%",
   },
   {
-    image: "/images/travel-home.png",
-    label: "See Cape Town differently",
+    image: "/images/new/kids.jpeg",
+    label: "Get your kids fit and active",
     position: "center center",
   },
 ];

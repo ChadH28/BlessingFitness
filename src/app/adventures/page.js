@@ -85,16 +85,18 @@ export default function Adventures() {
                 <p className="mt-3 line-clamp-4 text-sm leading-relaxed text-foreground/65">
                   {activity.description}
                 </p>
-                <a
-                  href={createWhatsAppLink(
-                    `Hi Total Blessing, I'm interested in the ${activity.title} experience. Could you please share more details?`
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary mt-5 w-full"
-                >
-                  Ask about this experience
-                </a>
+                <div className="mt-auto">
+                  <a
+                    href={createWhatsAppLink(
+                      `Hi Total Blessing, I'm interested in the ${activity.title} experience. Could you please share more details?`
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary mt-5 w-full"
+                  >
+                    Ask about this experience
+                  </a>
+                </div>
               </div>
             </article>
           ))}
@@ -128,9 +130,9 @@ export default function Adventures() {
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {hiking_trails.map((trail, index) => (
-              <article
+              <div
                 key={`${trail.title}-${trail.location}-${index}`}
-                className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04]"
+                className="flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04]"
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-white/10">
                   <Image
@@ -141,7 +143,7 @@ export default function Adventures() {
                     alt={`${trail.title.replace(/\n/g, " ")} trail`}
                   />
                 </div>
-                <div className="p-5">
+                <div className="flex flex-1 flex-col p-5">
                   <p
                     className={`text-xs font-extrabold uppercase tracking-[0.14em] ${trail.level.toLowerCase() === "easy" ? "text-emerald-300" : trail.level.toLowerCase() === "moderate" ? "text-sun" : "text-rose-300"}`}
                   >
@@ -157,19 +159,21 @@ export default function Adventures() {
                     {trail.distance && <span>{trail.distance}</span>}
                     {trail.time && <span>{trail.time}</span>}
                   </div>
-                  <a
-                    href={createWhatsAppLink(
-                      `Hi Total Blessing, I'm interested in hiking ${trail.title.replace(/\n/g, " ")}. Could you please share more details?`
-                    )}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-5 inline-flex min-h-11 items-center gap-2 text-xs font-extrabold uppercase tracking-[0.1em] text-sun hover:text-white"
-                  >
-                    Enquire about this trail{" "}
-                    <span aria-hidden="true">→</span>
-                  </a>
+                  <div className='mt-auto'>
+                    <a
+                      href={createWhatsAppLink(
+                        `Hi Total Blessing, I'm interested in hiking ${trail.title.replace(/\n/g, " ")}. Could you please share more details?`
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-5 inline-flex min-h-11 items-center gap-2 text-xs font-extrabold uppercase tracking-[0.1em] text-sun hover:text-white"
+                    >
+                      Enquire about this trail{" "}
+                      <span aria-hidden="true">→</span>
+                    </a>
+                  </div>
                 </div>
-              </article>
+              </div>
             ))}
           </div>
         </div>
@@ -200,9 +204,8 @@ export default function Adventures() {
           {galleryImages.map((item, index) => (
             <figure
               key={`${item.image}-${index}`}
-              className={`relative aspect-square overflow-hidden rounded-2xl bg-foreground/10 ${
-                index === 0 ? "col-span-2 row-span-2" : ""
-              }`}
+              className={`relative aspect-square overflow-hidden rounded-2xl bg-foreground/10 ${index === 0 ? "col-span-2 row-span-2" : ""
+                }`}
             >
               <Image
                 fill

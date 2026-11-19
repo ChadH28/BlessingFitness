@@ -38,7 +38,7 @@ const pathways = [
     title: "Explore",
     description:
       "Discover local trails, outdoor experiences and Cape Town highlights.",
-    image: "/images/adventureHome.jpeg",
+    image: "/images/new/explore.jpeg",
     href: "/adventures",
     action: "Explore adventures",
     imagePosition: "center",
